@@ -1,0 +1,60 @@
+# WARNING
+# This document is generated
+# modifications may be lost
+
+use strict;
+use warnings;
+use 5.014;
+
+package [% pm.package_name %] {
+
+  use OpenGL::FFI ();
+  use constant {
+[% FOREACH constant IN pm.constants -%]
+    [% constant.name %] => [% constant.value %],
+[% END -%]
+  };
+
+  my $ffi = OpenGL::FFI::_get_ffi();
+  $ffi->lib(OpenGL::FFI::_find_lib('GL'));
+[% FOREACH typedef IN pm.typedefs -%]
+  $ffi->type('[% typedef.type %]' => '[% typedef.alias %]');
+[% END -%]
+
+[% FOREACH function IN pm.functions -%]
+  $ffi->attach( [% function.name %] => [ [% function.ffi_argument_signature %] ] => '[% function.return_type %]' );
+[% END -%]
+
+}
+
+__END__
+
+# ABSTRACT: [% pm.abstract %]
+
+=head1 SYNOPSIS
+
+[% pm.synopsis %]
+
+=head1 DESCRIPTION
+
+[% pm.description -%]
+
+=head1 CONSTANTS
+
+=over 4
+
+[% FOREACH constant IN pm.constants -%]
+=item [% constant.name %]
+
+[% END -%]
+=back
+
+=head1 FUNCTIONS
+
+[% FOREACH function IN pm.functions -%]
+=head2 [% function.name %]
+
+ [% function.pod_usage -%]
+
+[% END -%]
+=cut
