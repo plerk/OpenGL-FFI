@@ -2,3 +2,4 @@ ExtUtils::MakeMaker
 FFI::CheckLib
 FFI::Platypus
 Test::More
+constant
