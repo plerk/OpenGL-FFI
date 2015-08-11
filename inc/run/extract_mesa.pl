@@ -73,6 +73,42 @@ while($header_text =~ s/GLAPI\s+(const\s+)?(?<return_type>[a-zA-Z0-9]+(\s*\*)?)\
 
 $mod->find_function_by_name('glGetString')->return_type('string');
 
+foreach my $function (@{ $mod->functions })
+{
+  my %offset = (
+    TexCoord      => 0,
+    Vertex        => 0,
+    Color         => 0,
+    MultiTexCoord => 1,
+    EvalCoord     => 0,
+    Normal        => 0,
+    RasterPos     => 0,
+  );
+
+  if($function->name =~ /^gl(TexCoord|Vertex|MultiTexCoord|Color|EvalCoord|Normal|RasterPos)([1234])([bdfis]|u[bis])v(ARB)?$/)
+  {
+    my $arg = $function->arguments->[$offset{$1}];
+    my $size = $2;
+    
+    my $type = $arg->type . "_array_$size";
+    
+    unless($mod->find_typedef_by_alias($type))
+    {
+      push @{ $mod->typedefs }, Gen::Typedef->new( type => $types->{$arg->{type}} . "[$size]", alias => $type );
+    }
+    
+    $arg->type($type);
+    my $name = $arg->name;
+    unless($name =~ s{^\s*\*\s*}{})
+    {
+      warn "tried to remove * from name for ", $function->name, " but did not find it ";
+    }
+    $arg->name($name);
+  }
+}
+
+$mod->lint;
+
 DumpFile("inc/data/OpenGL.FFI.Mesa.GL.yml", $mod);
 
 __DATA__

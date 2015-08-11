@@ -9,6 +9,6 @@ use Gen::Mod;
 foreach my $ymlfile (grep { $_->basename =~ /\.yml$/ } grep { ! $_->is_dir } dir('inc/data')->children)
 {
   my $mod = LoadFile($ymlfile);
-  say "GEN  ", $mod->path;
-  $mod->generate;
+  say "FILE $ymlfile";
+  $mod->lint;
 }

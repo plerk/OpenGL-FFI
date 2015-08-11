@@ -5204,6 +5204,30 @@ package OpenGL::FFI::Mesa::GL {
   $ffi->type('double[]' => 'GLdouble_array');
   $ffi->type('int[]' => 'GLint_array');
   $ffi->type('unsigned char[]' => 'GLboolean_array');
+  $ffi->type('double[2]' => 'GLdouble_array_2');
+  $ffi->type('float[2]' => 'GLfloat_array_2');
+  $ffi->type('int[2]' => 'GLint_array_2');
+  $ffi->type('short[2]' => 'GLshort_array_2');
+  $ffi->type('double[3]' => 'GLdouble_array_3');
+  $ffi->type('float[3]' => 'GLfloat_array_3');
+  $ffi->type('int[3]' => 'GLint_array_3');
+  $ffi->type('short[3]' => 'GLshort_array_3');
+  $ffi->type('double[4]' => 'GLdouble_array_4');
+  $ffi->type('float[4]' => 'GLfloat_array_4');
+  $ffi->type('int[4]' => 'GLint_array_4');
+  $ffi->type('short[4]' => 'GLshort_array_4');
+  $ffi->type('signed char[3]' => 'GLbyte_array_3');
+  $ffi->type('unsigned char[3]' => 'GLubyte_array_3');
+  $ffi->type('unsigned int[3]' => 'GLuint_array_3');
+  $ffi->type('unsigned short[3]' => 'GLushort_array_3');
+  $ffi->type('signed char[4]' => 'GLbyte_array_4');
+  $ffi->type('unsigned char[4]' => 'GLubyte_array_4');
+  $ffi->type('unsigned int[4]' => 'GLuint_array_4');
+  $ffi->type('unsigned short[4]' => 'GLushort_array_4');
+  $ffi->type('double[1]' => 'GLdouble_array_1');
+  $ffi->type('float[1]' => 'GLfloat_array_1');
+  $ffi->type('int[1]' => 'GLint_array_1');
+  $ffi->type('short[1]' => 'GLshort_array_1');
 
   $ffi->attach( glClearIndex => [ 'GLfloat' ] => 'void' );
   $ffi->attach( glClearColor => [ 'GLclampf', 'GLclampf', 'GLclampf', 'GLclampf' ] => 'void' );
@@ -5293,28 +5317,28 @@ package OpenGL::FFI::Mesa::GL {
   $ffi->attach( glVertex4f => [ 'GLfloat', 'GLfloat', 'GLfloat', 'GLfloat' ] => 'void' );
   $ffi->attach( glVertex4i => [ 'GLint', 'GLint', 'GLint', 'GLint' ] => 'void' );
   $ffi->attach( glVertex4s => [ 'GLshort', 'GLshort', 'GLshort', 'GLshort' ] => 'void' );
-  $ffi->attach( glVertex2dv => [ 'GLdouble' ] => 'void' );
-  $ffi->attach( glVertex2fv => [ 'GLfloat' ] => 'void' );
-  $ffi->attach( glVertex2iv => [ 'GLint' ] => 'void' );
-  $ffi->attach( glVertex2sv => [ 'GLshort' ] => 'void' );
-  $ffi->attach( glVertex3dv => [ 'GLdouble' ] => 'void' );
-  $ffi->attach( glVertex3fv => [ 'GLfloat' ] => 'void' );
-  $ffi->attach( glVertex3iv => [ 'GLint' ] => 'void' );
-  $ffi->attach( glVertex3sv => [ 'GLshort' ] => 'void' );
-  $ffi->attach( glVertex4dv => [ 'GLdouble' ] => 'void' );
-  $ffi->attach( glVertex4fv => [ 'GLfloat' ] => 'void' );
-  $ffi->attach( glVertex4iv => [ 'GLint' ] => 'void' );
-  $ffi->attach( glVertex4sv => [ 'GLshort' ] => 'void' );
+  $ffi->attach( glVertex2dv => [ 'GLdouble_array_2' ] => 'void' );
+  $ffi->attach( glVertex2fv => [ 'GLfloat_array_2' ] => 'void' );
+  $ffi->attach( glVertex2iv => [ 'GLint_array_2' ] => 'void' );
+  $ffi->attach( glVertex2sv => [ 'GLshort_array_2' ] => 'void' );
+  $ffi->attach( glVertex3dv => [ 'GLdouble_array_3' ] => 'void' );
+  $ffi->attach( glVertex3fv => [ 'GLfloat_array_3' ] => 'void' );
+  $ffi->attach( glVertex3iv => [ 'GLint_array_3' ] => 'void' );
+  $ffi->attach( glVertex3sv => [ 'GLshort_array_3' ] => 'void' );
+  $ffi->attach( glVertex4dv => [ 'GLdouble_array_4' ] => 'void' );
+  $ffi->attach( glVertex4fv => [ 'GLfloat_array_4' ] => 'void' );
+  $ffi->attach( glVertex4iv => [ 'GLint_array_4' ] => 'void' );
+  $ffi->attach( glVertex4sv => [ 'GLshort_array_4' ] => 'void' );
   $ffi->attach( glNormal3b => [ 'GLbyte', 'GLbyte', 'GLbyte' ] => 'void' );
   $ffi->attach( glNormal3d => [ 'GLdouble', 'GLdouble', 'GLdouble' ] => 'void' );
   $ffi->attach( glNormal3f => [ 'GLfloat', 'GLfloat', 'GLfloat' ] => 'void' );
   $ffi->attach( glNormal3i => [ 'GLint', 'GLint', 'GLint' ] => 'void' );
   $ffi->attach( glNormal3s => [ 'GLshort', 'GLshort', 'GLshort' ] => 'void' );
-  $ffi->attach( glNormal3bv => [ 'GLbyte' ] => 'void' );
-  $ffi->attach( glNormal3dv => [ 'GLdouble' ] => 'void' );
-  $ffi->attach( glNormal3fv => [ 'GLfloat' ] => 'void' );
-  $ffi->attach( glNormal3iv => [ 'GLint' ] => 'void' );
-  $ffi->attach( glNormal3sv => [ 'GLshort' ] => 'void' );
+  $ffi->attach( glNormal3bv => [ 'GLbyte_array_3' ] => 'void' );
+  $ffi->attach( glNormal3dv => [ 'GLdouble_array_3' ] => 'void' );
+  $ffi->attach( glNormal3fv => [ 'GLfloat_array_3' ] => 'void' );
+  $ffi->attach( glNormal3iv => [ 'GLint_array_3' ] => 'void' );
+  $ffi->attach( glNormal3sv => [ 'GLshort_array_3' ] => 'void' );
   $ffi->attach( glIndexd => [ 'GLdouble' ] => 'void' );
   $ffi->attach( glIndexf => [ 'GLfloat' ] => 'void' );
   $ffi->attach( glIndexi => [ 'GLint' ] => 'void' );
@@ -5341,22 +5365,22 @@ package OpenGL::FFI::Mesa::GL {
   $ffi->attach( glColor4ub => [ 'GLubyte', 'GLubyte', 'GLubyte', 'GLubyte' ] => 'void' );
   $ffi->attach( glColor4ui => [ 'GLuint', 'GLuint', 'GLuint', 'GLuint' ] => 'void' );
   $ffi->attach( glColor4us => [ 'GLushort', 'GLushort', 'GLushort', 'GLushort' ] => 'void' );
-  $ffi->attach( glColor3bv => [ 'GLbyte' ] => 'void' );
-  $ffi->attach( glColor3dv => [ 'GLdouble' ] => 'void' );
-  $ffi->attach( glColor3fv => [ 'GLfloat' ] => 'void' );
-  $ffi->attach( glColor3iv => [ 'GLint' ] => 'void' );
-  $ffi->attach( glColor3sv => [ 'GLshort' ] => 'void' );
-  $ffi->attach( glColor3ubv => [ 'GLubyte' ] => 'void' );
-  $ffi->attach( glColor3uiv => [ 'GLuint' ] => 'void' );
-  $ffi->attach( glColor3usv => [ 'GLushort' ] => 'void' );
-  $ffi->attach( glColor4bv => [ 'GLbyte' ] => 'void' );
-  $ffi->attach( glColor4dv => [ 'GLdouble' ] => 'void' );
-  $ffi->attach( glColor4fv => [ 'GLfloat' ] => 'void' );
-  $ffi->attach( glColor4iv => [ 'GLint' ] => 'void' );
-  $ffi->attach( glColor4sv => [ 'GLshort' ] => 'void' );
-  $ffi->attach( glColor4ubv => [ 'GLubyte' ] => 'void' );
-  $ffi->attach( glColor4uiv => [ 'GLuint' ] => 'void' );
-  $ffi->attach( glColor4usv => [ 'GLushort' ] => 'void' );
+  $ffi->attach( glColor3bv => [ 'GLbyte_array_3' ] => 'void' );
+  $ffi->attach( glColor3dv => [ 'GLdouble_array_3' ] => 'void' );
+  $ffi->attach( glColor3fv => [ 'GLfloat_array_3' ] => 'void' );
+  $ffi->attach( glColor3iv => [ 'GLint_array_3' ] => 'void' );
+  $ffi->attach( glColor3sv => [ 'GLshort_array_3' ] => 'void' );
+  $ffi->attach( glColor3ubv => [ 'GLubyte_array_3' ] => 'void' );
+  $ffi->attach( glColor3uiv => [ 'GLuint_array_3' ] => 'void' );
+  $ffi->attach( glColor3usv => [ 'GLushort_array_3' ] => 'void' );
+  $ffi->attach( glColor4bv => [ 'GLbyte_array_4' ] => 'void' );
+  $ffi->attach( glColor4dv => [ 'GLdouble_array_4' ] => 'void' );
+  $ffi->attach( glColor4fv => [ 'GLfloat_array_4' ] => 'void' );
+  $ffi->attach( glColor4iv => [ 'GLint_array_4' ] => 'void' );
+  $ffi->attach( glColor4sv => [ 'GLshort_array_4' ] => 'void' );
+  $ffi->attach( glColor4ubv => [ 'GLubyte_array_4' ] => 'void' );
+  $ffi->attach( glColor4uiv => [ 'GLuint_array_4' ] => 'void' );
+  $ffi->attach( glColor4usv => [ 'GLushort_array_4' ] => 'void' );
   $ffi->attach( glTexCoord1d => [ 'GLdouble' ] => 'void' );
   $ffi->attach( glTexCoord1f => [ 'GLfloat' ] => 'void' );
   $ffi->attach( glTexCoord1i => [ 'GLint' ] => 'void' );
@@ -5373,22 +5397,22 @@ package OpenGL::FFI::Mesa::GL {
   $ffi->attach( glTexCoord4f => [ 'GLfloat', 'GLfloat', 'GLfloat', 'GLfloat' ] => 'void' );
   $ffi->attach( glTexCoord4i => [ 'GLint', 'GLint', 'GLint', 'GLint' ] => 'void' );
   $ffi->attach( glTexCoord4s => [ 'GLshort', 'GLshort', 'GLshort', 'GLshort' ] => 'void' );
-  $ffi->attach( glTexCoord1dv => [ 'GLdouble' ] => 'void' );
-  $ffi->attach( glTexCoord1fv => [ 'GLfloat' ] => 'void' );
-  $ffi->attach( glTexCoord1iv => [ 'GLint' ] => 'void' );
-  $ffi->attach( glTexCoord1sv => [ 'GLshort' ] => 'void' );
-  $ffi->attach( glTexCoord2dv => [ 'GLdouble' ] => 'void' );
-  $ffi->attach( glTexCoord2fv => [ 'GLfloat' ] => 'void' );
-  $ffi->attach( glTexCoord2iv => [ 'GLint' ] => 'void' );
-  $ffi->attach( glTexCoord2sv => [ 'GLshort' ] => 'void' );
-  $ffi->attach( glTexCoord3dv => [ 'GLdouble' ] => 'void' );
-  $ffi->attach( glTexCoord3fv => [ 'GLfloat' ] => 'void' );
-  $ffi->attach( glTexCoord3iv => [ 'GLint' ] => 'void' );
-  $ffi->attach( glTexCoord3sv => [ 'GLshort' ] => 'void' );
-  $ffi->attach( glTexCoord4dv => [ 'GLdouble' ] => 'void' );
-  $ffi->attach( glTexCoord4fv => [ 'GLfloat' ] => 'void' );
-  $ffi->attach( glTexCoord4iv => [ 'GLint' ] => 'void' );
-  $ffi->attach( glTexCoord4sv => [ 'GLshort' ] => 'void' );
+  $ffi->attach( glTexCoord1dv => [ 'GLdouble_array_1' ] => 'void' );
+  $ffi->attach( glTexCoord1fv => [ 'GLfloat_array_1' ] => 'void' );
+  $ffi->attach( glTexCoord1iv => [ 'GLint_array_1' ] => 'void' );
+  $ffi->attach( glTexCoord1sv => [ 'GLshort_array_1' ] => 'void' );
+  $ffi->attach( glTexCoord2dv => [ 'GLdouble_array_2' ] => 'void' );
+  $ffi->attach( glTexCoord2fv => [ 'GLfloat_array_2' ] => 'void' );
+  $ffi->attach( glTexCoord2iv => [ 'GLint_array_2' ] => 'void' );
+  $ffi->attach( glTexCoord2sv => [ 'GLshort_array_2' ] => 'void' );
+  $ffi->attach( glTexCoord3dv => [ 'GLdouble_array_3' ] => 'void' );
+  $ffi->attach( glTexCoord3fv => [ 'GLfloat_array_3' ] => 'void' );
+  $ffi->attach( glTexCoord3iv => [ 'GLint_array_3' ] => 'void' );
+  $ffi->attach( glTexCoord3sv => [ 'GLshort_array_3' ] => 'void' );
+  $ffi->attach( glTexCoord4dv => [ 'GLdouble_array_4' ] => 'void' );
+  $ffi->attach( glTexCoord4fv => [ 'GLfloat_array_4' ] => 'void' );
+  $ffi->attach( glTexCoord4iv => [ 'GLint_array_4' ] => 'void' );
+  $ffi->attach( glTexCoord4sv => [ 'GLshort_array_4' ] => 'void' );
   $ffi->attach( glRasterPos2d => [ 'GLdouble', 'GLdouble' ] => 'void' );
   $ffi->attach( glRasterPos2f => [ 'GLfloat', 'GLfloat' ] => 'void' );
   $ffi->attach( glRasterPos2i => [ 'GLint', 'GLint' ] => 'void' );
@@ -5401,18 +5425,18 @@ package OpenGL::FFI::Mesa::GL {
   $ffi->attach( glRasterPos4f => [ 'GLfloat', 'GLfloat', 'GLfloat', 'GLfloat' ] => 'void' );
   $ffi->attach( glRasterPos4i => [ 'GLint', 'GLint', 'GLint', 'GLint' ] => 'void' );
   $ffi->attach( glRasterPos4s => [ 'GLshort', 'GLshort', 'GLshort', 'GLshort' ] => 'void' );
-  $ffi->attach( glRasterPos2dv => [ 'GLdouble' ] => 'void' );
-  $ffi->attach( glRasterPos2fv => [ 'GLfloat' ] => 'void' );
-  $ffi->attach( glRasterPos2iv => [ 'GLint' ] => 'void' );
-  $ffi->attach( glRasterPos2sv => [ 'GLshort' ] => 'void' );
-  $ffi->attach( glRasterPos3dv => [ 'GLdouble' ] => 'void' );
-  $ffi->attach( glRasterPos3fv => [ 'GLfloat' ] => 'void' );
-  $ffi->attach( glRasterPos3iv => [ 'GLint' ] => 'void' );
-  $ffi->attach( glRasterPos3sv => [ 'GLshort' ] => 'void' );
-  $ffi->attach( glRasterPos4dv => [ 'GLdouble' ] => 'void' );
-  $ffi->attach( glRasterPos4fv => [ 'GLfloat' ] => 'void' );
-  $ffi->attach( glRasterPos4iv => [ 'GLint' ] => 'void' );
-  $ffi->attach( glRasterPos4sv => [ 'GLshort' ] => 'void' );
+  $ffi->attach( glRasterPos2dv => [ 'GLdouble_array_2' ] => 'void' );
+  $ffi->attach( glRasterPos2fv => [ 'GLfloat_array_2' ] => 'void' );
+  $ffi->attach( glRasterPos2iv => [ 'GLint_array_2' ] => 'void' );
+  $ffi->attach( glRasterPos2sv => [ 'GLshort_array_2' ] => 'void' );
+  $ffi->attach( glRasterPos3dv => [ 'GLdouble_array_3' ] => 'void' );
+  $ffi->attach( glRasterPos3fv => [ 'GLfloat_array_3' ] => 'void' );
+  $ffi->attach( glRasterPos3iv => [ 'GLint_array_3' ] => 'void' );
+  $ffi->attach( glRasterPos3sv => [ 'GLshort_array_3' ] => 'void' );
+  $ffi->attach( glRasterPos4dv => [ 'GLdouble_array_4' ] => 'void' );
+  $ffi->attach( glRasterPos4fv => [ 'GLfloat_array_4' ] => 'void' );
+  $ffi->attach( glRasterPos4iv => [ 'GLint_array_4' ] => 'void' );
+  $ffi->attach( glRasterPos4sv => [ 'GLshort_array_4' ] => 'void' );
   $ffi->attach( glRectd => [ 'GLdouble', 'GLdouble', 'GLdouble', 'GLdouble' ] => 'void' );
   $ffi->attach( glRectf => [ 'GLfloat', 'GLfloat', 'GLfloat', 'GLfloat' ] => 'void' );
   $ffi->attach( glRecti => [ 'GLint', 'GLint', 'GLint', 'GLint' ] => 'void' );
@@ -5516,12 +5540,12 @@ package OpenGL::FFI::Mesa::GL {
   $ffi->attach( glGetMapiv => [ 'GLenum', 'GLenum', 'GLint' ] => 'void' );
   $ffi->attach( glEvalCoord1d => [ 'GLdouble' ] => 'void' );
   $ffi->attach( glEvalCoord1f => [ 'GLfloat' ] => 'void' );
-  $ffi->attach( glEvalCoord1dv => [ 'GLdouble' ] => 'void' );
-  $ffi->attach( glEvalCoord1fv => [ 'GLfloat' ] => 'void' );
+  $ffi->attach( glEvalCoord1dv => [ 'GLdouble_array_1' ] => 'void' );
+  $ffi->attach( glEvalCoord1fv => [ 'GLfloat_array_1' ] => 'void' );
   $ffi->attach( glEvalCoord2d => [ 'GLdouble', 'GLdouble' ] => 'void' );
   $ffi->attach( glEvalCoord2f => [ 'GLfloat', 'GLfloat' ] => 'void' );
-  $ffi->attach( glEvalCoord2dv => [ 'GLdouble' ] => 'void' );
-  $ffi->attach( glEvalCoord2fv => [ 'GLfloat' ] => 'void' );
+  $ffi->attach( glEvalCoord2dv => [ 'GLdouble_array_2' ] => 'void' );
+  $ffi->attach( glEvalCoord2fv => [ 'GLfloat_array_2' ] => 'void' );
   $ffi->attach( glMapGrid1d => [ 'GLint', 'GLdouble', 'GLdouble' ] => 'void' );
   $ffi->attach( glMapGrid1f => [ 'GLint', 'GLfloat', 'GLfloat' ] => 'void' );
   $ffi->attach( glMapGrid2d => [ 'GLint', 'GLdouble', 'GLdouble', 'GLint', 'GLdouble', 'GLdouble' ] => 'void' );
@@ -5589,37 +5613,37 @@ package OpenGL::FFI::Mesa::GL {
   $ffi->attach( glCompressedTexSubImage3D => [ 'GLenum', 'GLint', 'GLint', 'GLint', 'GLint', 'GLsizei', 'GLsizei', 'GLsizei', 'GLenum', 'GLsizei', 'GLvoid' ] => 'void' );
   $ffi->attach( glGetCompressedTexImage => [ 'GLenum', 'GLint', 'GLvoid' ] => 'void' );
   $ffi->attach( glMultiTexCoord1d => [ 'GLenum', 'GLdouble' ] => 'void' );
-  $ffi->attach( glMultiTexCoord1dv => [ 'GLenum', 'GLdouble' ] => 'void' );
+  $ffi->attach( glMultiTexCoord1dv => [ 'GLenum', 'GLdouble_array_1' ] => 'void' );
   $ffi->attach( glMultiTexCoord1f => [ 'GLenum', 'GLfloat' ] => 'void' );
-  $ffi->attach( glMultiTexCoord1fv => [ 'GLenum', 'GLfloat' ] => 'void' );
+  $ffi->attach( glMultiTexCoord1fv => [ 'GLenum', 'GLfloat_array_1' ] => 'void' );
   $ffi->attach( glMultiTexCoord1i => [ 'GLenum', 'GLint' ] => 'void' );
-  $ffi->attach( glMultiTexCoord1iv => [ 'GLenum', 'GLint' ] => 'void' );
+  $ffi->attach( glMultiTexCoord1iv => [ 'GLenum', 'GLint_array_1' ] => 'void' );
   $ffi->attach( glMultiTexCoord1s => [ 'GLenum', 'GLshort' ] => 'void' );
-  $ffi->attach( glMultiTexCoord1sv => [ 'GLenum', 'GLshort' ] => 'void' );
+  $ffi->attach( glMultiTexCoord1sv => [ 'GLenum', 'GLshort_array_1' ] => 'void' );
   $ffi->attach( glMultiTexCoord2d => [ 'GLenum', 'GLdouble', 'GLdouble' ] => 'void' );
-  $ffi->attach( glMultiTexCoord2dv => [ 'GLenum', 'GLdouble' ] => 'void' );
+  $ffi->attach( glMultiTexCoord2dv => [ 'GLenum', 'GLdouble_array_2' ] => 'void' );
   $ffi->attach( glMultiTexCoord2f => [ 'GLenum', 'GLfloat', 'GLfloat' ] => 'void' );
-  $ffi->attach( glMultiTexCoord2fv => [ 'GLenum', 'GLfloat' ] => 'void' );
+  $ffi->attach( glMultiTexCoord2fv => [ 'GLenum', 'GLfloat_array_2' ] => 'void' );
   $ffi->attach( glMultiTexCoord2i => [ 'GLenum', 'GLint', 'GLint' ] => 'void' );
-  $ffi->attach( glMultiTexCoord2iv => [ 'GLenum', 'GLint' ] => 'void' );
+  $ffi->attach( glMultiTexCoord2iv => [ 'GLenum', 'GLint_array_2' ] => 'void' );
   $ffi->attach( glMultiTexCoord2s => [ 'GLenum', 'GLshort', 'GLshort' ] => 'void' );
-  $ffi->attach( glMultiTexCoord2sv => [ 'GLenum', 'GLshort' ] => 'void' );
+  $ffi->attach( glMultiTexCoord2sv => [ 'GLenum', 'GLshort_array_2' ] => 'void' );
   $ffi->attach( glMultiTexCoord3d => [ 'GLenum', 'GLdouble', 'GLdouble', 'GLdouble' ] => 'void' );
-  $ffi->attach( glMultiTexCoord3dv => [ 'GLenum', 'GLdouble' ] => 'void' );
+  $ffi->attach( glMultiTexCoord3dv => [ 'GLenum', 'GLdouble_array_3' ] => 'void' );
   $ffi->attach( glMultiTexCoord3f => [ 'GLenum', 'GLfloat', 'GLfloat', 'GLfloat' ] => 'void' );
-  $ffi->attach( glMultiTexCoord3fv => [ 'GLenum', 'GLfloat' ] => 'void' );
+  $ffi->attach( glMultiTexCoord3fv => [ 'GLenum', 'GLfloat_array_3' ] => 'void' );
   $ffi->attach( glMultiTexCoord3i => [ 'GLenum', 'GLint', 'GLint', 'GLint' ] => 'void' );
-  $ffi->attach( glMultiTexCoord3iv => [ 'GLenum', 'GLint' ] => 'void' );
+  $ffi->attach( glMultiTexCoord3iv => [ 'GLenum', 'GLint_array_3' ] => 'void' );
   $ffi->attach( glMultiTexCoord3s => [ 'GLenum', 'GLshort', 'GLshort', 'GLshort' ] => 'void' );
-  $ffi->attach( glMultiTexCoord3sv => [ 'GLenum', 'GLshort' ] => 'void' );
+  $ffi->attach( glMultiTexCoord3sv => [ 'GLenum', 'GLshort_array_3' ] => 'void' );
   $ffi->attach( glMultiTexCoord4d => [ 'GLenum', 'GLdouble', 'GLdouble', 'GLdouble', 'GLdouble' ] => 'void' );
-  $ffi->attach( glMultiTexCoord4dv => [ 'GLenum', 'GLdouble' ] => 'void' );
+  $ffi->attach( glMultiTexCoord4dv => [ 'GLenum', 'GLdouble_array_4' ] => 'void' );
   $ffi->attach( glMultiTexCoord4f => [ 'GLenum', 'GLfloat', 'GLfloat', 'GLfloat', 'GLfloat' ] => 'void' );
-  $ffi->attach( glMultiTexCoord4fv => [ 'GLenum', 'GLfloat' ] => 'void' );
+  $ffi->attach( glMultiTexCoord4fv => [ 'GLenum', 'GLfloat_array_4' ] => 'void' );
   $ffi->attach( glMultiTexCoord4i => [ 'GLenum', 'GLint', 'GLint', 'GLint', 'GLint' ] => 'void' );
-  $ffi->attach( glMultiTexCoord4iv => [ 'GLenum', 'GLint' ] => 'void' );
+  $ffi->attach( glMultiTexCoord4iv => [ 'GLenum', 'GLint_array_4' ] => 'void' );
   $ffi->attach( glMultiTexCoord4s => [ 'GLenum', 'GLshort', 'GLshort', 'GLshort', 'GLshort' ] => 'void' );
-  $ffi->attach( glMultiTexCoord4sv => [ 'GLenum', 'GLshort' ] => 'void' );
+  $ffi->attach( glMultiTexCoord4sv => [ 'GLenum', 'GLshort_array_4' ] => 'void' );
   $ffi->attach( glLoadTransposeMatrixd => [ 'GLdouble' ] => 'void' );
   $ffi->attach( glLoadTransposeMatrixf => [ 'GLfloat' ] => 'void' );
   $ffi->attach( glMultTransposeMatrixd => [ 'GLdouble' ] => 'void' );
@@ -5628,37 +5652,37 @@ package OpenGL::FFI::Mesa::GL {
   $ffi->attach( glActiveTextureARB => [ 'GLenum' ] => 'void' );
   $ffi->attach( glClientActiveTextureARB => [ 'GLenum' ] => 'void' );
   $ffi->attach( glMultiTexCoord1dARB => [ 'GLenum', 'GLdouble' ] => 'void' );
-  $ffi->attach( glMultiTexCoord1dvARB => [ 'GLenum', 'GLdouble' ] => 'void' );
+  $ffi->attach( glMultiTexCoord1dvARB => [ 'GLenum', 'GLdouble_array_1' ] => 'void' );
   $ffi->attach( glMultiTexCoord1fARB => [ 'GLenum', 'GLfloat' ] => 'void' );
-  $ffi->attach( glMultiTexCoord1fvARB => [ 'GLenum', 'GLfloat' ] => 'void' );
+  $ffi->attach( glMultiTexCoord1fvARB => [ 'GLenum', 'GLfloat_array_1' ] => 'void' );
   $ffi->attach( glMultiTexCoord1iARB => [ 'GLenum', 'GLint' ] => 'void' );
-  $ffi->attach( glMultiTexCoord1ivARB => [ 'GLenum', 'GLint' ] => 'void' );
+  $ffi->attach( glMultiTexCoord1ivARB => [ 'GLenum', 'GLint_array_1' ] => 'void' );
   $ffi->attach( glMultiTexCoord1sARB => [ 'GLenum', 'GLshort' ] => 'void' );
-  $ffi->attach( glMultiTexCoord1svARB => [ 'GLenum', 'GLshort' ] => 'void' );
+  $ffi->attach( glMultiTexCoord1svARB => [ 'GLenum', 'GLshort_array_1' ] => 'void' );
   $ffi->attach( glMultiTexCoord2dARB => [ 'GLenum', 'GLdouble', 'GLdouble' ] => 'void' );
-  $ffi->attach( glMultiTexCoord2dvARB => [ 'GLenum', 'GLdouble' ] => 'void' );
+  $ffi->attach( glMultiTexCoord2dvARB => [ 'GLenum', 'GLdouble_array_2' ] => 'void' );
   $ffi->attach( glMultiTexCoord2fARB => [ 'GLenum', 'GLfloat', 'GLfloat' ] => 'void' );
-  $ffi->attach( glMultiTexCoord2fvARB => [ 'GLenum', 'GLfloat' ] => 'void' );
+  $ffi->attach( glMultiTexCoord2fvARB => [ 'GLenum', 'GLfloat_array_2' ] => 'void' );
   $ffi->attach( glMultiTexCoord2iARB => [ 'GLenum', 'GLint', 'GLint' ] => 'void' );
-  $ffi->attach( glMultiTexCoord2ivARB => [ 'GLenum', 'GLint' ] => 'void' );
+  $ffi->attach( glMultiTexCoord2ivARB => [ 'GLenum', 'GLint_array_2' ] => 'void' );
   $ffi->attach( glMultiTexCoord2sARB => [ 'GLenum', 'GLshort', 'GLshort' ] => 'void' );
-  $ffi->attach( glMultiTexCoord2svARB => [ 'GLenum', 'GLshort' ] => 'void' );
+  $ffi->attach( glMultiTexCoord2svARB => [ 'GLenum', 'GLshort_array_2' ] => 'void' );
   $ffi->attach( glMultiTexCoord3dARB => [ 'GLenum', 'GLdouble', 'GLdouble', 'GLdouble' ] => 'void' );
-  $ffi->attach( glMultiTexCoord3dvARB => [ 'GLenum', 'GLdouble' ] => 'void' );
+  $ffi->attach( glMultiTexCoord3dvARB => [ 'GLenum', 'GLdouble_array_3' ] => 'void' );
   $ffi->attach( glMultiTexCoord3fARB => [ 'GLenum', 'GLfloat', 'GLfloat', 'GLfloat' ] => 'void' );
-  $ffi->attach( glMultiTexCoord3fvARB => [ 'GLenum', 'GLfloat' ] => 'void' );
+  $ffi->attach( glMultiTexCoord3fvARB => [ 'GLenum', 'GLfloat_array_3' ] => 'void' );
   $ffi->attach( glMultiTexCoord3iARB => [ 'GLenum', 'GLint', 'GLint', 'GLint' ] => 'void' );
-  $ffi->attach( glMultiTexCoord3ivARB => [ 'GLenum', 'GLint' ] => 'void' );
+  $ffi->attach( glMultiTexCoord3ivARB => [ 'GLenum', 'GLint_array_3' ] => 'void' );
   $ffi->attach( glMultiTexCoord3sARB => [ 'GLenum', 'GLshort', 'GLshort', 'GLshort' ] => 'void' );
-  $ffi->attach( glMultiTexCoord3svARB => [ 'GLenum', 'GLshort' ] => 'void' );
+  $ffi->attach( glMultiTexCoord3svARB => [ 'GLenum', 'GLshort_array_3' ] => 'void' );
   $ffi->attach( glMultiTexCoord4dARB => [ 'GLenum', 'GLdouble', 'GLdouble', 'GLdouble', 'GLdouble' ] => 'void' );
-  $ffi->attach( glMultiTexCoord4dvARB => [ 'GLenum', 'GLdouble' ] => 'void' );
+  $ffi->attach( glMultiTexCoord4dvARB => [ 'GLenum', 'GLdouble_array_4' ] => 'void' );
   $ffi->attach( glMultiTexCoord4fARB => [ 'GLenum', 'GLfloat', 'GLfloat', 'GLfloat', 'GLfloat' ] => 'void' );
-  $ffi->attach( glMultiTexCoord4fvARB => [ 'GLenum', 'GLfloat' ] => 'void' );
+  $ffi->attach( glMultiTexCoord4fvARB => [ 'GLenum', 'GLfloat_array_4' ] => 'void' );
   $ffi->attach( glMultiTexCoord4iARB => [ 'GLenum', 'GLint', 'GLint', 'GLint', 'GLint' ] => 'void' );
-  $ffi->attach( glMultiTexCoord4ivARB => [ 'GLenum', 'GLint' ] => 'void' );
+  $ffi->attach( glMultiTexCoord4ivARB => [ 'GLenum', 'GLint_array_4' ] => 'void' );
   $ffi->attach( glMultiTexCoord4sARB => [ 'GLenum', 'GLshort', 'GLshort', 'GLshort', 'GLshort' ] => 'void' );
-  $ffi->attach( glMultiTexCoord4svARB => [ 'GLenum', 'GLshort' ] => 'void' );
+  $ffi->attach( glMultiTexCoord4svARB => [ 'GLenum', 'GLshort_array_4' ] => 'void' );
   $ffi->attach( glBlendEquationSeparateATI => [ 'GLenum', 'GLenum' ] => 'void' );
 
 }
@@ -16113,19 +16137,19 @@ too.
 
 =head2 glGetBooleanv
 
- glGetBooleanv($pname, $params)
+ glGetBooleanv($pname, \@params)
 
 =head2 glGetDoublev
 
- glGetDoublev($pname, $params)
+ glGetDoublev($pname, \@params)
 
 =head2 glGetFloatv
 
- glGetFloatv($pname, $params)
+ glGetFloatv($pname, \@params)
 
 =head2 glGetIntegerv
 
- glGetIntegerv($pname, $params)
+ glGetIntegerv($pname, \@params)
 
 =head2 glPushAttrib
 
@@ -16349,51 +16373,51 @@ too.
 
 =head2 glVertex2dv
 
- glVertex2dv($*v)
+ glVertex2dv(\@v)
 
 =head2 glVertex2fv
 
- glVertex2fv($*v)
+ glVertex2fv(\@v)
 
 =head2 glVertex2iv
 
- glVertex2iv($*v)
+ glVertex2iv(\@v)
 
 =head2 glVertex2sv
 
- glVertex2sv($*v)
+ glVertex2sv(\@v)
 
 =head2 glVertex3dv
 
- glVertex3dv($*v)
+ glVertex3dv(\@v)
 
 =head2 glVertex3fv
 
- glVertex3fv($*v)
+ glVertex3fv(\@v)
 
 =head2 glVertex3iv
 
- glVertex3iv($*v)
+ glVertex3iv(\@v)
 
 =head2 glVertex3sv
 
- glVertex3sv($*v)
+ glVertex3sv(\@v)
 
 =head2 glVertex4dv
 
- glVertex4dv($*v)
+ glVertex4dv(\@v)
 
 =head2 glVertex4fv
 
- glVertex4fv($*v)
+ glVertex4fv(\@v)
 
 =head2 glVertex4iv
 
- glVertex4iv($*v)
+ glVertex4iv(\@v)
 
 =head2 glVertex4sv
 
- glVertex4sv($*v)
+ glVertex4sv(\@v)
 
 =head2 glNormal3b
 
@@ -16417,23 +16441,23 @@ too.
 
 =head2 glNormal3bv
 
- glNormal3bv($*v)
+ glNormal3bv(\@v)
 
 =head2 glNormal3dv
 
- glNormal3dv($*v)
+ glNormal3dv(\@v)
 
 =head2 glNormal3fv
 
- glNormal3fv($*v)
+ glNormal3fv(\@v)
 
 =head2 glNormal3iv
 
- glNormal3iv($*v)
+ glNormal3iv(\@v)
 
 =head2 glNormal3sv
 
- glNormal3sv($*v)
+ glNormal3sv(\@v)
 
 =head2 glIndexd
 
@@ -16541,67 +16565,67 @@ too.
 
 =head2 glColor3bv
 
- glColor3bv($*v)
+ glColor3bv(\@v)
 
 =head2 glColor3dv
 
- glColor3dv($*v)
+ glColor3dv(\@v)
 
 =head2 glColor3fv
 
- glColor3fv($*v)
+ glColor3fv(\@v)
 
 =head2 glColor3iv
 
- glColor3iv($*v)
+ glColor3iv(\@v)
 
 =head2 glColor3sv
 
- glColor3sv($*v)
+ glColor3sv(\@v)
 
 =head2 glColor3ubv
 
- glColor3ubv($*v)
+ glColor3ubv(\@v)
 
 =head2 glColor3uiv
 
- glColor3uiv($*v)
+ glColor3uiv(\@v)
 
 =head2 glColor3usv
 
- glColor3usv($*v)
+ glColor3usv(\@v)
 
 =head2 glColor4bv
 
- glColor4bv($*v)
+ glColor4bv(\@v)
 
 =head2 glColor4dv
 
- glColor4dv($*v)
+ glColor4dv(\@v)
 
 =head2 glColor4fv
 
- glColor4fv($*v)
+ glColor4fv(\@v)
 
 =head2 glColor4iv
 
- glColor4iv($*v)
+ glColor4iv(\@v)
 
 =head2 glColor4sv
 
- glColor4sv($*v)
+ glColor4sv(\@v)
 
 =head2 glColor4ubv
 
- glColor4ubv($*v)
+ glColor4ubv(\@v)
 
 =head2 glColor4uiv
 
- glColor4uiv($*v)
+ glColor4uiv(\@v)
 
 =head2 glColor4usv
 
- glColor4usv($*v)
+ glColor4usv(\@v)
 
 =head2 glTexCoord1d
 
@@ -16669,67 +16693,67 @@ too.
 
 =head2 glTexCoord1dv
 
- glTexCoord1dv($*v)
+ glTexCoord1dv(\@v)
 
 =head2 glTexCoord1fv
 
- glTexCoord1fv($*v)
+ glTexCoord1fv(\@v)
 
 =head2 glTexCoord1iv
 
- glTexCoord1iv($*v)
+ glTexCoord1iv(\@v)
 
 =head2 glTexCoord1sv
 
- glTexCoord1sv($*v)
+ glTexCoord1sv(\@v)
 
 =head2 glTexCoord2dv
 
- glTexCoord2dv($*v)
+ glTexCoord2dv(\@v)
 
 =head2 glTexCoord2fv
 
- glTexCoord2fv($*v)
+ glTexCoord2fv(\@v)
 
 =head2 glTexCoord2iv
 
- glTexCoord2iv($*v)
+ glTexCoord2iv(\@v)
 
 =head2 glTexCoord2sv
 
- glTexCoord2sv($*v)
+ glTexCoord2sv(\@v)
 
 =head2 glTexCoord3dv
 
- glTexCoord3dv($*v)
+ glTexCoord3dv(\@v)
 
 =head2 glTexCoord3fv
 
- glTexCoord3fv($*v)
+ glTexCoord3fv(\@v)
 
 =head2 glTexCoord3iv
 
- glTexCoord3iv($*v)
+ glTexCoord3iv(\@v)
 
 =head2 glTexCoord3sv
 
- glTexCoord3sv($*v)
+ glTexCoord3sv(\@v)
 
 =head2 glTexCoord4dv
 
- glTexCoord4dv($*v)
+ glTexCoord4dv(\@v)
 
 =head2 glTexCoord4fv
 
- glTexCoord4fv($*v)
+ glTexCoord4fv(\@v)
 
 =head2 glTexCoord4iv
 
- glTexCoord4iv($*v)
+ glTexCoord4iv(\@v)
 
 =head2 glTexCoord4sv
 
- glTexCoord4sv($*v)
+ glTexCoord4sv(\@v)
 
 =head2 glRasterPos2d
 
@@ -16781,51 +16805,51 @@ too.
 
 =head2 glRasterPos2dv
 
- glRasterPos2dv($*v)
+ glRasterPos2dv(\@v)
 
 =head2 glRasterPos2fv
 
- glRasterPos2fv($*v)
+ glRasterPos2fv(\@v)
 
 =head2 glRasterPos2iv
 
- glRasterPos2iv($*v)
+ glRasterPos2iv(\@v)
 
 =head2 glRasterPos2sv
 
- glRasterPos2sv($*v)
+ glRasterPos2sv(\@v)
 
 =head2 glRasterPos3dv
 
- glRasterPos3dv($*v)
+ glRasterPos3dv(\@v)
 
 =head2 glRasterPos3fv
 
- glRasterPos3fv($*v)
+ glRasterPos3fv(\@v)
 
 =head2 glRasterPos3iv
 
- glRasterPos3iv($*v)
+ glRasterPos3iv(\@v)
 
 =head2 glRasterPos3sv
 
- glRasterPos3sv($*v)
+ glRasterPos3sv(\@v)
 
 =head2 glRasterPos4dv
 
- glRasterPos4dv($*v)
+ glRasterPos4dv(\@v)
 
 =head2 glRasterPos4fv
 
- glRasterPos4fv($*v)
+ glRasterPos4fv(\@v)
 
 =head2 glRasterPos4iv
 
- glRasterPos4iv($*v)
+ glRasterPos4iv(\@v)
 
 =head2 glRasterPos4sv
 
- glRasterPos4sv($*v)
+ glRasterPos4sv(\@v)
 
 =head2 glRectd
 
@@ -16917,19 +16941,19 @@ too.
 
 =head2 glLightfv
 
- glLightfv($light, $pname, $params)
+ glLightfv($light, $pname, \@params)
 
 =head2 glLightiv
 
- glLightiv($light, $pname, $params)
+ glLightiv($light, $pname, \@params)
 
 =head2 glGetLightfv
 
- glGetLightfv($light, $pname, $params)
+ glGetLightfv($light, $pname, \@params)
 
 =head2 glGetLightiv
 
- glGetLightiv($light, $pname, $params)
+ glGetLightiv($light, $pname, \@params)
 
 =head2 glLightModelf
 
@@ -16941,11 +16965,11 @@ too.
 
 =head2 glLightModelfv
 
- glLightModelfv($pname, $params)
+ glLightModelfv($pname, \@params)
 
 =head2 glLightModeliv
 
- glLightModeliv($pname, $params)
+ glLightModeliv($pname, \@params)
 
 =head2 glMaterialf
 
@@ -16957,19 +16981,19 @@ too.
 
 =head2 glMaterialfv
 
- glMaterialfv($face, $pname, $params)
+ glMaterialfv($face, $pname, \@params)
 
 =head2 glMaterialiv
 
- glMaterialiv($face, $pname, $params)
+ glMaterialiv($face, $pname, \@params)
 
 =head2 glGetMaterialfv
 
- glGetMaterialfv($face, $pname, $params)
+ glGetMaterialfv($face, $pname, \@params)
 
 =head2 glGetMaterialiv
 
- glGetMaterialiv($face, $pname, $params)
+ glGetMaterialiv($face, $pname, \@params)
 
 =head2 glColorMaterial
 
@@ -17065,27 +17089,27 @@ too.
 
 =head2 glTexGendv
 
- glTexGendv($coord, $pname, $params)
+ glTexGendv($coord, $pname, \@params)
 
 =head2 glTexGenfv
 
- glTexGenfv($coord, $pname, $params)
+ glTexGenfv($coord, $pname, \@params)
 
 =head2 glTexGeniv
 
- glTexGeniv($coord, $pname, $params)
+ glTexGeniv($coord, $pname, \@params)
 
 =head2 glGetTexGendv
 
- glGetTexGendv($coord, $pname, $params)
+ glGetTexGendv($coord, $pname, \@params)
 
 =head2 glGetTexGenfv
 
- glGetTexGenfv($coord, $pname, $params)
+ glGetTexGenfv($coord, $pname, \@params)
 
 =head2 glGetTexGeniv
 
- glGetTexGeniv($coord, $pname, $params)
+ glGetTexGeniv($coord, $pname, \@params)
 
 =head2 glTexEnvf
 
@@ -17097,19 +17121,19 @@ too.
 
 =head2 glTexEnvfv
 
- glTexEnvfv($target, $pname, $params)
+ glTexEnvfv($target, $pname, \@params)
 
 =head2 glTexEnviv
 
- glTexEnviv($target, $pname, $params)
+ glTexEnviv($target, $pname, \@params)
 
 =head2 glGetTexEnvfv
 
- glGetTexEnvfv($target, $pname, $params)
+ glGetTexEnvfv($target, $pname, \@params)
 
 =head2 glGetTexEnviv
 
- glGetTexEnviv($target, $pname, $params)
+ glGetTexEnviv($target, $pname, \@params)
 
 =head2 glTexParameterf
 
@@ -17121,27 +17145,27 @@ too.
 
 =head2 glTexParameterfv
 
- glTexParameterfv($target, $pname, $params)
+ glTexParameterfv($target, $pname, \@params)
 
 =head2 glTexParameteriv
 
- glTexParameteriv($target, $pname, $params)
+ glTexParameteriv($target, $pname, \@params)
 
 =head2 glGetTexParameterfv
 
- glGetTexParameterfv($target, $pname, $params)
+ glGetTexParameterfv($target, $pname, \@params)
 
 =head2 glGetTexParameteriv
 
- glGetTexParameteriv($target, $pname, $params)
+ glGetTexParameteriv($target, $pname, \@params)
 
 =head2 glGetTexLevelParameterfv
 
- glGetTexLevelParameterfv($target, $level, $pname, $params)
+ glGetTexLevelParameterfv($target, $level, $pname, \@params)
 
 =head2 glGetTexLevelParameteriv
 
- glGetTexLevelParameteriv($target, $level, $pname, $params)
+ glGetTexLevelParameteriv($target, $level, $pname, \@params)
 
 =head2 glTexImage1D
 
@@ -17241,11 +17265,11 @@ too.
 
 =head2 glEvalCoord1dv
 
- glEvalCoord1dv($*u)
+ glEvalCoord1dv(\@u)
 
 =head2 glEvalCoord1fv
 
- glEvalCoord1fv($*u)
+ glEvalCoord1fv(\@u)
 
 =head2 glEvalCoord2d
 
@@ -17257,11 +17281,11 @@ too.
 
 =head2 glEvalCoord2dv
 
- glEvalCoord2dv($*u)
+ glEvalCoord2dv(\@u)
 
 =head2 glEvalCoord2fv
 
- glEvalCoord2fv($*u)
+ glEvalCoord2fv(\@u)
 
 =head2 glMapGrid1d
 
@@ -17305,11 +17329,11 @@ too.
 
 =head2 glFogfv
 
- glFogfv($pname, $params)
+ glFogfv($pname, \@params)
 
 =head2 glFogiv
 
- glFogiv($pname, $params)
+ glFogiv($pname, \@params)
 
 =head2 glFeedbackBuffer
 
@@ -17365,11 +17389,11 @@ too.
 
 =head2 glColorTableParameteriv
 
- glColorTableParameteriv($target, $pname, $params)
+ glColorTableParameteriv($target, $pname, \@params)
 
 =head2 glColorTableParameterfv
 
- glColorTableParameterfv($target, $pname, $params)
+ glColorTableParameterfv($target, $pname, \@params)
 
 =head2 glCopyColorSubTable
 
@@ -17385,11 +17409,11 @@ too.
 
 =head2 glGetColorTableParameterfv
 
- glGetColorTableParameterfv($target, $pname, $params)
+ glGetColorTableParameterfv($target, $pname, \@params)
 
 =head2 glGetColorTableParameteriv
 
- glGetColorTableParameteriv($target, $pname, $params)
+ glGetColorTableParameteriv($target, $pname, \@params)
 
 =head2 glBlendEquation
 
@@ -17413,11 +17437,11 @@ too.
 
 =head2 glGetHistogramParameterfv
 
- glGetHistogramParameterfv($target, $pname, $params)
+ glGetHistogramParameterfv($target, $pname, \@params)
 
 =head2 glGetHistogramParameteriv
 
- glGetHistogramParameteriv($target, $pname, $params)
+ glGetHistogramParameteriv($target, $pname, \@params)
 
 =head2 glMinmax
 
@@ -17433,11 +17457,11 @@ too.
 
 =head2 glGetMinmaxParameterfv
 
- glGetMinmaxParameterfv($target, $pname, $params)
+ glGetMinmaxParameterfv($target, $pname, \@params)
 
 =head2 glGetMinmaxParameteriv
 
- glGetMinmaxParameteriv($target, $pname, $params)
+ glGetMinmaxParameteriv($target, $pname, \@params)
 
 =head2 glConvolutionFilter1D
 
@@ -17453,7 +17477,7 @@ too.
 
 =head2 glConvolutionParameterfv
 
- glConvolutionParameterfv($target, $pname, $params)
+ glConvolutionParameterfv($target, $pname, \@params)
 
 =head2 glConvolutionParameteri
 
@@ -17461,7 +17485,7 @@ too.
 
 =head2 glConvolutionParameteriv
 
- glConvolutionParameteriv($target, $pname, $params)
+ glConvolutionParameteriv($target, $pname, \@params)
 
 =head2 glCopyConvolutionFilter1D
 
@@ -17477,11 +17501,11 @@ too.
 
 =head2 glGetConvolutionParameterfv
 
- glGetConvolutionParameterfv($target, $pname, $params)
+ glGetConvolutionParameterfv($target, $pname, \@params)
 
 =head2 glGetConvolutionParameteriv
 
- glGetConvolutionParameteriv($target, $pname, $params)
+ glGetConvolutionParameteriv($target, $pname, \@params)
 
 =head2 glSeparableFilter2D
 
@@ -17533,7 +17557,7 @@ too.
 
 =head2 glMultiTexCoord1dv
 
- glMultiTexCoord1dv($target, $*v)
+ glMultiTexCoord1dv($target, \@v)
 
 =head2 glMultiTexCoord1f
 
@@ -17541,7 +17565,7 @@ too.
 
 =head2 glMultiTexCoord1fv
 
- glMultiTexCoord1fv($target, $*v)
+ glMultiTexCoord1fv($target, \@v)
 
 =head2 glMultiTexCoord1i
 
@@ -17549,7 +17573,7 @@ too.
 
 =head2 glMultiTexCoord1iv
 
- glMultiTexCoord1iv($target, $*v)
+ glMultiTexCoord1iv($target, \@v)
 
 =head2 glMultiTexCoord1s
 
@@ -17557,7 +17581,7 @@ too.
 
 =head2 glMultiTexCoord1sv
 
- glMultiTexCoord1sv($target, $*v)
+ glMultiTexCoord1sv($target, \@v)
 
 =head2 glMultiTexCoord2d
 
@@ -17565,7 +17589,7 @@ too.
 
 =head2 glMultiTexCoord2dv
 
- glMultiTexCoord2dv($target, $*v)
+ glMultiTexCoord2dv($target, \@v)
 
 =head2 glMultiTexCoord2f
 
@@ -17573,7 +17597,7 @@ too.
 
 =head2 glMultiTexCoord2fv
 
- glMultiTexCoord2fv($target, $*v)
+ glMultiTexCoord2fv($target, \@v)
 
 =head2 glMultiTexCoord2i
 
@@ -17581,7 +17605,7 @@ too.
 
 =head2 glMultiTexCoord2iv
 
- glMultiTexCoord2iv($target, $*v)
+ glMultiTexCoord2iv($target, \@v)
 
 =head2 glMultiTexCoord2s
 
@@ -17589,7 +17613,7 @@ too.
 
 =head2 glMultiTexCoord2sv
 
- glMultiTexCoord2sv($target, $*v)
+ glMultiTexCoord2sv($target, \@v)
 
 =head2 glMultiTexCoord3d
 
@@ -17597,7 +17621,7 @@ too.
 
 =head2 glMultiTexCoord3dv
 
- glMultiTexCoord3dv($target, $*v)
+ glMultiTexCoord3dv($target, \@v)
 
 =head2 glMultiTexCoord3f
 
@@ -17605,7 +17629,7 @@ too.
 
 =head2 glMultiTexCoord3fv
 
- glMultiTexCoord3fv($target, $*v)
+ glMultiTexCoord3fv($target, \@v)
 
 =head2 glMultiTexCoord3i
 
@@ -17613,7 +17637,7 @@ too.
 
 =head2 glMultiTexCoord3iv
 
- glMultiTexCoord3iv($target, $*v)
+ glMultiTexCoord3iv($target, \@v)
 
 =head2 glMultiTexCoord3s
 
@@ -17621,7 +17645,7 @@ too.
 
 =head2 glMultiTexCoord3sv
 
- glMultiTexCoord3sv($target, $*v)
+ glMultiTexCoord3sv($target, \@v)
 
 =head2 glMultiTexCoord4d
 
@@ -17629,7 +17653,7 @@ too.
 
 =head2 glMultiTexCoord4dv
 
- glMultiTexCoord4dv($target, $*v)
+ glMultiTexCoord4dv($target, \@v)
 
 =head2 glMultiTexCoord4f
 
@@ -17637,7 +17661,7 @@ too.
 
 =head2 glMultiTexCoord4fv
 
- glMultiTexCoord4fv($target, $*v)
+ glMultiTexCoord4fv($target, \@v)
 
 =head2 glMultiTexCoord4i
 
@@ -17645,7 +17669,7 @@ too.
 
 =head2 glMultiTexCoord4iv
 
- glMultiTexCoord4iv($target, $*v)
+ glMultiTexCoord4iv($target, \@v)
 
 =head2 glMultiTexCoord4s
 
@@ -17653,7 +17677,7 @@ too.
 
 =head2 glMultiTexCoord4sv
 
- glMultiTexCoord4sv($target, $*v)
+ glMultiTexCoord4sv($target, \@v)
 
 =head2 glLoadTransposeMatrixd
 
@@ -17689,7 +17713,7 @@ too.
 
 =head2 glMultiTexCoord1dvARB
 
- glMultiTexCoord1dvARB($target, $*v)
+ glMultiTexCoord1dvARB($target, \@v)
 
 =head2 glMultiTexCoord1fARB
 
@@ -17697,7 +17721,7 @@ too.
 
 =head2 glMultiTexCoord1fvARB
 
- glMultiTexCoord1fvARB($target, $*v)
+ glMultiTexCoord1fvARB($target, \@v)
 
 =head2 glMultiTexCoord1iARB
 
@@ -17705,7 +17729,7 @@ too.
 
 =head2 glMultiTexCoord1ivARB
 
- glMultiTexCoord1ivARB($target, $*v)
+ glMultiTexCoord1ivARB($target, \@v)
 
 =head2 glMultiTexCoord1sARB
 
@@ -17713,7 +17737,7 @@ too.
 
 =head2 glMultiTexCoord1svARB
 
- glMultiTexCoord1svARB($target, $*v)
+ glMultiTexCoord1svARB($target, \@v)
 
 =head2 glMultiTexCoord2dARB
 
@@ -17721,7 +17745,7 @@ too.
 
 =head2 glMultiTexCoord2dvARB
 
- glMultiTexCoord2dvARB($target, $*v)
+ glMultiTexCoord2dvARB($target, \@v)
 
 =head2 glMultiTexCoord2fARB
 
@@ -17729,7 +17753,7 @@ too.
 
 =head2 glMultiTexCoord2fvARB
 
- glMultiTexCoord2fvARB($target, $*v)
+ glMultiTexCoord2fvARB($target, \@v)
 
 =head2 glMultiTexCoord2iARB
 
@@ -17737,7 +17761,7 @@ too.
 
 =head2 glMultiTexCoord2ivARB
 
- glMultiTexCoord2ivARB($target, $*v)
+ glMultiTexCoord2ivARB($target, \@v)
 
 =head2 glMultiTexCoord2sARB
 
@@ -17745,7 +17769,7 @@ too.
 
 =head2 glMultiTexCoord2svARB
 
- glMultiTexCoord2svARB($target, $*v)
+ glMultiTexCoord2svARB($target, \@v)
 
 =head2 glMultiTexCoord3dARB
 
@@ -17753,7 +17777,7 @@ too.
 
 =head2 glMultiTexCoord3dvARB
 
- glMultiTexCoord3dvARB($target, $*v)
+ glMultiTexCoord3dvARB($target, \@v)
 
 =head2 glMultiTexCoord3fARB
 
@@ -17761,7 +17785,7 @@ too.
 
 =head2 glMultiTexCoord3fvARB
 
- glMultiTexCoord3fvARB($target, $*v)
+ glMultiTexCoord3fvARB($target, \@v)
 
 =head2 glMultiTexCoord3iARB
 
@@ -17769,7 +17793,7 @@ too.
 
 =head2 glMultiTexCoord3ivARB
 
- glMultiTexCoord3ivARB($target, $*v)
+ glMultiTexCoord3ivARB($target, \@v)
 
 =head2 glMultiTexCoord3sARB
 
@@ -17777,7 +17801,7 @@ too.
 
 =head2 glMultiTexCoord3svARB
 
- glMultiTexCoord3svARB($target, $*v)
+ glMultiTexCoord3svARB($target, \@v)
 
 =head2 glMultiTexCoord4dARB
 
@@ -17785,7 +17809,7 @@ too.
 
 =head2 glMultiTexCoord4dvARB
 
- glMultiTexCoord4dvARB($target, $*v)
+ glMultiTexCoord4dvARB($target, \@v)
 
 =head2 glMultiTexCoord4fARB
 
@@ -17793,7 +17817,7 @@ too.
 
 =head2 glMultiTexCoord4fvARB
 
- glMultiTexCoord4fvARB($target, $*v)
+ glMultiTexCoord4fvARB($target, \@v)
 
 =head2 glMultiTexCoord4iARB
 
@@ -17801,7 +17825,7 @@ too.
 
 =head2 glMultiTexCoord4ivARB
 
- glMultiTexCoord4ivARB($target, $*v)
+ glMultiTexCoord4ivARB($target, \@v)
 
 =head2 glMultiTexCoord4sARB
 
@@ -17809,7 +17833,7 @@ too.
 
 =head2 glMultiTexCoord4svARB
 
- glMultiTexCoord4svARB($target, $*v)
+ glMultiTexCoord4svARB($target, \@v)
 
 =head2 glBlendEquationSeparateATI
 

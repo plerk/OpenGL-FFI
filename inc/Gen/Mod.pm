@@ -55,6 +55,25 @@ package Gen::Mod {
     return;
   }
   
+  sub find_typedef_by_alias
+  {
+    my($self, $alias) = @_;
+    foreach my $typedef (@{ $self->typedefs })
+    {
+      return $typedef if $typedef->alias eq $alias;
+    }
+    return;
+  }
+
+  sub lint
+  {
+    my($self) = @_;
+    foreach my $function (sort { $a->name cmp $b->name } @{ $self->functions })
+    {
+      $function->lint;
+    }
+  }
+  
 }
 
 package Gen::Constant {
@@ -125,10 +144,18 @@ package Gen::Function {
     $str .= $self->name . '(';
     
     $str .= join ', ', map {
-      $_->type =~ /\[\]$/ ? '\\@' . $_->name : '$' . $_->name
+      $_->type =~ /_array/ ? '\\@' . $_->name : '$' . $_->name
     } @{ $self->arguments };
 
     $str .= ")\n";
+  }
+  
+  sub lint {
+    my($self) = @_;
+    if(grep { $_->name =~ /\*/ } @{ $self->arguments })
+    {
+      say STDERR "LINT function ", $self->name, " has unmapped pointer arguments";
+    }
   }
   
 };
@@ -138,12 +165,12 @@ package Gen::ArgumentType {
   use Moo;
   
   has name => (
-    is       => 'ro',
+    is       => 'rw',
     required => 1,
   );
   
   has type => (
-    is       => 'ro',
+    is       => 'rw',
     required => 1,
   );
 
