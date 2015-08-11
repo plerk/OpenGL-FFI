@@ -13,7 +13,7 @@ package OpenGL::FFI {
 
   sub _get_ffi {
     state $ffi;
-    $ffi = FFI::Platypus->new unless defined $ffi;
+    $ffi = FFI::Platypus->new(ignore_not_found => 1) unless defined $ffi;
     $ffi;
   }
 

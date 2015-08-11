@@ -58,7 +58,7 @@ package OpenGL::FFI::FreeGLUT {
     
     sub set_closure {
       my($self, $name, $sub) = @_;
-      $self->closures->{$name} = $ffi->closure($sub);
+      $self->closures->{$name} = $ffi->closure(sub { goto \&$sub });
     }
     
     sub DESTROY {
