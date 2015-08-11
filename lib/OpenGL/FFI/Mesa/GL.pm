@@ -4,8 +4,7 @@ use 5.014;
 
 package OpenGL::FFI::Mesa::GL {
 
-  use FFI::Platypus ();
-  use FFI::CheckLib ();
+  use OpenGL::FFI ();
 
   use constant {
 
@@ -30943,13 +30942,8 @@ package OpenGL::FFI::Mesa::GL {
 
   };
   
-  our $ffi = FFI::Platypus->new(
-    ignore_not_found => 1,
-    lib => FFI::CheckLib::find_lib_or_die(
-      lib => 'GL',
-    ),
-  );
-
+  my $ffi = OpenGL::FFI::_get_ffi();
+  $ffi->lib(OpenGL::FFI::_find_lib('GL'));
   $ffi->type('unsigned int' => 'GLenum');
   $ffi->type('unsigned char' => 'GLboolean');
   $ffi->type('unsigned int' => 'GLbitfield');

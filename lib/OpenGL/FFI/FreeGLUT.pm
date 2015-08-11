@@ -4,19 +4,25 @@ use 5.014;
 
 package OpenGL::FFI::FreeGLUT {
 
-  use FFI::Platypus ();
-  use FFI::CheckLib ();
-  use OpenGL::FFI::Mesa::GL ();
+  use OpenGL::FFI;
   use constant {
     GLUT_DOUBLE => 0x0002,
     GLUT_RGB    => 0x0000,
   };
   
-  my $ffi = $OpenGL::FFI::Mesa::GL::ffi;
-  $ffi->lib( FFI::CheckLib::find_lib_or_die( lib => 'glut' ) );
+  my $ffi = OpenGL::FFI::_get_ffi();
+  $ffi->lib( OpenGL::FFI::_find_lib('GLUT') );
+  
   $ffi->load_custom_type('::StringArray' => 'string_array');
   
-  $ffi->attach( glutInit            => [ 'int*', 'string_array' ] => 'void' );
+  $ffi->attach( [glutInit=>'_glutInit'] => [ 'int*', 'string_array' ] => 'void');
+  
+  sub glutInit (\@) {
+    # TODO: update of @ARGV ?
+    my $size = scalar @{$_[0]};
+    _glutInit(\$size, $_[0]);
+  }
+  
   $ffi->attach( glutSolidCube       => [ 'GLdouble' ] => 'void' );
   $ffi->attach( glutSwapBuffers     => [] => 'void' );
   $ffi->attach( glutInitDisplayMode => [ 'unsigned int' ] => 'void' );
