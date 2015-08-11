@@ -33,17 +33,24 @@ sub display {
 }
 
 sub idle {
-  $x_rotated += 0.3;
-  $y_rotated += 0.1;
+  $x_rotated +=  0.3;
+  $y_rotated +=  0.1;
   $z_rotated += -0.4;
   display();
 }
 
-my $ffi = OpenGL::FFI::_get_ffi();
+sub reshape {
+  my($x,$y) = @_;
+  exit if $x == 0 || $y == 0;
+  glMatrixMode(GL_PROJECTION);
+  glLoadIdentity();
+  gluPerspective(30.0, $x / $y, 0.5, 20.0);
+  glMatrixMode(GL_MODELVIEW);
+  glViewport(0, 0, $x, $y);
+}
 
-our $display = $ffi->closure(\&display);
-glutDisplayFunc($display);
-our $idle = $ffi->closure(\&idle);
-glutIdleFunc($idle);
+glutDisplayFunc(\&display);
+glutIdleFunc(\&idle);
+glutReshapeFunc(\&reshape);
 
 glutMainLoop();
