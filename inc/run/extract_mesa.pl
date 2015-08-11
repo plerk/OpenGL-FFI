@@ -43,9 +43,9 @@ push @{ $mod->typedefs }, Gen::Typedef->new( type => $types->{$_} . '[]', alias 
   for qw( GLfloat GLdouble GLint GLboolean );
 
 my $header_text = file('/usr/include/GL/gl.h')->slurp;
-while($header_text =~ s/GLAPI\s+([a-zA-Z0-9]+)\s+GLAPIENTRY\s*(.+?);//s)
+while($header_text =~ s/GLAPI\s+(const\s+)?(?<return_type>[a-zA-Z0-9]+(\s*\*)?)\s+GLAPIENTRY\s*(?<rest>.+?);//s)
 {
-  my($return_type, $rest) = ($1,$2);
+  my($return_type, $rest) = ($+{return_type},$+{rest});
   
   if($rest =~ /^(gl[a-zA-Z0-9]+)\s*\(\s*(.*)\s*\)/s)
   {
@@ -70,6 +70,8 @@ while($header_text =~ s/GLAPI\s+([a-zA-Z0-9]+)\s+GLAPIENTRY\s*(.+?);//s)
     warn "function signature does not pattern that this script recognize: $rest";
   }
 }
+
+$mod->find_function_by_name('glGetString')->return_type('string');
 
 DumpFile("inc/data/OpenGL.FFI.Mesa.GL.yml", $mod);
 

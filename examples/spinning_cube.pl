@@ -26,6 +26,11 @@ glClearColor(0.0, 0.0, 0.0, 0.0);
 glutDisplayFunc(\&display);
 glutIdleFunc(\&idle);
 glutReshapeFunc(\&reshape);
+
+say "OpenGL Version: ", glGetString(GL_VERSION);
+say "Vendor:         ", glGetString(GL_VENDOR);
+say "Renderer:       ", glGetString(GL_RENDERER);
+
 glutMainLoop();
 
 sub display {

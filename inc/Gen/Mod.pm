@@ -11,6 +11,21 @@ package Gen::Mod {
     required => 1,
   );
 
+  foreach my $attr (qw( constants typedefs functions )) {
+    has $attr => (
+      is      => 'ro',
+      default => sub { [] },
+      lazy    => 1,
+    );
+  }
+  
+  foreach my $attr (qw( abstract synopsis description )) {
+    has $attr => (
+      is       => 'ro',
+      required => 1,
+    );
+  }
+
   sub path
   {
     my @list = split /::/, shift->package_name;
@@ -30,20 +45,16 @@ package Gen::Mod {
       || die $tt->error;
   }
   
-  foreach my $attr (qw( constants typedefs functions )) {
-    has $attr => (
-      is      => 'ro',
-      default => sub { [] },
-      lazy    => 1,
-    );
+  sub find_function_by_name
+  {
+    my($self, $name) = @_;
+    foreach my $function (@{ $self->functions })
+    {
+      return $function if $function->name eq $name;
+    }
+    return;
   }
   
-  foreach my $attr (qw( abstract synopsis description )) {
-    has $attr => (
-      is       => 'ro',
-      required => 1,
-    );
-  }
 }
 
 package Gen::Constant {
@@ -88,7 +99,7 @@ package Gen::Function {
   );
   
   has return_type => (
-    is       => 'ro',
+    is       => 'rw',
     required => 1,
   );
   

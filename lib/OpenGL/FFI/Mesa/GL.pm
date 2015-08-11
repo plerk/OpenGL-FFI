@@ -5244,6 +5244,7 @@ package OpenGL::FFI::Mesa::GL {
   $ffi->attach( glPopClientAttrib => [  ] => 'void' );
   $ffi->attach( glRenderMode => [ 'GLenum' ] => 'GLint' );
   $ffi->attach( glGetError => [  ] => 'GLenum' );
+  $ffi->attach( glGetString => [ 'GLenum' ] => 'string' );
   $ffi->attach( glFinish => [  ] => 'void' );
   $ffi->attach( glFlush => [  ] => 'void' );
   $ffi->attach( glHint => [ 'GLenum', 'GLenum' ] => 'void' );
@@ -16149,6 +16150,10 @@ too.
 =head2 glGetError
 
  my $GLenum = glGetError()
+
+=head2 glGetString
+
+ my $string = glGetString($name)
 
 =head2 glFinish
 
