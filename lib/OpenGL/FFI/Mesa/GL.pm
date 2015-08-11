@@ -30981,3637 +30981,3637 @@ package OpenGL::FFI::Mesa::GL {
   $ffi->type('unsigned char[]' => 'GLboolean_params');
 
 
-#=head1 FUNCTIONS
-#
-#=head2 glClearIndex
+=head1 FUNCTIONS
 
-# glClearIndex( $c, );
+=head2 glClearIndex
 
-#=cut
+ glClearIndex( $c, );
+
+=cut
 
   $ffi->attach( glClearIndex => [ 'GLfloat', ] => 'void' );
 
-#=head2 glClearColor
+=head2 glClearColor
 
-# glClearColor( $red, $green, $blue, $alpha, );
+ glClearColor( $red, $green, $blue, $alpha, );
 
-#=cut
+=cut
 
   $ffi->attach( glClearColor => [ 'GLclampf', 'GLclampf', 'GLclampf', 'GLclampf', ] => 'void' );
 
-#=head2 glClear
+=head2 glClear
 
-# glClear( $mask, );
+ glClear( $mask, );
 
-#=cut
+=cut
 
   $ffi->attach( glClear => [ 'GLbitfield', ] => 'void' );
 
-#=head2 glIndexMask
+=head2 glIndexMask
 
-# glIndexMask( $mask, );
+ glIndexMask( $mask, );
 
-#=cut
+=cut
 
   $ffi->attach( glIndexMask => [ 'GLuint', ] => 'void' );
 
-#=head2 glColorMask
+=head2 glColorMask
 
-# glColorMask( $red, $green, $blue, $alpha, );
+ glColorMask( $red, $green, $blue, $alpha, );
 
-#=cut
+=cut
 
   $ffi->attach( glColorMask => [ 'GLboolean', 'GLboolean', 'GLboolean', 'GLboolean', ] => 'void' );
 
-#=head2 glAlphaFunc
+=head2 glAlphaFunc
 
-# glAlphaFunc( $func, $ref, );
+ glAlphaFunc( $func, $ref, );
 
-#=cut
+=cut
 
   $ffi->attach( glAlphaFunc => [ 'GLenum', 'GLclampf', ] => 'void' );
 
-#=head2 glBlendFunc
+=head2 glBlendFunc
 
-# glBlendFunc( $sfactor, $dfactor, );
+ glBlendFunc( $sfactor, $dfactor, );
 
-#=cut
+=cut
 
   $ffi->attach( glBlendFunc => [ 'GLenum', 'GLenum', ] => 'void' );
 
-#=head2 glLogicOp
+=head2 glLogicOp
 
-# glLogicOp( $opcode, );
+ glLogicOp( $opcode, );
 
-#=cut
+=cut
 
   $ffi->attach( glLogicOp => [ 'GLenum', ] => 'void' );
 
-#=head2 glCullFace
+=head2 glCullFace
 
-# glCullFace( $mode, );
+ glCullFace( $mode, );
 
-#=cut
+=cut
 
   $ffi->attach( glCullFace => [ 'GLenum', ] => 'void' );
 
-#=head2 glFrontFace
+=head2 glFrontFace
 
-# glFrontFace( $mode, );
+ glFrontFace( $mode, );
 
-#=cut
+=cut
 
   $ffi->attach( glFrontFace => [ 'GLenum', ] => 'void' );
 
-#=head2 glPointSize
+=head2 glPointSize
 
-# glPointSize( $size, );
+ glPointSize( $size, );
 
-#=cut
+=cut
 
   $ffi->attach( glPointSize => [ 'GLfloat', ] => 'void' );
 
-#=head2 glLineWidth
+=head2 glLineWidth
 
-# glLineWidth( $width, );
+ glLineWidth( $width, );
 
-#=cut
+=cut
 
   $ffi->attach( glLineWidth => [ 'GLfloat', ] => 'void' );
 
-#=head2 glLineStipple
+=head2 glLineStipple
 
-# glLineStipple( $factor, $pattern, );
+ glLineStipple( $factor, $pattern, );
 
-#=cut
+=cut
 
   $ffi->attach( glLineStipple => [ 'GLint', 'GLushort', ] => 'void' );
 
-#=head2 glPolygonMode
+=head2 glPolygonMode
 
-# glPolygonMode( $face, $mode, );
+ glPolygonMode( $face, $mode, );
 
-#=cut
+=cut
 
   $ffi->attach( glPolygonMode => [ 'GLenum', 'GLenum', ] => 'void' );
 
-#=head2 glPolygonOffset
+=head2 glPolygonOffset
 
-# glPolygonOffset( $factor, $units, );
+ glPolygonOffset( $factor, $units, );
 
-#=cut
+=cut
 
   $ffi->attach( glPolygonOffset => [ 'GLfloat', 'GLfloat', ] => 'void' );
 
-#=head2 glPolygonStipple
+=head2 glPolygonStipple
 
-# glPolygonStipple( $*mask, );
+ glPolygonStipple( $*mask, );
 
-#=cut
+=cut
 
   $ffi->attach( glPolygonStipple => [ 'GLubyte', ] => 'void' );
 
-#=head2 glGetPolygonStipple
+=head2 glGetPolygonStipple
 
-# glGetPolygonStipple( $*mask, );
+ glGetPolygonStipple( $*mask, );
 
-#=cut
+=cut
 
   $ffi->attach( glGetPolygonStipple => [ 'GLubyte', ] => 'void' );
 
-#=head2 glEdgeFlag
+=head2 glEdgeFlag
 
-# glEdgeFlag( $flag, );
+ glEdgeFlag( $flag, );
 
-#=cut
+=cut
 
   $ffi->attach( glEdgeFlag => [ 'GLboolean', ] => 'void' );
 
-#=head2 glEdgeFlagv
+=head2 glEdgeFlagv
 
-# glEdgeFlagv( $*flag, );
+ glEdgeFlagv( $*flag, );
 
-#=cut
+=cut
 
   $ffi->attach( glEdgeFlagv => [ 'GLboolean', ] => 'void' );
 
-#=head2 glScissor
+=head2 glScissor
 
-# glScissor( $x, $y, $width, $height, );
+ glScissor( $x, $y, $width, $height, );
 
-#=cut
+=cut
 
   $ffi->attach( glScissor => [ 'GLint', 'GLint', 'GLsizei', 'GLsizei', ] => 'void' );
 
-#=head2 glClipPlane
+=head2 glClipPlane
 
-# glClipPlane( $plane, $*equation, );
+ glClipPlane( $plane, $*equation, );
 
-#=cut
+=cut
 
   $ffi->attach( glClipPlane => [ 'GLenum', 'GLdouble', ] => 'void' );
 
-#=head2 glGetClipPlane
+=head2 glGetClipPlane
 
-# glGetClipPlane( $plane, $*equation, );
+ glGetClipPlane( $plane, $*equation, );
 
-#=cut
+=cut
 
   $ffi->attach( glGetClipPlane => [ 'GLenum', 'GLdouble', ] => 'void' );
 
-#=head2 glDrawBuffer
+=head2 glDrawBuffer
 
-# glDrawBuffer( $mode, );
+ glDrawBuffer( $mode, );
 
-#=cut
+=cut
 
   $ffi->attach( glDrawBuffer => [ 'GLenum', ] => 'void' );
 
-#=head2 glReadBuffer
+=head2 glReadBuffer
 
-# glReadBuffer( $mode, );
+ glReadBuffer( $mode, );
 
-#=cut
+=cut
 
   $ffi->attach( glReadBuffer => [ 'GLenum', ] => 'void' );
 
-#=head2 glEnable
+=head2 glEnable
 
-# glEnable( $cap, );
+ glEnable( $cap, );
 
-#=cut
+=cut
 
   $ffi->attach( glEnable => [ 'GLenum', ] => 'void' );
 
-#=head2 glDisable
+=head2 glDisable
 
-# glDisable( $cap, );
+ glDisable( $cap, );
 
-#=cut
+=cut
 
   $ffi->attach( glDisable => [ 'GLenum', ] => 'void' );
 
-#=head2 glIsEnabled
+=head2 glIsEnabled
 
-# glIsEnabled( $cap, );
+ glIsEnabled( $cap, );
 
-#=cut
+=cut
 
   $ffi->attach( glIsEnabled => [ 'GLenum', ] => 'GLboolean' );
 
-#=head2 glEnableClientState
+=head2 glEnableClientState
 
-# glEnableClientState( $cap, );
+ glEnableClientState( $cap, );
 
-#=cut
+=cut
 
   $ffi->attach( glEnableClientState => [ 'GLenum', ] => 'void' );
 
-#=head2 glDisableClientState
+=head2 glDisableClientState
 
-# glDisableClientState( $cap, );
+ glDisableClientState( $cap, );
 
-#=cut
+=cut
 
   $ffi->attach( glDisableClientState => [ 'GLenum', ] => 'void' );
 
-#=head2 glGetBooleanv
+=head2 glGetBooleanv
 
-# glGetBooleanv( $pname, \@params, );
+ glGetBooleanv( $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glGetBooleanv => [ 'GLenum', 'GLboolean_params', ] => 'void' );
 
-#=head2 glGetDoublev
+=head2 glGetDoublev
 
-# glGetDoublev( $pname, \@params, );
+ glGetDoublev( $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glGetDoublev => [ 'GLenum', 'GLdouble_params', ] => 'void' );
 
-#=head2 glGetFloatv
+=head2 glGetFloatv
 
-# glGetFloatv( $pname, \@params, );
+ glGetFloatv( $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glGetFloatv => [ 'GLenum', 'GLfloat_params', ] => 'void' );
 
-#=head2 glGetIntegerv
+=head2 glGetIntegerv
 
-# glGetIntegerv( $pname, \@params, );
+ glGetIntegerv( $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glGetIntegerv => [ 'GLenum', 'GLint_params', ] => 'void' );
 
-#=head2 glPushAttrib
+=head2 glPushAttrib
 
-# glPushAttrib( $mask, );
+ glPushAttrib( $mask, );
 
-#=cut
+=cut
 
   $ffi->attach( glPushAttrib => [ 'GLbitfield', ] => 'void' );
 
-#=head2 glPopAttrib
+=head2 glPopAttrib
 
-# glPopAttrib();
+ glPopAttrib();
 
-#=cut
+=cut
 
   $ffi->attach( glPopAttrib => [] => 'void' );
 
-#=head2 glPushClientAttrib
+=head2 glPushClientAttrib
 
-# glPushClientAttrib( $mask, );
+ glPushClientAttrib( $mask, );
 
-#=cut
+=cut
 
   $ffi->attach( glPushClientAttrib => [ 'GLbitfield', ] => 'void' );
 
-#=head2 glPopClientAttrib
+=head2 glPopClientAttrib
 
-# glPopClientAttrib();
+ glPopClientAttrib();
 
-#=cut
+=cut
 
   $ffi->attach( glPopClientAttrib => [] => 'void' );
 
-#=head2 glRenderMode
+=head2 glRenderMode
 
-# glRenderMode( $mode, );
+ glRenderMode( $mode, );
 
-#=cut
+=cut
 
   $ffi->attach( glRenderMode => [ 'GLenum', ] => 'GLint' );
 
-#=head2 glGetError
+=head2 glGetError
 
-# glGetError();
+ glGetError();
 
-#=cut
+=cut
 
   $ffi->attach( glGetError => [] => 'GLenum' );
 
-#=head2 glFinish
+=head2 glFinish
 
-# glFinish();
+ glFinish();
 
-#=cut
+=cut
 
   $ffi->attach( glFinish => [] => 'void' );
 
-#=head2 glFlush
+=head2 glFlush
 
-# glFlush();
+ glFlush();
 
-#=cut
+=cut
 
   $ffi->attach( glFlush => [] => 'void' );
 
-#=head2 glHint
+=head2 glHint
 
-# glHint( $target, $mode, );
+ glHint( $target, $mode, );
 
-#=cut
+=cut
 
   $ffi->attach( glHint => [ 'GLenum', 'GLenum', ] => 'void' );
 
-#=head2 glClearDepth
+=head2 glClearDepth
 
-# glClearDepth( $depth, );
+ glClearDepth( $depth, );
 
-#=cut
+=cut
 
   $ffi->attach( glClearDepth => [ 'GLclampd', ] => 'void' );
 
-#=head2 glDepthFunc
+=head2 glDepthFunc
 
-# glDepthFunc( $func, );
+ glDepthFunc( $func, );
 
-#=cut
+=cut
 
   $ffi->attach( glDepthFunc => [ 'GLenum', ] => 'void' );
 
-#=head2 glDepthMask
+=head2 glDepthMask
 
-# glDepthMask( $flag, );
+ glDepthMask( $flag, );
 
-#=cut
+=cut
 
   $ffi->attach( glDepthMask => [ 'GLboolean', ] => 'void' );
 
-#=head2 glDepthRange
+=head2 glDepthRange
 
-# glDepthRange( $near_val, $far_val, );
+ glDepthRange( $near_val, $far_val, );
 
-#=cut
+=cut
 
   $ffi->attach( glDepthRange => [ 'GLclampd', 'GLclampd', ] => 'void' );
 
-#=head2 glClearAccum
+=head2 glClearAccum
 
-# glClearAccum( $red, $green, $blue, $alpha, );
+ glClearAccum( $red, $green, $blue, $alpha, );
 
-#=cut
+=cut
 
   $ffi->attach( glClearAccum => [ 'GLfloat', 'GLfloat', 'GLfloat', 'GLfloat', ] => 'void' );
 
-#=head2 glAccum
+=head2 glAccum
 
-# glAccum( $op, $value, );
+ glAccum( $op, $value, );
 
-#=cut
+=cut
 
   $ffi->attach( glAccum => [ 'GLenum', 'GLfloat', ] => 'void' );
 
-#=head2 glMatrixMode
+=head2 glMatrixMode
 
-# glMatrixMode( $mode, );
+ glMatrixMode( $mode, );
 
-#=cut
+=cut
 
   $ffi->attach( glMatrixMode => [ 'GLenum', ] => 'void' );
 
-#=head2 glOrtho
+=head2 glOrtho
 
-# glOrtho( $left, $right, $bottom, $top, $near_val, $far_val, );
+ glOrtho( $left, $right, $bottom, $top, $near_val, $far_val, );
 
-#=cut
+=cut
 
   $ffi->attach( glOrtho => [ 'GLdouble', 'GLdouble', 'GLdouble', 'GLdouble', 'GLdouble', 'GLdouble', ] => 'void' );
 
-#=head2 glFrustum
+=head2 glFrustum
 
-# glFrustum( $left, $right, $bottom, $top, $near_val, $far_val, );
+ glFrustum( $left, $right, $bottom, $top, $near_val, $far_val, );
 
-#=cut
+=cut
 
   $ffi->attach( glFrustum => [ 'GLdouble', 'GLdouble', 'GLdouble', 'GLdouble', 'GLdouble', 'GLdouble', ] => 'void' );
 
-#=head2 glViewport
+=head2 glViewport
 
-# glViewport( $x, $y, $width, $height, );
+ glViewport( $x, $y, $width, $height, );
 
-#=cut
+=cut
 
   $ffi->attach( glViewport => [ 'GLint', 'GLint', 'GLsizei', 'GLsizei', ] => 'void' );
 
-#=head2 glPushMatrix
+=head2 glPushMatrix
 
-# glPushMatrix();
+ glPushMatrix();
 
-#=cut
+=cut
 
   $ffi->attach( glPushMatrix => [] => 'void' );
 
-#=head2 glPopMatrix
+=head2 glPopMatrix
 
-# glPopMatrix();
+ glPopMatrix();
 
-#=cut
+=cut
 
   $ffi->attach( glPopMatrix => [] => 'void' );
 
-#=head2 glLoadIdentity
+=head2 glLoadIdentity
 
-# glLoadIdentity();
+ glLoadIdentity();
 
-#=cut
+=cut
 
   $ffi->attach( glLoadIdentity => [] => 'void' );
 
-#=head2 glLoadMatrixd
+=head2 glLoadMatrixd
 
-# glLoadMatrixd( $*m, );
+ glLoadMatrixd( $*m, );
 
-#=cut
+=cut
 
   $ffi->attach( glLoadMatrixd => [ 'GLdouble', ] => 'void' );
 
-#=head2 glLoadMatrixf
+=head2 glLoadMatrixf
 
-# glLoadMatrixf( $*m, );
+ glLoadMatrixf( $*m, );
 
-#=cut
+=cut
 
   $ffi->attach( glLoadMatrixf => [ 'GLfloat', ] => 'void' );
 
-#=head2 glMultMatrixd
+=head2 glMultMatrixd
 
-# glMultMatrixd( $*m, );
+ glMultMatrixd( $*m, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultMatrixd => [ 'GLdouble', ] => 'void' );
 
-#=head2 glMultMatrixf
+=head2 glMultMatrixf
 
-# glMultMatrixf( $*m, );
+ glMultMatrixf( $*m, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultMatrixf => [ 'GLfloat', ] => 'void' );
 
-#=head2 glRotated
+=head2 glRotated
 
-# glRotated( $angle, $x, $y, $z, );
+ glRotated( $angle, $x, $y, $z, );
 
-#=cut
+=cut
 
   $ffi->attach( glRotated => [ 'GLdouble', 'GLdouble', 'GLdouble', 'GLdouble', ] => 'void' );
 
-#=head2 glRotatef
+=head2 glRotatef
 
-# glRotatef( $angle, $x, $y, $z, );
+ glRotatef( $angle, $x, $y, $z, );
 
-#=cut
+=cut
 
   $ffi->attach( glRotatef => [ 'GLfloat', 'GLfloat', 'GLfloat', 'GLfloat', ] => 'void' );
 
-#=head2 glScaled
+=head2 glScaled
 
-# glScaled( $x, $y, $z, );
+ glScaled( $x, $y, $z, );
 
-#=cut
+=cut
 
   $ffi->attach( glScaled => [ 'GLdouble', 'GLdouble', 'GLdouble', ] => 'void' );
 
-#=head2 glScalef
+=head2 glScalef
 
-# glScalef( $x, $y, $z, );
+ glScalef( $x, $y, $z, );
 
-#=cut
+=cut
 
   $ffi->attach( glScalef => [ 'GLfloat', 'GLfloat', 'GLfloat', ] => 'void' );
 
-#=head2 glTranslated
+=head2 glTranslated
 
-# glTranslated( $x, $y, $z, );
+ glTranslated( $x, $y, $z, );
 
-#=cut
+=cut
 
   $ffi->attach( glTranslated => [ 'GLdouble', 'GLdouble', 'GLdouble', ] => 'void' );
 
-#=head2 glTranslatef
+=head2 glTranslatef
 
-# glTranslatef( $x, $y, $z, );
+ glTranslatef( $x, $y, $z, );
 
-#=cut
+=cut
 
   $ffi->attach( glTranslatef => [ 'GLfloat', 'GLfloat', 'GLfloat', ] => 'void' );
 
-#=head2 glIsList
+=head2 glIsList
 
-# glIsList( $list, );
+ glIsList( $list, );
 
-#=cut
+=cut
 
   $ffi->attach( glIsList => [ 'GLuint', ] => 'GLboolean' );
 
-#=head2 glDeleteLists
+=head2 glDeleteLists
 
-# glDeleteLists( $list, $range, );
+ glDeleteLists( $list, $range, );
 
-#=cut
+=cut
 
   $ffi->attach( glDeleteLists => [ 'GLuint', 'GLsizei', ] => 'void' );
 
-#=head2 glGenLists
+=head2 glGenLists
 
-# glGenLists( $range, );
+ glGenLists( $range, );
 
-#=cut
+=cut
 
   $ffi->attach( glGenLists => [ 'GLsizei', ] => 'GLuint' );
 
-#=head2 glNewList
+=head2 glNewList
 
-# glNewList( $list, $mode, );
+ glNewList( $list, $mode, );
 
-#=cut
+=cut
 
   $ffi->attach( glNewList => [ 'GLuint', 'GLenum', ] => 'void' );
 
-#=head2 glEndList
+=head2 glEndList
 
-# glEndList();
+ glEndList();
 
-#=cut
+=cut
 
   $ffi->attach( glEndList => [] => 'void' );
 
-#=head2 glCallList
+=head2 glCallList
 
-# glCallList( $list, );
+ glCallList( $list, );
 
-#=cut
+=cut
 
   $ffi->attach( glCallList => [ 'GLuint', ] => 'void' );
 
-#=head2 glCallLists
+=head2 glCallLists
 
-# glCallLists( $n, $type, $*lists, );
+ glCallLists( $n, $type, $*lists, );
 
-#=cut
+=cut
 
   $ffi->attach( glCallLists => [ 'GLsizei', 'GLenum', 'GLvoid', ] => 'void' );
 
-#=head2 glListBase
+=head2 glListBase
 
-# glListBase( $base, );
+ glListBase( $base, );
 
-#=cut
+=cut
 
   $ffi->attach( glListBase => [ 'GLuint', ] => 'void' );
 
-#=head2 glBegin
+=head2 glBegin
 
-# glBegin( $mode, );
+ glBegin( $mode, );
 
-#=cut
+=cut
 
   $ffi->attach( glBegin => [ 'GLenum', ] => 'void' );
 
-#=head2 glEnd
+=head2 glEnd
 
-# glEnd();
+ glEnd();
 
-#=cut
+=cut
 
   $ffi->attach( glEnd => [] => 'void' );
 
-#=head2 glVertex2d
+=head2 glVertex2d
 
-# glVertex2d( $x, $y, );
+ glVertex2d( $x, $y, );
 
-#=cut
+=cut
 
   $ffi->attach( glVertex2d => [ 'GLdouble', 'GLdouble', ] => 'void' );
 
-#=head2 glVertex2f
+=head2 glVertex2f
 
-# glVertex2f( $x, $y, );
+ glVertex2f( $x, $y, );
 
-#=cut
+=cut
 
   $ffi->attach( glVertex2f => [ 'GLfloat', 'GLfloat', ] => 'void' );
 
-#=head2 glVertex2i
+=head2 glVertex2i
 
-# glVertex2i( $x, $y, );
+ glVertex2i( $x, $y, );
 
-#=cut
+=cut
 
   $ffi->attach( glVertex2i => [ 'GLint', 'GLint', ] => 'void' );
 
-#=head2 glVertex2s
+=head2 glVertex2s
 
-# glVertex2s( $x, $y, );
+ glVertex2s( $x, $y, );
 
-#=cut
+=cut
 
   $ffi->attach( glVertex2s => [ 'GLshort', 'GLshort', ] => 'void' );
 
-#=head2 glVertex3d
+=head2 glVertex3d
 
-# glVertex3d( $x, $y, $z, );
+ glVertex3d( $x, $y, $z, );
 
-#=cut
+=cut
 
   $ffi->attach( glVertex3d => [ 'GLdouble', 'GLdouble', 'GLdouble', ] => 'void' );
 
-#=head2 glVertex3f
+=head2 glVertex3f
 
-# glVertex3f( $x, $y, $z, );
+ glVertex3f( $x, $y, $z, );
 
-#=cut
+=cut
 
   $ffi->attach( glVertex3f => [ 'GLfloat', 'GLfloat', 'GLfloat', ] => 'void' );
 
-#=head2 glVertex3i
+=head2 glVertex3i
 
-# glVertex3i( $x, $y, $z, );
+ glVertex3i( $x, $y, $z, );
 
-#=cut
+=cut
 
   $ffi->attach( glVertex3i => [ 'GLint', 'GLint', 'GLint', ] => 'void' );
 
-#=head2 glVertex3s
+=head2 glVertex3s
 
-# glVertex3s( $x, $y, $z, );
+ glVertex3s( $x, $y, $z, );
 
-#=cut
+=cut
 
   $ffi->attach( glVertex3s => [ 'GLshort', 'GLshort', 'GLshort', ] => 'void' );
 
-#=head2 glVertex4d
+=head2 glVertex4d
 
-# glVertex4d( $x, $y, $z, $w, );
+ glVertex4d( $x, $y, $z, $w, );
 
-#=cut
+=cut
 
   $ffi->attach( glVertex4d => [ 'GLdouble', 'GLdouble', 'GLdouble', 'GLdouble', ] => 'void' );
 
-#=head2 glVertex4f
+=head2 glVertex4f
 
-# glVertex4f( $x, $y, $z, $w, );
+ glVertex4f( $x, $y, $z, $w, );
 
-#=cut
+=cut
 
   $ffi->attach( glVertex4f => [ 'GLfloat', 'GLfloat', 'GLfloat', 'GLfloat', ] => 'void' );
 
-#=head2 glVertex4i
+=head2 glVertex4i
 
-# glVertex4i( $x, $y, $z, $w, );
+ glVertex4i( $x, $y, $z, $w, );
 
-#=cut
+=cut
 
   $ffi->attach( glVertex4i => [ 'GLint', 'GLint', 'GLint', 'GLint', ] => 'void' );
 
-#=head2 glVertex4s
+=head2 glVertex4s
 
-# glVertex4s( $x, $y, $z, $w, );
+ glVertex4s( $x, $y, $z, $w, );
 
-#=cut
+=cut
 
   $ffi->attach( glVertex4s => [ 'GLshort', 'GLshort', 'GLshort', 'GLshort', ] => 'void' );
 
-#=head2 glVertex2dv
+=head2 glVertex2dv
 
-# glVertex2dv( $*v, );
+ glVertex2dv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glVertex2dv => [ 'GLdouble', ] => 'void' );
 
-#=head2 glVertex2fv
+=head2 glVertex2fv
 
-# glVertex2fv( $*v, );
+ glVertex2fv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glVertex2fv => [ 'GLfloat', ] => 'void' );
 
-#=head2 glVertex2iv
+=head2 glVertex2iv
 
-# glVertex2iv( $*v, );
+ glVertex2iv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glVertex2iv => [ 'GLint', ] => 'void' );
 
-#=head2 glVertex2sv
+=head2 glVertex2sv
 
-# glVertex2sv( $*v, );
+ glVertex2sv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glVertex2sv => [ 'GLshort', ] => 'void' );
 
-#=head2 glVertex3dv
+=head2 glVertex3dv
 
-# glVertex3dv( $*v, );
+ glVertex3dv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glVertex3dv => [ 'GLdouble', ] => 'void' );
 
-#=head2 glVertex3fv
+=head2 glVertex3fv
 
-# glVertex3fv( $*v, );
+ glVertex3fv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glVertex3fv => [ 'GLfloat', ] => 'void' );
 
-#=head2 glVertex3iv
+=head2 glVertex3iv
 
-# glVertex3iv( $*v, );
+ glVertex3iv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glVertex3iv => [ 'GLint', ] => 'void' );
 
-#=head2 glVertex3sv
+=head2 glVertex3sv
 
-# glVertex3sv( $*v, );
+ glVertex3sv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glVertex3sv => [ 'GLshort', ] => 'void' );
 
-#=head2 glVertex4dv
+=head2 glVertex4dv
 
-# glVertex4dv( $*v, );
+ glVertex4dv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glVertex4dv => [ 'GLdouble', ] => 'void' );
 
-#=head2 glVertex4fv
+=head2 glVertex4fv
 
-# glVertex4fv( $*v, );
+ glVertex4fv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glVertex4fv => [ 'GLfloat', ] => 'void' );
 
-#=head2 glVertex4iv
+=head2 glVertex4iv
 
-# glVertex4iv( $*v, );
+ glVertex4iv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glVertex4iv => [ 'GLint', ] => 'void' );
 
-#=head2 glVertex4sv
+=head2 glVertex4sv
 
-# glVertex4sv( $*v, );
+ glVertex4sv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glVertex4sv => [ 'GLshort', ] => 'void' );
 
-#=head2 glNormal3b
+=head2 glNormal3b
 
-# glNormal3b( $nx, $ny, $nz, );
+ glNormal3b( $nx, $ny, $nz, );
 
-#=cut
+=cut
 
   $ffi->attach( glNormal3b => [ 'GLbyte', 'GLbyte', 'GLbyte', ] => 'void' );
 
-#=head2 glNormal3d
+=head2 glNormal3d
 
-# glNormal3d( $nx, $ny, $nz, );
+ glNormal3d( $nx, $ny, $nz, );
 
-#=cut
+=cut
 
   $ffi->attach( glNormal3d => [ 'GLdouble', 'GLdouble', 'GLdouble', ] => 'void' );
 
-#=head2 glNormal3f
+=head2 glNormal3f
 
-# glNormal3f( $nx, $ny, $nz, );
+ glNormal3f( $nx, $ny, $nz, );
 
-#=cut
+=cut
 
   $ffi->attach( glNormal3f => [ 'GLfloat', 'GLfloat', 'GLfloat', ] => 'void' );
 
-#=head2 glNormal3i
+=head2 glNormal3i
 
-# glNormal3i( $nx, $ny, $nz, );
+ glNormal3i( $nx, $ny, $nz, );
 
-#=cut
+=cut
 
   $ffi->attach( glNormal3i => [ 'GLint', 'GLint', 'GLint', ] => 'void' );
 
-#=head2 glNormal3s
+=head2 glNormal3s
 
-# glNormal3s( $nx, $ny, $nz, );
+ glNormal3s( $nx, $ny, $nz, );
 
-#=cut
+=cut
 
   $ffi->attach( glNormal3s => [ 'GLshort', 'GLshort', 'GLshort', ] => 'void' );
 
-#=head2 glNormal3bv
+=head2 glNormal3bv
 
-# glNormal3bv( $*v, );
+ glNormal3bv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glNormal3bv => [ 'GLbyte', ] => 'void' );
 
-#=head2 glNormal3dv
+=head2 glNormal3dv
 
-# glNormal3dv( $*v, );
+ glNormal3dv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glNormal3dv => [ 'GLdouble', ] => 'void' );
 
-#=head2 glNormal3fv
+=head2 glNormal3fv
 
-# glNormal3fv( $*v, );
+ glNormal3fv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glNormal3fv => [ 'GLfloat', ] => 'void' );
 
-#=head2 glNormal3iv
+=head2 glNormal3iv
 
-# glNormal3iv( $*v, );
+ glNormal3iv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glNormal3iv => [ 'GLint', ] => 'void' );
 
-#=head2 glNormal3sv
+=head2 glNormal3sv
 
-# glNormal3sv( $*v, );
+ glNormal3sv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glNormal3sv => [ 'GLshort', ] => 'void' );
 
-#=head2 glIndexd
+=head2 glIndexd
 
-# glIndexd( $c, );
+ glIndexd( $c, );
 
-#=cut
+=cut
 
   $ffi->attach( glIndexd => [ 'GLdouble', ] => 'void' );
 
-#=head2 glIndexf
+=head2 glIndexf
 
-# glIndexf( $c, );
+ glIndexf( $c, );
 
-#=cut
+=cut
 
   $ffi->attach( glIndexf => [ 'GLfloat', ] => 'void' );
 
-#=head2 glIndexi
+=head2 glIndexi
 
-# glIndexi( $c, );
+ glIndexi( $c, );
 
-#=cut
+=cut
 
   $ffi->attach( glIndexi => [ 'GLint', ] => 'void' );
 
-#=head2 glIndexs
+=head2 glIndexs
 
-# glIndexs( $c, );
+ glIndexs( $c, );
 
-#=cut
+=cut
 
   $ffi->attach( glIndexs => [ 'GLshort', ] => 'void' );
 
-#=head2 glIndexub
+=head2 glIndexub
 
-# glIndexub( $c, );
+ glIndexub( $c, );
 
-#=cut
+=cut
 
   $ffi->attach( glIndexub => [ 'GLubyte', ] => 'void' );
 
-#=head2 glIndexdv
+=head2 glIndexdv
 
-# glIndexdv( $*c, );
+ glIndexdv( $*c, );
 
-#=cut
+=cut
 
   $ffi->attach( glIndexdv => [ 'GLdouble', ] => 'void' );
 
-#=head2 glIndexfv
+=head2 glIndexfv
 
-# glIndexfv( $*c, );
+ glIndexfv( $*c, );
 
-#=cut
+=cut
 
   $ffi->attach( glIndexfv => [ 'GLfloat', ] => 'void' );
 
-#=head2 glIndexiv
+=head2 glIndexiv
 
-# glIndexiv( $*c, );
+ glIndexiv( $*c, );
 
-#=cut
+=cut
 
   $ffi->attach( glIndexiv => [ 'GLint', ] => 'void' );
 
-#=head2 glIndexsv
+=head2 glIndexsv
 
-# glIndexsv( $*c, );
+ glIndexsv( $*c, );
 
-#=cut
+=cut
 
   $ffi->attach( glIndexsv => [ 'GLshort', ] => 'void' );
 
-#=head2 glIndexubv
+=head2 glIndexubv
 
-# glIndexubv( $*c, );
+ glIndexubv( $*c, );
 
-#=cut
+=cut
 
   $ffi->attach( glIndexubv => [ 'GLubyte', ] => 'void' );
 
-#=head2 glColor3b
+=head2 glColor3b
 
-# glColor3b( $red, $green, $blue, );
+ glColor3b( $red, $green, $blue, );
 
-#=cut
+=cut
 
   $ffi->attach( glColor3b => [ 'GLbyte', 'GLbyte', 'GLbyte', ] => 'void' );
 
-#=head2 glColor3d
+=head2 glColor3d
 
-# glColor3d( $red, $green, $blue, );
+ glColor3d( $red, $green, $blue, );
 
-#=cut
+=cut
 
   $ffi->attach( glColor3d => [ 'GLdouble', 'GLdouble', 'GLdouble', ] => 'void' );
 
-#=head2 glColor3f
+=head2 glColor3f
 
-# glColor3f( $red, $green, $blue, );
+ glColor3f( $red, $green, $blue, );
 
-#=cut
+=cut
 
   $ffi->attach( glColor3f => [ 'GLfloat', 'GLfloat', 'GLfloat', ] => 'void' );
 
-#=head2 glColor3i
+=head2 glColor3i
 
-# glColor3i( $red, $green, $blue, );
+ glColor3i( $red, $green, $blue, );
 
-#=cut
+=cut
 
   $ffi->attach( glColor3i => [ 'GLint', 'GLint', 'GLint', ] => 'void' );
 
-#=head2 glColor3s
+=head2 glColor3s
 
-# glColor3s( $red, $green, $blue, );
+ glColor3s( $red, $green, $blue, );
 
-#=cut
+=cut
 
   $ffi->attach( glColor3s => [ 'GLshort', 'GLshort', 'GLshort', ] => 'void' );
 
-#=head2 glColor3ub
+=head2 glColor3ub
 
-# glColor3ub( $red, $green, $blue, );
+ glColor3ub( $red, $green, $blue, );
 
-#=cut
+=cut
 
   $ffi->attach( glColor3ub => [ 'GLubyte', 'GLubyte', 'GLubyte', ] => 'void' );
 
-#=head2 glColor3ui
+=head2 glColor3ui
 
-# glColor3ui( $red, $green, $blue, );
+ glColor3ui( $red, $green, $blue, );
 
-#=cut
+=cut
 
   $ffi->attach( glColor3ui => [ 'GLuint', 'GLuint', 'GLuint', ] => 'void' );
 
-#=head2 glColor3us
+=head2 glColor3us
 
-# glColor3us( $red, $green, $blue, );
+ glColor3us( $red, $green, $blue, );
 
-#=cut
+=cut
 
   $ffi->attach( glColor3us => [ 'GLushort', 'GLushort', 'GLushort', ] => 'void' );
 
-#=head2 glColor4b
+=head2 glColor4b
 
-# glColor4b( $red, $green, $blue, $alpha, );
+ glColor4b( $red, $green, $blue, $alpha, );
 
-#=cut
+=cut
 
   $ffi->attach( glColor4b => [ 'GLbyte', 'GLbyte', 'GLbyte', 'GLbyte', ] => 'void' );
 
-#=head2 glColor4d
+=head2 glColor4d
 
-# glColor4d( $red, $green, $blue, $alpha, );
+ glColor4d( $red, $green, $blue, $alpha, );
 
-#=cut
+=cut
 
   $ffi->attach( glColor4d => [ 'GLdouble', 'GLdouble', 'GLdouble', 'GLdouble', ] => 'void' );
 
-#=head2 glColor4f
+=head2 glColor4f
 
-# glColor4f( $red, $green, $blue, $alpha, );
+ glColor4f( $red, $green, $blue, $alpha, );
 
-#=cut
+=cut
 
   $ffi->attach( glColor4f => [ 'GLfloat', 'GLfloat', 'GLfloat', 'GLfloat', ] => 'void' );
 
-#=head2 glColor4i
+=head2 glColor4i
 
-# glColor4i( $red, $green, $blue, $alpha, );
+ glColor4i( $red, $green, $blue, $alpha, );
 
-#=cut
+=cut
 
   $ffi->attach( glColor4i => [ 'GLint', 'GLint', 'GLint', 'GLint', ] => 'void' );
 
-#=head2 glColor4s
+=head2 glColor4s
 
-# glColor4s( $red, $green, $blue, $alpha, );
+ glColor4s( $red, $green, $blue, $alpha, );
 
-#=cut
+=cut
 
   $ffi->attach( glColor4s => [ 'GLshort', 'GLshort', 'GLshort', 'GLshort', ] => 'void' );
 
-#=head2 glColor4ub
+=head2 glColor4ub
 
-# glColor4ub( $red, $green, $blue, $alpha, );
+ glColor4ub( $red, $green, $blue, $alpha, );
 
-#=cut
+=cut
 
   $ffi->attach( glColor4ub => [ 'GLubyte', 'GLubyte', 'GLubyte', 'GLubyte', ] => 'void' );
 
-#=head2 glColor4ui
+=head2 glColor4ui
 
-# glColor4ui( $red, $green, $blue, $alpha, );
+ glColor4ui( $red, $green, $blue, $alpha, );
 
-#=cut
+=cut
 
   $ffi->attach( glColor4ui => [ 'GLuint', 'GLuint', 'GLuint', 'GLuint', ] => 'void' );
 
-#=head2 glColor4us
+=head2 glColor4us
 
-# glColor4us( $red, $green, $blue, $alpha, );
+ glColor4us( $red, $green, $blue, $alpha, );
 
-#=cut
+=cut
 
   $ffi->attach( glColor4us => [ 'GLushort', 'GLushort', 'GLushort', 'GLushort', ] => 'void' );
 
-#=head2 glColor3bv
+=head2 glColor3bv
 
-# glColor3bv( $*v, );
+ glColor3bv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glColor3bv => [ 'GLbyte', ] => 'void' );
 
-#=head2 glColor3dv
+=head2 glColor3dv
 
-# glColor3dv( $*v, );
+ glColor3dv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glColor3dv => [ 'GLdouble', ] => 'void' );
 
-#=head2 glColor3fv
+=head2 glColor3fv
 
-# glColor3fv( $*v, );
+ glColor3fv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glColor3fv => [ 'GLfloat', ] => 'void' );
 
-#=head2 glColor3iv
+=head2 glColor3iv
 
-# glColor3iv( $*v, );
+ glColor3iv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glColor3iv => [ 'GLint', ] => 'void' );
 
-#=head2 glColor3sv
+=head2 glColor3sv
 
-# glColor3sv( $*v, );
+ glColor3sv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glColor3sv => [ 'GLshort', ] => 'void' );
 
-#=head2 glColor3ubv
+=head2 glColor3ubv
 
-# glColor3ubv( $*v, );
+ glColor3ubv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glColor3ubv => [ 'GLubyte', ] => 'void' );
 
-#=head2 glColor3uiv
+=head2 glColor3uiv
 
-# glColor3uiv( $*v, );
+ glColor3uiv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glColor3uiv => [ 'GLuint', ] => 'void' );
 
-#=head2 glColor3usv
+=head2 glColor3usv
 
-# glColor3usv( $*v, );
+ glColor3usv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glColor3usv => [ 'GLushort', ] => 'void' );
 
-#=head2 glColor4bv
+=head2 glColor4bv
 
-# glColor4bv( $*v, );
+ glColor4bv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glColor4bv => [ 'GLbyte', ] => 'void' );
 
-#=head2 glColor4dv
+=head2 glColor4dv
 
-# glColor4dv( $*v, );
+ glColor4dv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glColor4dv => [ 'GLdouble', ] => 'void' );
 
-#=head2 glColor4fv
+=head2 glColor4fv
 
-# glColor4fv( $*v, );
+ glColor4fv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glColor4fv => [ 'GLfloat', ] => 'void' );
 
-#=head2 glColor4iv
+=head2 glColor4iv
 
-# glColor4iv( $*v, );
+ glColor4iv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glColor4iv => [ 'GLint', ] => 'void' );
 
-#=head2 glColor4sv
+=head2 glColor4sv
 
-# glColor4sv( $*v, );
+ glColor4sv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glColor4sv => [ 'GLshort', ] => 'void' );
 
-#=head2 glColor4ubv
+=head2 glColor4ubv
 
-# glColor4ubv( $*v, );
+ glColor4ubv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glColor4ubv => [ 'GLubyte', ] => 'void' );
 
-#=head2 glColor4uiv
+=head2 glColor4uiv
 
-# glColor4uiv( $*v, );
+ glColor4uiv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glColor4uiv => [ 'GLuint', ] => 'void' );
 
-#=head2 glColor4usv
+=head2 glColor4usv
 
-# glColor4usv( $*v, );
+ glColor4usv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glColor4usv => [ 'GLushort', ] => 'void' );
 
-#=head2 glTexCoord1d
+=head2 glTexCoord1d
 
-# glTexCoord1d( $s, );
+ glTexCoord1d( $s, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexCoord1d => [ 'GLdouble', ] => 'void' );
 
-#=head2 glTexCoord1f
+=head2 glTexCoord1f
 
-# glTexCoord1f( $s, );
+ glTexCoord1f( $s, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexCoord1f => [ 'GLfloat', ] => 'void' );
 
-#=head2 glTexCoord1i
+=head2 glTexCoord1i
 
-# glTexCoord1i( $s, );
+ glTexCoord1i( $s, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexCoord1i => [ 'GLint', ] => 'void' );
 
-#=head2 glTexCoord1s
+=head2 glTexCoord1s
 
-# glTexCoord1s( $s, );
+ glTexCoord1s( $s, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexCoord1s => [ 'GLshort', ] => 'void' );
 
-#=head2 glTexCoord2d
+=head2 glTexCoord2d
 
-# glTexCoord2d( $s, $t, );
+ glTexCoord2d( $s, $t, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexCoord2d => [ 'GLdouble', 'GLdouble', ] => 'void' );
 
-#=head2 glTexCoord2f
+=head2 glTexCoord2f
 
-# glTexCoord2f( $s, $t, );
+ glTexCoord2f( $s, $t, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexCoord2f => [ 'GLfloat', 'GLfloat', ] => 'void' );
 
-#=head2 glTexCoord2i
+=head2 glTexCoord2i
 
-# glTexCoord2i( $s, $t, );
+ glTexCoord2i( $s, $t, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexCoord2i => [ 'GLint', 'GLint', ] => 'void' );
 
-#=head2 glTexCoord2s
+=head2 glTexCoord2s
 
-# glTexCoord2s( $s, $t, );
+ glTexCoord2s( $s, $t, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexCoord2s => [ 'GLshort', 'GLshort', ] => 'void' );
 
-#=head2 glTexCoord3d
+=head2 glTexCoord3d
 
-# glTexCoord3d( $s, $t, $r, );
+ glTexCoord3d( $s, $t, $r, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexCoord3d => [ 'GLdouble', 'GLdouble', 'GLdouble', ] => 'void' );
 
-#=head2 glTexCoord3f
+=head2 glTexCoord3f
 
-# glTexCoord3f( $s, $t, $r, );
+ glTexCoord3f( $s, $t, $r, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexCoord3f => [ 'GLfloat', 'GLfloat', 'GLfloat', ] => 'void' );
 
-#=head2 glTexCoord3i
+=head2 glTexCoord3i
 
-# glTexCoord3i( $s, $t, $r, );
+ glTexCoord3i( $s, $t, $r, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexCoord3i => [ 'GLint', 'GLint', 'GLint', ] => 'void' );
 
-#=head2 glTexCoord3s
+=head2 glTexCoord3s
 
-# glTexCoord3s( $s, $t, $r, );
+ glTexCoord3s( $s, $t, $r, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexCoord3s => [ 'GLshort', 'GLshort', 'GLshort', ] => 'void' );
 
-#=head2 glTexCoord4d
+=head2 glTexCoord4d
 
-# glTexCoord4d( $s, $t, $r, $q, );
+ glTexCoord4d( $s, $t, $r, $q, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexCoord4d => [ 'GLdouble', 'GLdouble', 'GLdouble', 'GLdouble', ] => 'void' );
 
-#=head2 glTexCoord4f
+=head2 glTexCoord4f
 
-# glTexCoord4f( $s, $t, $r, $q, );
+ glTexCoord4f( $s, $t, $r, $q, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexCoord4f => [ 'GLfloat', 'GLfloat', 'GLfloat', 'GLfloat', ] => 'void' );
 
-#=head2 glTexCoord4i
+=head2 glTexCoord4i
 
-# glTexCoord4i( $s, $t, $r, $q, );
+ glTexCoord4i( $s, $t, $r, $q, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexCoord4i => [ 'GLint', 'GLint', 'GLint', 'GLint', ] => 'void' );
 
-#=head2 glTexCoord4s
+=head2 glTexCoord4s
 
-# glTexCoord4s( $s, $t, $r, $q, );
+ glTexCoord4s( $s, $t, $r, $q, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexCoord4s => [ 'GLshort', 'GLshort', 'GLshort', 'GLshort', ] => 'void' );
 
-#=head2 glTexCoord1dv
+=head2 glTexCoord1dv
 
-# glTexCoord1dv( $*v, );
+ glTexCoord1dv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexCoord1dv => [ 'GLdouble', ] => 'void' );
 
-#=head2 glTexCoord1fv
+=head2 glTexCoord1fv
 
-# glTexCoord1fv( $*v, );
+ glTexCoord1fv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexCoord1fv => [ 'GLfloat', ] => 'void' );
 
-#=head2 glTexCoord1iv
+=head2 glTexCoord1iv
 
-# glTexCoord1iv( $*v, );
+ glTexCoord1iv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexCoord1iv => [ 'GLint', ] => 'void' );
 
-#=head2 glTexCoord1sv
+=head2 glTexCoord1sv
 
-# glTexCoord1sv( $*v, );
+ glTexCoord1sv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexCoord1sv => [ 'GLshort', ] => 'void' );
 
-#=head2 glTexCoord2dv
+=head2 glTexCoord2dv
 
-# glTexCoord2dv( $*v, );
+ glTexCoord2dv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexCoord2dv => [ 'GLdouble', ] => 'void' );
 
-#=head2 glTexCoord2fv
+=head2 glTexCoord2fv
 
-# glTexCoord2fv( $*v, );
+ glTexCoord2fv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexCoord2fv => [ 'GLfloat', ] => 'void' );
 
-#=head2 glTexCoord2iv
+=head2 glTexCoord2iv
 
-# glTexCoord2iv( $*v, );
+ glTexCoord2iv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexCoord2iv => [ 'GLint', ] => 'void' );
 
-#=head2 glTexCoord2sv
+=head2 glTexCoord2sv
 
-# glTexCoord2sv( $*v, );
+ glTexCoord2sv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexCoord2sv => [ 'GLshort', ] => 'void' );
 
-#=head2 glTexCoord3dv
+=head2 glTexCoord3dv
 
-# glTexCoord3dv( $*v, );
+ glTexCoord3dv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexCoord3dv => [ 'GLdouble', ] => 'void' );
 
-#=head2 glTexCoord3fv
+=head2 glTexCoord3fv
 
-# glTexCoord3fv( $*v, );
+ glTexCoord3fv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexCoord3fv => [ 'GLfloat', ] => 'void' );
 
-#=head2 glTexCoord3iv
+=head2 glTexCoord3iv
 
-# glTexCoord3iv( $*v, );
+ glTexCoord3iv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexCoord3iv => [ 'GLint', ] => 'void' );
 
-#=head2 glTexCoord3sv
+=head2 glTexCoord3sv
 
-# glTexCoord3sv( $*v, );
+ glTexCoord3sv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexCoord3sv => [ 'GLshort', ] => 'void' );
 
-#=head2 glTexCoord4dv
+=head2 glTexCoord4dv
 
-# glTexCoord4dv( $*v, );
+ glTexCoord4dv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexCoord4dv => [ 'GLdouble', ] => 'void' );
 
-#=head2 glTexCoord4fv
+=head2 glTexCoord4fv
 
-# glTexCoord4fv( $*v, );
+ glTexCoord4fv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexCoord4fv => [ 'GLfloat', ] => 'void' );
 
-#=head2 glTexCoord4iv
+=head2 glTexCoord4iv
 
-# glTexCoord4iv( $*v, );
+ glTexCoord4iv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexCoord4iv => [ 'GLint', ] => 'void' );
 
-#=head2 glTexCoord4sv
+=head2 glTexCoord4sv
 
-# glTexCoord4sv( $*v, );
+ glTexCoord4sv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexCoord4sv => [ 'GLshort', ] => 'void' );
 
-#=head2 glRasterPos2d
+=head2 glRasterPos2d
 
-# glRasterPos2d( $x, $y, );
+ glRasterPos2d( $x, $y, );
 
-#=cut
+=cut
 
   $ffi->attach( glRasterPos2d => [ 'GLdouble', 'GLdouble', ] => 'void' );
 
-#=head2 glRasterPos2f
+=head2 glRasterPos2f
 
-# glRasterPos2f( $x, $y, );
+ glRasterPos2f( $x, $y, );
 
-#=cut
+=cut
 
   $ffi->attach( glRasterPos2f => [ 'GLfloat', 'GLfloat', ] => 'void' );
 
-#=head2 glRasterPos2i
+=head2 glRasterPos2i
 
-# glRasterPos2i( $x, $y, );
+ glRasterPos2i( $x, $y, );
 
-#=cut
+=cut
 
   $ffi->attach( glRasterPos2i => [ 'GLint', 'GLint', ] => 'void' );
 
-#=head2 glRasterPos2s
+=head2 glRasterPos2s
 
-# glRasterPos2s( $x, $y, );
+ glRasterPos2s( $x, $y, );
 
-#=cut
+=cut
 
   $ffi->attach( glRasterPos2s => [ 'GLshort', 'GLshort', ] => 'void' );
 
-#=head2 glRasterPos3d
+=head2 glRasterPos3d
 
-# glRasterPos3d( $x, $y, $z, );
+ glRasterPos3d( $x, $y, $z, );
 
-#=cut
+=cut
 
   $ffi->attach( glRasterPos3d => [ 'GLdouble', 'GLdouble', 'GLdouble', ] => 'void' );
 
-#=head2 glRasterPos3f
+=head2 glRasterPos3f
 
-# glRasterPos3f( $x, $y, $z, );
+ glRasterPos3f( $x, $y, $z, );
 
-#=cut
+=cut
 
   $ffi->attach( glRasterPos3f => [ 'GLfloat', 'GLfloat', 'GLfloat', ] => 'void' );
 
-#=head2 glRasterPos3i
+=head2 glRasterPos3i
 
-# glRasterPos3i( $x, $y, $z, );
+ glRasterPos3i( $x, $y, $z, );
 
-#=cut
+=cut
 
   $ffi->attach( glRasterPos3i => [ 'GLint', 'GLint', 'GLint', ] => 'void' );
 
-#=head2 glRasterPos3s
+=head2 glRasterPos3s
 
-# glRasterPos3s( $x, $y, $z, );
+ glRasterPos3s( $x, $y, $z, );
 
-#=cut
+=cut
 
   $ffi->attach( glRasterPos3s => [ 'GLshort', 'GLshort', 'GLshort', ] => 'void' );
 
-#=head2 glRasterPos4d
+=head2 glRasterPos4d
 
-# glRasterPos4d( $x, $y, $z, $w, );
+ glRasterPos4d( $x, $y, $z, $w, );
 
-#=cut
+=cut
 
   $ffi->attach( glRasterPos4d => [ 'GLdouble', 'GLdouble', 'GLdouble', 'GLdouble', ] => 'void' );
 
-#=head2 glRasterPos4f
+=head2 glRasterPos4f
 
-# glRasterPos4f( $x, $y, $z, $w, );
+ glRasterPos4f( $x, $y, $z, $w, );
 
-#=cut
+=cut
 
   $ffi->attach( glRasterPos4f => [ 'GLfloat', 'GLfloat', 'GLfloat', 'GLfloat', ] => 'void' );
 
-#=head2 glRasterPos4i
+=head2 glRasterPos4i
 
-# glRasterPos4i( $x, $y, $z, $w, );
+ glRasterPos4i( $x, $y, $z, $w, );
 
-#=cut
+=cut
 
   $ffi->attach( glRasterPos4i => [ 'GLint', 'GLint', 'GLint', 'GLint', ] => 'void' );
 
-#=head2 glRasterPos4s
+=head2 glRasterPos4s
 
-# glRasterPos4s( $x, $y, $z, $w, );
+ glRasterPos4s( $x, $y, $z, $w, );
 
-#=cut
+=cut
 
   $ffi->attach( glRasterPos4s => [ 'GLshort', 'GLshort', 'GLshort', 'GLshort', ] => 'void' );
 
-#=head2 glRasterPos2dv
+=head2 glRasterPos2dv
 
-# glRasterPos2dv( $*v, );
+ glRasterPos2dv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glRasterPos2dv => [ 'GLdouble', ] => 'void' );
 
-#=head2 glRasterPos2fv
+=head2 glRasterPos2fv
 
-# glRasterPos2fv( $*v, );
+ glRasterPos2fv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glRasterPos2fv => [ 'GLfloat', ] => 'void' );
 
-#=head2 glRasterPos2iv
+=head2 glRasterPos2iv
 
-# glRasterPos2iv( $*v, );
+ glRasterPos2iv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glRasterPos2iv => [ 'GLint', ] => 'void' );
 
-#=head2 glRasterPos2sv
+=head2 glRasterPos2sv
 
-# glRasterPos2sv( $*v, );
+ glRasterPos2sv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glRasterPos2sv => [ 'GLshort', ] => 'void' );
 
-#=head2 glRasterPos3dv
+=head2 glRasterPos3dv
 
-# glRasterPos3dv( $*v, );
+ glRasterPos3dv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glRasterPos3dv => [ 'GLdouble', ] => 'void' );
 
-#=head2 glRasterPos3fv
+=head2 glRasterPos3fv
 
-# glRasterPos3fv( $*v, );
+ glRasterPos3fv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glRasterPos3fv => [ 'GLfloat', ] => 'void' );
 
-#=head2 glRasterPos3iv
+=head2 glRasterPos3iv
 
-# glRasterPos3iv( $*v, );
+ glRasterPos3iv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glRasterPos3iv => [ 'GLint', ] => 'void' );
 
-#=head2 glRasterPos3sv
+=head2 glRasterPos3sv
 
-# glRasterPos3sv( $*v, );
+ glRasterPos3sv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glRasterPos3sv => [ 'GLshort', ] => 'void' );
 
-#=head2 glRasterPos4dv
+=head2 glRasterPos4dv
 
-# glRasterPos4dv( $*v, );
+ glRasterPos4dv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glRasterPos4dv => [ 'GLdouble', ] => 'void' );
 
-#=head2 glRasterPos4fv
+=head2 glRasterPos4fv
 
-# glRasterPos4fv( $*v, );
+ glRasterPos4fv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glRasterPos4fv => [ 'GLfloat', ] => 'void' );
 
-#=head2 glRasterPos4iv
+=head2 glRasterPos4iv
 
-# glRasterPos4iv( $*v, );
+ glRasterPos4iv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glRasterPos4iv => [ 'GLint', ] => 'void' );
 
-#=head2 glRasterPos4sv
+=head2 glRasterPos4sv
 
-# glRasterPos4sv( $*v, );
+ glRasterPos4sv( $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glRasterPos4sv => [ 'GLshort', ] => 'void' );
 
-#=head2 glRectd
+=head2 glRectd
 
-# glRectd( $x1, $y1, $x2, $y2, );
+ glRectd( $x1, $y1, $x2, $y2, );
 
-#=cut
+=cut
 
   $ffi->attach( glRectd => [ 'GLdouble', 'GLdouble', 'GLdouble', 'GLdouble', ] => 'void' );
 
-#=head2 glRectf
+=head2 glRectf
 
-# glRectf( $x1, $y1, $x2, $y2, );
+ glRectf( $x1, $y1, $x2, $y2, );
 
-#=cut
+=cut
 
   $ffi->attach( glRectf => [ 'GLfloat', 'GLfloat', 'GLfloat', 'GLfloat', ] => 'void' );
 
-#=head2 glRecti
+=head2 glRecti
 
-# glRecti( $x1, $y1, $x2, $y2, );
+ glRecti( $x1, $y1, $x2, $y2, );
 
-#=cut
+=cut
 
   $ffi->attach( glRecti => [ 'GLint', 'GLint', 'GLint', 'GLint', ] => 'void' );
 
-#=head2 glRects
+=head2 glRects
 
-# glRects( $x1, $y1, $x2, $y2, );
+ glRects( $x1, $y1, $x2, $y2, );
 
-#=cut
+=cut
 
   $ffi->attach( glRects => [ 'GLshort', 'GLshort', 'GLshort', 'GLshort', ] => 'void' );
 
-#=head2 glRectdv
+=head2 glRectdv
 
-# glRectdv( $*v1, $*v2, );
+ glRectdv( $*v1, $*v2, );
 
-#=cut
+=cut
 
   $ffi->attach( glRectdv => [ 'GLdouble', 'GLdouble', ] => 'void' );
 
-#=head2 glRectfv
+=head2 glRectfv
 
-# glRectfv( $*v1, $*v2, );
+ glRectfv( $*v1, $*v2, );
 
-#=cut
+=cut
 
   $ffi->attach( glRectfv => [ 'GLfloat', 'GLfloat', ] => 'void' );
 
-#=head2 glRectiv
+=head2 glRectiv
 
-# glRectiv( $*v1, $*v2, );
+ glRectiv( $*v1, $*v2, );
 
-#=cut
+=cut
 
   $ffi->attach( glRectiv => [ 'GLint', 'GLint', ] => 'void' );
 
-#=head2 glRectsv
+=head2 glRectsv
 
-# glRectsv( $*v1, $*v2, );
+ glRectsv( $*v1, $*v2, );
 
-#=cut
+=cut
 
   $ffi->attach( glRectsv => [ 'GLshort', 'GLshort', ] => 'void' );
 
-#=head2 glVertexPointer
+=head2 glVertexPointer
 
-# glVertexPointer( $size, $type, $stride, $*ptr, );
+ glVertexPointer( $size, $type, $stride, $*ptr, );
 
-#=cut
+=cut
 
   $ffi->attach( glVertexPointer => [ 'GLint', 'GLenum', 'GLsizei', 'GLvoid', ] => 'void' );
 
-#=head2 glNormalPointer
+=head2 glNormalPointer
 
-# glNormalPointer( $type, $stride, $*ptr, );
+ glNormalPointer( $type, $stride, $*ptr, );
 
-#=cut
+=cut
 
   $ffi->attach( glNormalPointer => [ 'GLenum', 'GLsizei', 'GLvoid', ] => 'void' );
 
-#=head2 glColorPointer
+=head2 glColorPointer
 
-# glColorPointer( $size, $type, $stride, $*ptr, );
+ glColorPointer( $size, $type, $stride, $*ptr, );
 
-#=cut
+=cut
 
   $ffi->attach( glColorPointer => [ 'GLint', 'GLenum', 'GLsizei', 'GLvoid', ] => 'void' );
 
-#=head2 glIndexPointer
+=head2 glIndexPointer
 
-# glIndexPointer( $type, $stride, $*ptr, );
+ glIndexPointer( $type, $stride, $*ptr, );
 
-#=cut
+=cut
 
   $ffi->attach( glIndexPointer => [ 'GLenum', 'GLsizei', 'GLvoid', ] => 'void' );
 
-#=head2 glTexCoordPointer
+=head2 glTexCoordPointer
 
-# glTexCoordPointer( $size, $type, $stride, $*ptr, );
+ glTexCoordPointer( $size, $type, $stride, $*ptr, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexCoordPointer => [ 'GLint', 'GLenum', 'GLsizei', 'GLvoid', ] => 'void' );
 
-#=head2 glEdgeFlagPointer
+=head2 glEdgeFlagPointer
 
-# glEdgeFlagPointer( $stride, $*ptr, );
+ glEdgeFlagPointer( $stride, $*ptr, );
 
-#=cut
+=cut
 
   $ffi->attach( glEdgeFlagPointer => [ 'GLsizei', 'GLvoid', ] => 'void' );
 
-#=head2 glGetPointerv
+=head2 glGetPointerv
 
-# glGetPointerv( $pname, $**params, );
+ glGetPointerv( $pname, $**params, );
 
-#=cut
+=cut
 
   $ffi->attach( glGetPointerv => [ 'GLenum', 'GLvoid', ] => 'void' );
 
-#=head2 glArrayElement
+=head2 glArrayElement
 
-# glArrayElement( $i, );
+ glArrayElement( $i, );
 
-#=cut
+=cut
 
   $ffi->attach( glArrayElement => [ 'GLint', ] => 'void' );
 
-#=head2 glDrawArrays
+=head2 glDrawArrays
 
-# glDrawArrays( $mode, $first, $count, );
+ glDrawArrays( $mode, $first, $count, );
 
-#=cut
+=cut
 
   $ffi->attach( glDrawArrays => [ 'GLenum', 'GLint', 'GLsizei', ] => 'void' );
 
-#=head2 glDrawElements
+=head2 glDrawElements
 
-# glDrawElements( $mode, $count, $type, $*indices, );
+ glDrawElements( $mode, $count, $type, $*indices, );
 
-#=cut
+=cut
 
   $ffi->attach( glDrawElements => [ 'GLenum', 'GLsizei', 'GLenum', 'GLvoid', ] => 'void' );
 
-#=head2 glInterleavedArrays
+=head2 glInterleavedArrays
 
-# glInterleavedArrays( $format, $stride, $*pointer, );
+ glInterleavedArrays( $format, $stride, $*pointer, );
 
-#=cut
+=cut
 
   $ffi->attach( glInterleavedArrays => [ 'GLenum', 'GLsizei', 'GLvoid', ] => 'void' );
 
-#=head2 glShadeModel
+=head2 glShadeModel
 
-# glShadeModel( $mode, );
+ glShadeModel( $mode, );
 
-#=cut
+=cut
 
   $ffi->attach( glShadeModel => [ 'GLenum', ] => 'void' );
 
-#=head2 glLightf
+=head2 glLightf
 
-# glLightf( $light, $pname, $param, );
+ glLightf( $light, $pname, $param, );
 
-#=cut
+=cut
 
   $ffi->attach( glLightf => [ 'GLenum', 'GLenum', 'GLfloat', ] => 'void' );
 
-#=head2 glLighti
+=head2 glLighti
 
-# glLighti( $light, $pname, $param, );
+ glLighti( $light, $pname, $param, );
 
-#=cut
+=cut
 
   $ffi->attach( glLighti => [ 'GLenum', 'GLenum', 'GLint', ] => 'void' );
 
-#=head2 glLightfv
+=head2 glLightfv
 
-# glLightfv( $light, $pname, \@params, );
+ glLightfv( $light, $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glLightfv => [ 'GLenum', 'GLenum', 'GLfloat_params', ] => 'void' );
 
-#=head2 glLightiv
+=head2 glLightiv
 
-# glLightiv( $light, $pname, \@params, );
+ glLightiv( $light, $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glLightiv => [ 'GLenum', 'GLenum', 'GLint_params', ] => 'void' );
 
-#=head2 glGetLightfv
+=head2 glGetLightfv
 
-# glGetLightfv( $light, $pname, \@params, );
+ glGetLightfv( $light, $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glGetLightfv => [ 'GLenum', 'GLenum', 'GLfloat_params', ] => 'void' );
 
-#=head2 glGetLightiv
+=head2 glGetLightiv
 
-# glGetLightiv( $light, $pname, \@params, );
+ glGetLightiv( $light, $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glGetLightiv => [ 'GLenum', 'GLenum', 'GLint_params', ] => 'void' );
 
-#=head2 glLightModelf
+=head2 glLightModelf
 
-# glLightModelf( $pname, $param, );
+ glLightModelf( $pname, $param, );
 
-#=cut
+=cut
 
   $ffi->attach( glLightModelf => [ 'GLenum', 'GLfloat', ] => 'void' );
 
-#=head2 glLightModeli
+=head2 glLightModeli
 
-# glLightModeli( $pname, $param, );
+ glLightModeli( $pname, $param, );
 
-#=cut
+=cut
 
   $ffi->attach( glLightModeli => [ 'GLenum', 'GLint', ] => 'void' );
 
-#=head2 glLightModelfv
+=head2 glLightModelfv
 
-# glLightModelfv( $pname, \@params, );
+ glLightModelfv( $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glLightModelfv => [ 'GLenum', 'GLfloat_params', ] => 'void' );
 
-#=head2 glLightModeliv
+=head2 glLightModeliv
 
-# glLightModeliv( $pname, \@params, );
+ glLightModeliv( $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glLightModeliv => [ 'GLenum', 'GLint_params', ] => 'void' );
 
-#=head2 glMaterialf
+=head2 glMaterialf
 
-# glMaterialf( $face, $pname, $param, );
+ glMaterialf( $face, $pname, $param, );
 
-#=cut
+=cut
 
   $ffi->attach( glMaterialf => [ 'GLenum', 'GLenum', 'GLfloat', ] => 'void' );
 
-#=head2 glMateriali
+=head2 glMateriali
 
-# glMateriali( $face, $pname, $param, );
+ glMateriali( $face, $pname, $param, );
 
-#=cut
+=cut
 
   $ffi->attach( glMateriali => [ 'GLenum', 'GLenum', 'GLint', ] => 'void' );
 
-#=head2 glMaterialfv
+=head2 glMaterialfv
 
-# glMaterialfv( $face, $pname, \@params, );
+ glMaterialfv( $face, $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glMaterialfv => [ 'GLenum', 'GLenum', 'GLfloat_params', ] => 'void' );
 
-#=head2 glMaterialiv
+=head2 glMaterialiv
 
-# glMaterialiv( $face, $pname, \@params, );
+ glMaterialiv( $face, $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glMaterialiv => [ 'GLenum', 'GLenum', 'GLint_params', ] => 'void' );
 
-#=head2 glGetMaterialfv
+=head2 glGetMaterialfv
 
-# glGetMaterialfv( $face, $pname, \@params, );
+ glGetMaterialfv( $face, $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glGetMaterialfv => [ 'GLenum', 'GLenum', 'GLfloat_params', ] => 'void' );
 
-#=head2 glGetMaterialiv
+=head2 glGetMaterialiv
 
-# glGetMaterialiv( $face, $pname, \@params, );
+ glGetMaterialiv( $face, $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glGetMaterialiv => [ 'GLenum', 'GLenum', 'GLint_params', ] => 'void' );
 
-#=head2 glColorMaterial
+=head2 glColorMaterial
 
-# glColorMaterial( $face, $mode, );
+ glColorMaterial( $face, $mode, );
 
-#=cut
+=cut
 
   $ffi->attach( glColorMaterial => [ 'GLenum', 'GLenum', ] => 'void' );
 
-#=head2 glPixelZoom
+=head2 glPixelZoom
 
-# glPixelZoom( $xfactor, $yfactor, );
+ glPixelZoom( $xfactor, $yfactor, );
 
-#=cut
+=cut
 
   $ffi->attach( glPixelZoom => [ 'GLfloat', 'GLfloat', ] => 'void' );
 
-#=head2 glPixelStoref
+=head2 glPixelStoref
 
-# glPixelStoref( $pname, $param, );
+ glPixelStoref( $pname, $param, );
 
-#=cut
+=cut
 
   $ffi->attach( glPixelStoref => [ 'GLenum', 'GLfloat', ] => 'void' );
 
-#=head2 glPixelStorei
+=head2 glPixelStorei
 
-# glPixelStorei( $pname, $param, );
+ glPixelStorei( $pname, $param, );
 
-#=cut
+=cut
 
   $ffi->attach( glPixelStorei => [ 'GLenum', 'GLint', ] => 'void' );
 
-#=head2 glPixelTransferf
+=head2 glPixelTransferf
 
-# glPixelTransferf( $pname, $param, );
+ glPixelTransferf( $pname, $param, );
 
-#=cut
+=cut
 
   $ffi->attach( glPixelTransferf => [ 'GLenum', 'GLfloat', ] => 'void' );
 
-#=head2 glPixelTransferi
+=head2 glPixelTransferi
 
-# glPixelTransferi( $pname, $param, );
+ glPixelTransferi( $pname, $param, );
 
-#=cut
+=cut
 
   $ffi->attach( glPixelTransferi => [ 'GLenum', 'GLint', ] => 'void' );
 
-#=head2 glPixelMapfv
+=head2 glPixelMapfv
 
-# glPixelMapfv( $map, $mapsize, $*values, );
+ glPixelMapfv( $map, $mapsize, $*values, );
 
-#=cut
+=cut
 
   $ffi->attach( glPixelMapfv => [ 'GLenum', 'GLsizei', 'GLfloat', ] => 'void' );
 
-#=head2 glPixelMapuiv
+=head2 glPixelMapuiv
 
-# glPixelMapuiv( $map, $mapsize, $*values, );
+ glPixelMapuiv( $map, $mapsize, $*values, );
 
-#=cut
+=cut
 
   $ffi->attach( glPixelMapuiv => [ 'GLenum', 'GLsizei', 'GLuint', ] => 'void' );
 
-#=head2 glPixelMapusv
+=head2 glPixelMapusv
 
-# glPixelMapusv( $map, $mapsize, $*values, );
+ glPixelMapusv( $map, $mapsize, $*values, );
 
-#=cut
+=cut
 
   $ffi->attach( glPixelMapusv => [ 'GLenum', 'GLsizei', 'GLushort', ] => 'void' );
 
-#=head2 glGetPixelMapfv
+=head2 glGetPixelMapfv
 
-# glGetPixelMapfv( $map, $*values, );
+ glGetPixelMapfv( $map, $*values, );
 
-#=cut
+=cut
 
   $ffi->attach( glGetPixelMapfv => [ 'GLenum', 'GLfloat', ] => 'void' );
 
-#=head2 glGetPixelMapuiv
+=head2 glGetPixelMapuiv
 
-# glGetPixelMapuiv( $map, $*values, );
+ glGetPixelMapuiv( $map, $*values, );
 
-#=cut
+=cut
 
   $ffi->attach( glGetPixelMapuiv => [ 'GLenum', 'GLuint', ] => 'void' );
 
-#=head2 glGetPixelMapusv
+=head2 glGetPixelMapusv
 
-# glGetPixelMapusv( $map, $*values, );
+ glGetPixelMapusv( $map, $*values, );
 
-#=cut
+=cut
 
   $ffi->attach( glGetPixelMapusv => [ 'GLenum', 'GLushort', ] => 'void' );
 
-#=head2 glBitmap
+=head2 glBitmap
 
-# glBitmap( $width, $height, $xorig, $yorig, $xmove, $ymove, $*bitmap, );
+ glBitmap( $width, $height, $xorig, $yorig, $xmove, $ymove, $*bitmap, );
 
-#=cut
+=cut
 
   $ffi->attach( glBitmap => [ 'GLsizei', 'GLsizei', 'GLfloat', 'GLfloat', 'GLfloat', 'GLfloat', 'GLubyte', ] => 'void' );
 
-#=head2 glReadPixels
+=head2 glReadPixels
 
-# glReadPixels( $x, $y, $width, $height, $format, $type, $*pixels, );
+ glReadPixels( $x, $y, $width, $height, $format, $type, $*pixels, );
 
-#=cut
+=cut
 
   $ffi->attach( glReadPixels => [ 'GLint', 'GLint', 'GLsizei', 'GLsizei', 'GLenum', 'GLenum', 'GLvoid', ] => 'void' );
 
-#=head2 glDrawPixels
+=head2 glDrawPixels
 
-# glDrawPixels( $width, $height, $format, $type, $*pixels, );
+ glDrawPixels( $width, $height, $format, $type, $*pixels, );
 
-#=cut
+=cut
 
   $ffi->attach( glDrawPixels => [ 'GLsizei', 'GLsizei', 'GLenum', 'GLenum', 'GLvoid', ] => 'void' );
 
-#=head2 glCopyPixels
+=head2 glCopyPixels
 
-# glCopyPixels( $x, $y, $width, $height, $type, );
+ glCopyPixels( $x, $y, $width, $height, $type, );
 
-#=cut
+=cut
 
   $ffi->attach( glCopyPixels => [ 'GLint', 'GLint', 'GLsizei', 'GLsizei', 'GLenum', ] => 'void' );
 
-#=head2 glStencilFunc
+=head2 glStencilFunc
 
-# glStencilFunc( $func, $ref, $mask, );
+ glStencilFunc( $func, $ref, $mask, );
 
-#=cut
+=cut
 
   $ffi->attach( glStencilFunc => [ 'GLenum', 'GLint', 'GLuint', ] => 'void' );
 
-#=head2 glStencilMask
+=head2 glStencilMask
 
-# glStencilMask( $mask, );
+ glStencilMask( $mask, );
 
-#=cut
+=cut
 
   $ffi->attach( glStencilMask => [ 'GLuint', ] => 'void' );
 
-#=head2 glStencilOp
+=head2 glStencilOp
 
-# glStencilOp( $fail, $zfail, $zpass, );
+ glStencilOp( $fail, $zfail, $zpass, );
 
-#=cut
+=cut
 
   $ffi->attach( glStencilOp => [ 'GLenum', 'GLenum', 'GLenum', ] => 'void' );
 
-#=head2 glClearStencil
+=head2 glClearStencil
 
-# glClearStencil( $s, );
+ glClearStencil( $s, );
 
-#=cut
+=cut
 
   $ffi->attach( glClearStencil => [ 'GLint', ] => 'void' );
 
-#=head2 glTexGend
+=head2 glTexGend
 
-# glTexGend( $coord, $pname, $param, );
+ glTexGend( $coord, $pname, $param, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexGend => [ 'GLenum', 'GLenum', 'GLdouble', ] => 'void' );
 
-#=head2 glTexGenf
+=head2 glTexGenf
 
-# glTexGenf( $coord, $pname, $param, );
+ glTexGenf( $coord, $pname, $param, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexGenf => [ 'GLenum', 'GLenum', 'GLfloat', ] => 'void' );
 
-#=head2 glTexGeni
+=head2 glTexGeni
 
-# glTexGeni( $coord, $pname, $param, );
+ glTexGeni( $coord, $pname, $param, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexGeni => [ 'GLenum', 'GLenum', 'GLint', ] => 'void' );
 
-#=head2 glTexGendv
+=head2 glTexGendv
 
-# glTexGendv( $coord, $pname, \@params, );
+ glTexGendv( $coord, $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexGendv => [ 'GLenum', 'GLenum', 'GLdouble_params', ] => 'void' );
 
-#=head2 glTexGenfv
+=head2 glTexGenfv
 
-# glTexGenfv( $coord, $pname, \@params, );
+ glTexGenfv( $coord, $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexGenfv => [ 'GLenum', 'GLenum', 'GLfloat_params', ] => 'void' );
 
-#=head2 glTexGeniv
+=head2 glTexGeniv
 
-# glTexGeniv( $coord, $pname, \@params, );
+ glTexGeniv( $coord, $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexGeniv => [ 'GLenum', 'GLenum', 'GLint_params', ] => 'void' );
 
-#=head2 glGetTexGendv
+=head2 glGetTexGendv
 
-# glGetTexGendv( $coord, $pname, \@params, );
+ glGetTexGendv( $coord, $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glGetTexGendv => [ 'GLenum', 'GLenum', 'GLdouble_params', ] => 'void' );
 
-#=head2 glGetTexGenfv
+=head2 glGetTexGenfv
 
-# glGetTexGenfv( $coord, $pname, \@params, );
+ glGetTexGenfv( $coord, $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glGetTexGenfv => [ 'GLenum', 'GLenum', 'GLfloat_params', ] => 'void' );
 
-#=head2 glGetTexGeniv
+=head2 glGetTexGeniv
 
-# glGetTexGeniv( $coord, $pname, \@params, );
+ glGetTexGeniv( $coord, $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glGetTexGeniv => [ 'GLenum', 'GLenum', 'GLint_params', ] => 'void' );
 
-#=head2 glTexEnvf
+=head2 glTexEnvf
 
-# glTexEnvf( $target, $pname, $param, );
+ glTexEnvf( $target, $pname, $param, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexEnvf => [ 'GLenum', 'GLenum', 'GLfloat', ] => 'void' );
 
-#=head2 glTexEnvi
+=head2 glTexEnvi
 
-# glTexEnvi( $target, $pname, $param, );
+ glTexEnvi( $target, $pname, $param, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexEnvi => [ 'GLenum', 'GLenum', 'GLint', ] => 'void' );
 
-#=head2 glTexEnvfv
+=head2 glTexEnvfv
 
-# glTexEnvfv( $target, $pname, \@params, );
+ glTexEnvfv( $target, $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexEnvfv => [ 'GLenum', 'GLenum', 'GLfloat_params', ] => 'void' );
 
-#=head2 glTexEnviv
+=head2 glTexEnviv
 
-# glTexEnviv( $target, $pname, \@params, );
+ glTexEnviv( $target, $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexEnviv => [ 'GLenum', 'GLenum', 'GLint_params', ] => 'void' );
 
-#=head2 glGetTexEnvfv
+=head2 glGetTexEnvfv
 
-# glGetTexEnvfv( $target, $pname, \@params, );
+ glGetTexEnvfv( $target, $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glGetTexEnvfv => [ 'GLenum', 'GLenum', 'GLfloat_params', ] => 'void' );
 
-#=head2 glGetTexEnviv
+=head2 glGetTexEnviv
 
-# glGetTexEnviv( $target, $pname, \@params, );
+ glGetTexEnviv( $target, $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glGetTexEnviv => [ 'GLenum', 'GLenum', 'GLint_params', ] => 'void' );
 
-#=head2 glTexParameterf
+=head2 glTexParameterf
 
-# glTexParameterf( $target, $pname, $param, );
+ glTexParameterf( $target, $pname, $param, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexParameterf => [ 'GLenum', 'GLenum', 'GLfloat', ] => 'void' );
 
-#=head2 glTexParameteri
+=head2 glTexParameteri
 
-# glTexParameteri( $target, $pname, $param, );
+ glTexParameteri( $target, $pname, $param, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexParameteri => [ 'GLenum', 'GLenum', 'GLint', ] => 'void' );
 
-#=head2 glTexParameterfv
+=head2 glTexParameterfv
 
-# glTexParameterfv( $target, $pname, \@params, );
+ glTexParameterfv( $target, $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexParameterfv => [ 'GLenum', 'GLenum', 'GLfloat_params', ] => 'void' );
 
-#=head2 glTexParameteriv
+=head2 glTexParameteriv
 
-# glTexParameteriv( $target, $pname, \@params, );
+ glTexParameteriv( $target, $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexParameteriv => [ 'GLenum', 'GLenum', 'GLint_params', ] => 'void' );
 
-#=head2 glGetTexParameterfv
+=head2 glGetTexParameterfv
 
-# glGetTexParameterfv( $target, $pname, \@params, );
+ glGetTexParameterfv( $target, $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glGetTexParameterfv => [ 'GLenum', 'GLenum', 'GLfloat_params', ] => 'void' );
 
-#=head2 glGetTexParameteriv
+=head2 glGetTexParameteriv
 
-# glGetTexParameteriv( $target, $pname, \@params, );
+ glGetTexParameteriv( $target, $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glGetTexParameteriv => [ 'GLenum', 'GLenum', 'GLint_params', ] => 'void' );
 
-#=head2 glGetTexLevelParameterfv
+=head2 glGetTexLevelParameterfv
 
-# glGetTexLevelParameterfv( $target, $level, $pname, \@params, );
+ glGetTexLevelParameterfv( $target, $level, $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glGetTexLevelParameterfv => [ 'GLenum', 'GLint', 'GLenum', 'GLfloat_params', ] => 'void' );
 
-#=head2 glGetTexLevelParameteriv
+=head2 glGetTexLevelParameteriv
 
-# glGetTexLevelParameteriv( $target, $level, $pname, \@params, );
+ glGetTexLevelParameteriv( $target, $level, $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glGetTexLevelParameteriv => [ 'GLenum', 'GLint', 'GLenum', 'GLint_params', ] => 'void' );
 
-#=head2 glTexImage1D
+=head2 glTexImage1D
 
-# glTexImage1D( $target, $level, $internalFormat, $width, $border, $format, $type, $*pixels, );
+ glTexImage1D( $target, $level, $internalFormat, $width, $border, $format, $type, $*pixels, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexImage1D => [ 'GLenum', 'GLint', 'GLint', 'GLsizei', 'GLint', 'GLenum', 'GLenum', 'GLvoid', ] => 'void' );
 
-#=head2 glTexImage2D
+=head2 glTexImage2D
 
-# glTexImage2D( $target, $level, $internalFormat, $width, $height, $border, $format, $type, $*pixels, );
+ glTexImage2D( $target, $level, $internalFormat, $width, $height, $border, $format, $type, $*pixels, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexImage2D => [ 'GLenum', 'GLint', 'GLint', 'GLsizei', 'GLsizei', 'GLint', 'GLenum', 'GLenum', 'GLvoid', ] => 'void' );
 
-#=head2 glGetTexImage
+=head2 glGetTexImage
 
-# glGetTexImage( $target, $level, $format, $type, $*pixels, );
+ glGetTexImage( $target, $level, $format, $type, $*pixels, );
 
-#=cut
+=cut
 
   $ffi->attach( glGetTexImage => [ 'GLenum', 'GLint', 'GLenum', 'GLenum', 'GLvoid', ] => 'void' );
 
-#=head2 glGenTextures
+=head2 glGenTextures
 
-# glGenTextures( $n, $*textures, );
+ glGenTextures( $n, $*textures, );
 
-#=cut
+=cut
 
   $ffi->attach( glGenTextures => [ 'GLsizei', 'GLuint', ] => 'void' );
 
-#=head2 glDeleteTextures
+=head2 glDeleteTextures
 
-# glDeleteTextures( $n, $*textures, );
+ glDeleteTextures( $n, $*textures, );
 
-#=cut
+=cut
 
   $ffi->attach( glDeleteTextures => [ 'GLsizei', 'GLuint', ] => 'void' );
 
-#=head2 glBindTexture
+=head2 glBindTexture
 
-# glBindTexture( $target, $texture, );
+ glBindTexture( $target, $texture, );
 
-#=cut
+=cut
 
   $ffi->attach( glBindTexture => [ 'GLenum', 'GLuint', ] => 'void' );
 
-#=head2 glPrioritizeTextures
+=head2 glPrioritizeTextures
 
-# glPrioritizeTextures( $n, $*textures, $*priorities, );
+ glPrioritizeTextures( $n, $*textures, $*priorities, );
 
-#=cut
+=cut
 
   $ffi->attach( glPrioritizeTextures => [ 'GLsizei', 'GLuint', 'GLclampf', ] => 'void' );
 
-#=head2 glAreTexturesResident
+=head2 glAreTexturesResident
 
-# glAreTexturesResident( $n, $*textures, $*residences, );
+ glAreTexturesResident( $n, $*textures, $*residences, );
 
-#=cut
+=cut
 
   $ffi->attach( glAreTexturesResident => [ 'GLsizei', 'GLuint', 'GLboolean', ] => 'GLboolean' );
 
-#=head2 glIsTexture
+=head2 glIsTexture
 
-# glIsTexture( $texture, );
+ glIsTexture( $texture, );
 
-#=cut
+=cut
 
   $ffi->attach( glIsTexture => [ 'GLuint', ] => 'GLboolean' );
 
-#=head2 glTexSubImage1D
+=head2 glTexSubImage1D
 
-# glTexSubImage1D( $target, $level, $xoffset, $width, $format, $type, $*pixels, );
+ glTexSubImage1D( $target, $level, $xoffset, $width, $format, $type, $*pixels, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexSubImage1D => [ 'GLenum', 'GLint', 'GLint', 'GLsizei', 'GLenum', 'GLenum', 'GLvoid', ] => 'void' );
 
-#=head2 glTexSubImage2D
+=head2 glTexSubImage2D
 
-# glTexSubImage2D( $target, $level, $xoffset, $yoffset, $width, $height, $format, $type, $*pixels, );
+ glTexSubImage2D( $target, $level, $xoffset, $yoffset, $width, $height, $format, $type, $*pixels, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexSubImage2D => [ 'GLenum', 'GLint', 'GLint', 'GLint', 'GLsizei', 'GLsizei', 'GLenum', 'GLenum', 'GLvoid', ] => 'void' );
 
-#=head2 glCopyTexImage1D
+=head2 glCopyTexImage1D
 
-# glCopyTexImage1D( $target, $level, $internalformat, $x, $y, $width, $border, );
+ glCopyTexImage1D( $target, $level, $internalformat, $x, $y, $width, $border, );
 
-#=cut
+=cut
 
   $ffi->attach( glCopyTexImage1D => [ 'GLenum', 'GLint', 'GLenum', 'GLint', 'GLint', 'GLsizei', 'GLint', ] => 'void' );
 
-#=head2 glCopyTexImage2D
+=head2 glCopyTexImage2D
 
-# glCopyTexImage2D( $target, $level, $internalformat, $x, $y, $width, $height, $border, );
+ glCopyTexImage2D( $target, $level, $internalformat, $x, $y, $width, $height, $border, );
 
-#=cut
+=cut
 
   $ffi->attach( glCopyTexImage2D => [ 'GLenum', 'GLint', 'GLenum', 'GLint', 'GLint', 'GLsizei', 'GLsizei', 'GLint', ] => 'void' );
 
-#=head2 glCopyTexSubImage1D
+=head2 glCopyTexSubImage1D
 
-# glCopyTexSubImage1D( $target, $level, $xoffset, $x, $y, $width, );
+ glCopyTexSubImage1D( $target, $level, $xoffset, $x, $y, $width, );
 
-#=cut
+=cut
 
   $ffi->attach( glCopyTexSubImage1D => [ 'GLenum', 'GLint', 'GLint', 'GLint', 'GLint', 'GLsizei', ] => 'void' );
 
-#=head2 glCopyTexSubImage2D
+=head2 glCopyTexSubImage2D
 
-# glCopyTexSubImage2D( $target, $level, $xoffset, $yoffset, $x, $y, $width, $height, );
+ glCopyTexSubImage2D( $target, $level, $xoffset, $yoffset, $x, $y, $width, $height, );
 
-#=cut
+=cut
 
   $ffi->attach( glCopyTexSubImage2D => [ 'GLenum', 'GLint', 'GLint', 'GLint', 'GLint', 'GLint', 'GLsizei', 'GLsizei', ] => 'void' );
 
-#=head2 glMap1d
+=head2 glMap1d
 
-# glMap1d( $target, $u1, $u2, $stride, $order, $*points, );
+ glMap1d( $target, $u1, $u2, $stride, $order, $*points, );
 
-#=cut
+=cut
 
   $ffi->attach( glMap1d => [ 'GLenum', 'GLdouble', 'GLdouble', 'GLint', 'GLint', 'GLdouble', ] => 'void' );
 
-#=head2 glMap1f
+=head2 glMap1f
 
-# glMap1f( $target, $u1, $u2, $stride, $order, $*points, );
+ glMap1f( $target, $u1, $u2, $stride, $order, $*points, );
 
-#=cut
+=cut
 
   $ffi->attach( glMap1f => [ 'GLenum', 'GLfloat', 'GLfloat', 'GLint', 'GLint', 'GLfloat', ] => 'void' );
 
-#=head2 glMap2d
+=head2 glMap2d
 
-# glMap2d( $target, $u1, $u2, $ustride, $uorder, $v1, $v2, $vstride, $vorder, $*points, );
+ glMap2d( $target, $u1, $u2, $ustride, $uorder, $v1, $v2, $vstride, $vorder, $*points, );
 
-#=cut
+=cut
 
   $ffi->attach( glMap2d => [ 'GLenum', 'GLdouble', 'GLdouble', 'GLint', 'GLint', 'GLdouble', 'GLdouble', 'GLint', 'GLint', 'GLdouble', ] => 'void' );
 
-#=head2 glMap2f
+=head2 glMap2f
 
-# glMap2f( $target, $u1, $u2, $ustride, $uorder, $v1, $v2, $vstride, $vorder, $*points, );
+ glMap2f( $target, $u1, $u2, $ustride, $uorder, $v1, $v2, $vstride, $vorder, $*points, );
 
-#=cut
+=cut
 
   $ffi->attach( glMap2f => [ 'GLenum', 'GLfloat', 'GLfloat', 'GLint', 'GLint', 'GLfloat', 'GLfloat', 'GLint', 'GLint', 'GLfloat', ] => 'void' );
 
-#=head2 glGetMapdv
+=head2 glGetMapdv
 
-# glGetMapdv( $target, $query, $*v, );
+ glGetMapdv( $target, $query, $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glGetMapdv => [ 'GLenum', 'GLenum', 'GLdouble', ] => 'void' );
 
-#=head2 glGetMapfv
+=head2 glGetMapfv
 
-# glGetMapfv( $target, $query, $*v, );
+ glGetMapfv( $target, $query, $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glGetMapfv => [ 'GLenum', 'GLenum', 'GLfloat', ] => 'void' );
 
-#=head2 glGetMapiv
+=head2 glGetMapiv
 
-# glGetMapiv( $target, $query, $*v, );
+ glGetMapiv( $target, $query, $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glGetMapiv => [ 'GLenum', 'GLenum', 'GLint', ] => 'void' );
 
-#=head2 glEvalCoord1d
+=head2 glEvalCoord1d
 
-# glEvalCoord1d( $u, );
+ glEvalCoord1d( $u, );
 
-#=cut
+=cut
 
   $ffi->attach( glEvalCoord1d => [ 'GLdouble', ] => 'void' );
 
-#=head2 glEvalCoord1f
+=head2 glEvalCoord1f
 
-# glEvalCoord1f( $u, );
+ glEvalCoord1f( $u, );
 
-#=cut
+=cut
 
   $ffi->attach( glEvalCoord1f => [ 'GLfloat', ] => 'void' );
 
-#=head2 glEvalCoord1dv
+=head2 glEvalCoord1dv
 
-# glEvalCoord1dv( $*u, );
+ glEvalCoord1dv( $*u, );
 
-#=cut
+=cut
 
   $ffi->attach( glEvalCoord1dv => [ 'GLdouble', ] => 'void' );
 
-#=head2 glEvalCoord1fv
+=head2 glEvalCoord1fv
 
-# glEvalCoord1fv( $*u, );
+ glEvalCoord1fv( $*u, );
 
-#=cut
+=cut
 
   $ffi->attach( glEvalCoord1fv => [ 'GLfloat', ] => 'void' );
 
-#=head2 glEvalCoord2d
+=head2 glEvalCoord2d
 
-# glEvalCoord2d( $u, $v, );
+ glEvalCoord2d( $u, $v, );
 
-#=cut
+=cut
 
   $ffi->attach( glEvalCoord2d => [ 'GLdouble', 'GLdouble', ] => 'void' );
 
-#=head2 glEvalCoord2f
+=head2 glEvalCoord2f
 
-# glEvalCoord2f( $u, $v, );
+ glEvalCoord2f( $u, $v, );
 
-#=cut
+=cut
 
   $ffi->attach( glEvalCoord2f => [ 'GLfloat', 'GLfloat', ] => 'void' );
 
-#=head2 glEvalCoord2dv
+=head2 glEvalCoord2dv
 
-# glEvalCoord2dv( $*u, );
+ glEvalCoord2dv( $*u, );
 
-#=cut
+=cut
 
   $ffi->attach( glEvalCoord2dv => [ 'GLdouble', ] => 'void' );
 
-#=head2 glEvalCoord2fv
+=head2 glEvalCoord2fv
 
-# glEvalCoord2fv( $*u, );
+ glEvalCoord2fv( $*u, );
 
-#=cut
+=cut
 
   $ffi->attach( glEvalCoord2fv => [ 'GLfloat', ] => 'void' );
 
-#=head2 glMapGrid1d
+=head2 glMapGrid1d
 
-# glMapGrid1d( $un, $u1, $u2, );
+ glMapGrid1d( $un, $u1, $u2, );
 
-#=cut
+=cut
 
   $ffi->attach( glMapGrid1d => [ 'GLint', 'GLdouble', 'GLdouble', ] => 'void' );
 
-#=head2 glMapGrid1f
+=head2 glMapGrid1f
 
-# glMapGrid1f( $un, $u1, $u2, );
+ glMapGrid1f( $un, $u1, $u2, );
 
-#=cut
+=cut
 
   $ffi->attach( glMapGrid1f => [ 'GLint', 'GLfloat', 'GLfloat', ] => 'void' );
 
-#=head2 glMapGrid2d
+=head2 glMapGrid2d
 
-# glMapGrid2d( $un, $u1, $u2, $vn, $v1, $v2, );
+ glMapGrid2d( $un, $u1, $u2, $vn, $v1, $v2, );
 
-#=cut
+=cut
 
   $ffi->attach( glMapGrid2d => [ 'GLint', 'GLdouble', 'GLdouble', 'GLint', 'GLdouble', 'GLdouble', ] => 'void' );
 
-#=head2 glMapGrid2f
+=head2 glMapGrid2f
 
-# glMapGrid2f( $un, $u1, $u2, $vn, $v1, $v2, );
+ glMapGrid2f( $un, $u1, $u2, $vn, $v1, $v2, );
 
-#=cut
+=cut
 
   $ffi->attach( glMapGrid2f => [ 'GLint', 'GLfloat', 'GLfloat', 'GLint', 'GLfloat', 'GLfloat', ] => 'void' );
 
-#=head2 glEvalPoint1
+=head2 glEvalPoint1
 
-# glEvalPoint1( $i, );
+ glEvalPoint1( $i, );
 
-#=cut
+=cut
 
   $ffi->attach( glEvalPoint1 => [ 'GLint', ] => 'void' );
 
-#=head2 glEvalPoint2
+=head2 glEvalPoint2
 
-# glEvalPoint2( $i, $j, );
+ glEvalPoint2( $i, $j, );
 
-#=cut
+=cut
 
   $ffi->attach( glEvalPoint2 => [ 'GLint', 'GLint', ] => 'void' );
 
-#=head2 glEvalMesh1
+=head2 glEvalMesh1
 
-# glEvalMesh1( $mode, $i1, $i2, );
+ glEvalMesh1( $mode, $i1, $i2, );
 
-#=cut
+=cut
 
   $ffi->attach( glEvalMesh1 => [ 'GLenum', 'GLint', 'GLint', ] => 'void' );
 
-#=head2 glEvalMesh2
+=head2 glEvalMesh2
 
-# glEvalMesh2( $mode, $i1, $i2, $j1, $j2, );
+ glEvalMesh2( $mode, $i1, $i2, $j1, $j2, );
 
-#=cut
+=cut
 
   $ffi->attach( glEvalMesh2 => [ 'GLenum', 'GLint', 'GLint', 'GLint', 'GLint', ] => 'void' );
 
-#=head2 glFogf
+=head2 glFogf
 
-# glFogf( $pname, $param, );
+ glFogf( $pname, $param, );
 
-#=cut
+=cut
 
   $ffi->attach( glFogf => [ 'GLenum', 'GLfloat', ] => 'void' );
 
-#=head2 glFogi
+=head2 glFogi
 
-# glFogi( $pname, $param, );
+ glFogi( $pname, $param, );
 
-#=cut
+=cut
 
   $ffi->attach( glFogi => [ 'GLenum', 'GLint', ] => 'void' );
 
-#=head2 glFogfv
+=head2 glFogfv
 
-# glFogfv( $pname, \@params, );
+ glFogfv( $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glFogfv => [ 'GLenum', 'GLfloat_params', ] => 'void' );
 
-#=head2 glFogiv
+=head2 glFogiv
 
-# glFogiv( $pname, \@params, );
+ glFogiv( $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glFogiv => [ 'GLenum', 'GLint_params', ] => 'void' );
 
-#=head2 glFeedbackBuffer
+=head2 glFeedbackBuffer
 
-# glFeedbackBuffer( $size, $type, $*buffer, );
+ glFeedbackBuffer( $size, $type, $*buffer, );
 
-#=cut
+=cut
 
   $ffi->attach( glFeedbackBuffer => [ 'GLsizei', 'GLenum', 'GLfloat', ] => 'void' );
 
-#=head2 glPassThrough
+=head2 glPassThrough
 
-# glPassThrough( $token, );
+ glPassThrough( $token, );
 
-#=cut
+=cut
 
   $ffi->attach( glPassThrough => [ 'GLfloat', ] => 'void' );
 
-#=head2 glSelectBuffer
+=head2 glSelectBuffer
 
-# glSelectBuffer( $size, $*buffer, );
+ glSelectBuffer( $size, $*buffer, );
 
-#=cut
+=cut
 
   $ffi->attach( glSelectBuffer => [ 'GLsizei', 'GLuint', ] => 'void' );
 
-#=head2 glInitNames
+=head2 glInitNames
 
-# glInitNames();
+ glInitNames();
 
-#=cut
+=cut
 
   $ffi->attach( glInitNames => [] => 'void' );
 
-#=head2 glLoadName
+=head2 glLoadName
 
-# glLoadName( $name, );
+ glLoadName( $name, );
 
-#=cut
+=cut
 
   $ffi->attach( glLoadName => [ 'GLuint', ] => 'void' );
 
-#=head2 glPushName
+=head2 glPushName
 
-# glPushName( $name, );
+ glPushName( $name, );
 
-#=cut
+=cut
 
   $ffi->attach( glPushName => [ 'GLuint', ] => 'void' );
 
-#=head2 glPopName
+=head2 glPopName
 
-# glPopName();
+ glPopName();
 
-#=cut
+=cut
 
   $ffi->attach( glPopName => [] => 'void' );
 
-#=head2 glDrawRangeElements
+=head2 glDrawRangeElements
 
-# glDrawRangeElements( $mode, $start, $end, $count, $type, $*indices, );
+ glDrawRangeElements( $mode, $start, $end, $count, $type, $*indices, );
 
-#=cut
+=cut
 
   $ffi->attach( glDrawRangeElements => [ 'GLenum', 'GLuint', 'GLuint', 'GLsizei', 'GLenum', 'GLvoid', ] => 'void' );
 
-#=head2 glTexImage3D
+=head2 glTexImage3D
 
-# glTexImage3D( $target, $level, $internalFormat, $width, $height, $depth, $border, $format, $type, $*pixels, );
+ glTexImage3D( $target, $level, $internalFormat, $width, $height, $depth, $border, $format, $type, $*pixels, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexImage3D => [ 'GLenum', 'GLint', 'GLint', 'GLsizei', 'GLsizei', 'GLsizei', 'GLint', 'GLenum', 'GLenum', 'GLvoid', ] => 'void' );
 
-#=head2 glTexSubImage3D
+=head2 glTexSubImage3D
 
-# glTexSubImage3D( $target, $level, $xoffset, $yoffset, $zoffset, $width, $height, $depth, $format, $type, $*pixels, );
+ glTexSubImage3D( $target, $level, $xoffset, $yoffset, $zoffset, $width, $height, $depth, $format, $type, $*pixels, );
 
-#=cut
+=cut
 
   $ffi->attach( glTexSubImage3D => [ 'GLenum', 'GLint', 'GLint', 'GLint', 'GLint', 'GLsizei', 'GLsizei', 'GLsizei', 'GLenum', 'GLenum', 'GLvoid', ] => 'void' );
 
-#=head2 glCopyTexSubImage3D
+=head2 glCopyTexSubImage3D
 
-# glCopyTexSubImage3D( $target, $level, $xoffset, $yoffset, $zoffset, $x, $y, $width, $height, );
+ glCopyTexSubImage3D( $target, $level, $xoffset, $yoffset, $zoffset, $x, $y, $width, $height, );
 
-#=cut
+=cut
 
   $ffi->attach( glCopyTexSubImage3D => [ 'GLenum', 'GLint', 'GLint', 'GLint', 'GLint', 'GLint', 'GLint', 'GLsizei', 'GLsizei', ] => 'void' );
 
-#=head2 glColorTable
+=head2 glColorTable
 
-# glColorTable( $target, $internalformat, $width, $format, $type, $*table, );
+ glColorTable( $target, $internalformat, $width, $format, $type, $*table, );
 
-#=cut
+=cut
 
   $ffi->attach( glColorTable => [ 'GLenum', 'GLenum', 'GLsizei', 'GLenum', 'GLenum', 'GLvoid', ] => 'void' );
 
-#=head2 glColorSubTable
+=head2 glColorSubTable
 
-# glColorSubTable( $target, $start, $count, $format, $type, $*data, );
+ glColorSubTable( $target, $start, $count, $format, $type, $*data, );
 
-#=cut
+=cut
 
   $ffi->attach( glColorSubTable => [ 'GLenum', 'GLsizei', 'GLsizei', 'GLenum', 'GLenum', 'GLvoid', ] => 'void' );
 
-#=head2 glColorTableParameteriv
+=head2 glColorTableParameteriv
 
-# glColorTableParameteriv( $target, $pname, \@params, );
+ glColorTableParameteriv( $target, $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glColorTableParameteriv => [ 'GLenum', 'GLenum', 'GLint_params', ] => 'void' );
 
-#=head2 glColorTableParameterfv
+=head2 glColorTableParameterfv
 
-# glColorTableParameterfv( $target, $pname, \@params, );
+ glColorTableParameterfv( $target, $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glColorTableParameterfv => [ 'GLenum', 'GLenum', 'GLfloat_params', ] => 'void' );
 
-#=head2 glCopyColorSubTable
+=head2 glCopyColorSubTable
 
-# glCopyColorSubTable( $target, $start, $x, $y, $width, );
+ glCopyColorSubTable( $target, $start, $x, $y, $width, );
 
-#=cut
+=cut
 
   $ffi->attach( glCopyColorSubTable => [ 'GLenum', 'GLsizei', 'GLint', 'GLint', 'GLsizei', ] => 'void' );
 
-#=head2 glCopyColorTable
+=head2 glCopyColorTable
 
-# glCopyColorTable( $target, $internalformat, $x, $y, $width, );
+ glCopyColorTable( $target, $internalformat, $x, $y, $width, );
 
-#=cut
+=cut
 
   $ffi->attach( glCopyColorTable => [ 'GLenum', 'GLenum', 'GLint', 'GLint', 'GLsizei', ] => 'void' );
 
-#=head2 glGetColorTable
+=head2 glGetColorTable
 
-# glGetColorTable( $target, $format, $type, $*table, );
+ glGetColorTable( $target, $format, $type, $*table, );
 
-#=cut
+=cut
 
   $ffi->attach( glGetColorTable => [ 'GLenum', 'GLenum', 'GLenum', 'GLvoid', ] => 'void' );
 
-#=head2 glGetColorTableParameterfv
+=head2 glGetColorTableParameterfv
 
-# glGetColorTableParameterfv( $target, $pname, \@params, );
+ glGetColorTableParameterfv( $target, $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glGetColorTableParameterfv => [ 'GLenum', 'GLenum', 'GLfloat_params', ] => 'void' );
 
-#=head2 glGetColorTableParameteriv
+=head2 glGetColorTableParameteriv
 
-# glGetColorTableParameteriv( $target, $pname, \@params, );
+ glGetColorTableParameteriv( $target, $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glGetColorTableParameteriv => [ 'GLenum', 'GLenum', 'GLint_params', ] => 'void' );
 
-#=head2 glBlendEquation
+=head2 glBlendEquation
 
-# glBlendEquation( $mode, );
+ glBlendEquation( $mode, );
 
-#=cut
+=cut
 
   $ffi->attach( glBlendEquation => [ 'GLenum', ] => 'void' );
 
-#=head2 glBlendColor
+=head2 glBlendColor
 
-# glBlendColor( $red, $green, $blue, $alpha, );
+ glBlendColor( $red, $green, $blue, $alpha, );
 
-#=cut
+=cut
 
   $ffi->attach( glBlendColor => [ 'GLclampf', 'GLclampf', 'GLclampf', 'GLclampf', ] => 'void' );
 
-#=head2 glHistogram
+=head2 glHistogram
 
-# glHistogram( $target, $width, $internalformat, $sink, );
+ glHistogram( $target, $width, $internalformat, $sink, );
 
-#=cut
+=cut
 
   $ffi->attach( glHistogram => [ 'GLenum', 'GLsizei', 'GLenum', 'GLboolean', ] => 'void' );
 
-#=head2 glResetHistogram
+=head2 glResetHistogram
 
-# glResetHistogram( $target, );
+ glResetHistogram( $target, );
 
-#=cut
+=cut
 
   $ffi->attach( glResetHistogram => [ 'GLenum', ] => 'void' );
 
-#=head2 glGetHistogram
+=head2 glGetHistogram
 
-# glGetHistogram( $target, $reset, $format, $type, $*values, );
+ glGetHistogram( $target, $reset, $format, $type, $*values, );
 
-#=cut
+=cut
 
   $ffi->attach( glGetHistogram => [ 'GLenum', 'GLboolean', 'GLenum', 'GLenum', 'GLvoid', ] => 'void' );
 
-#=head2 glGetHistogramParameterfv
+=head2 glGetHistogramParameterfv
 
-# glGetHistogramParameterfv( $target, $pname, \@params, );
+ glGetHistogramParameterfv( $target, $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glGetHistogramParameterfv => [ 'GLenum', 'GLenum', 'GLfloat_params', ] => 'void' );
 
-#=head2 glGetHistogramParameteriv
+=head2 glGetHistogramParameteriv
 
-# glGetHistogramParameteriv( $target, $pname, \@params, );
+ glGetHistogramParameteriv( $target, $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glGetHistogramParameteriv => [ 'GLenum', 'GLenum', 'GLint_params', ] => 'void' );
 
-#=head2 glMinmax
+=head2 glMinmax
 
-# glMinmax( $target, $internalformat, $sink, );
+ glMinmax( $target, $internalformat, $sink, );
 
-#=cut
+=cut
 
   $ffi->attach( glMinmax => [ 'GLenum', 'GLenum', 'GLboolean', ] => 'void' );
 
-#=head2 glResetMinmax
+=head2 glResetMinmax
 
-# glResetMinmax( $target, );
+ glResetMinmax( $target, );
 
-#=cut
+=cut
 
   $ffi->attach( glResetMinmax => [ 'GLenum', ] => 'void' );
 
-#=head2 glGetMinmax
+=head2 glGetMinmax
 
-# glGetMinmax( $target, $reset, $format, $types, $*values, );
+ glGetMinmax( $target, $reset, $format, $types, $*values, );
 
-#=cut
+=cut
 
   $ffi->attach( glGetMinmax => [ 'GLenum', 'GLboolean', 'GLenum', 'GLenum', 'GLvoid', ] => 'void' );
 
-#=head2 glGetMinmaxParameterfv
+=head2 glGetMinmaxParameterfv
 
-# glGetMinmaxParameterfv( $target, $pname, \@params, );
+ glGetMinmaxParameterfv( $target, $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glGetMinmaxParameterfv => [ 'GLenum', 'GLenum', 'GLfloat_params', ] => 'void' );
 
-#=head2 glGetMinmaxParameteriv
+=head2 glGetMinmaxParameteriv
 
-# glGetMinmaxParameteriv( $target, $pname, \@params, );
+ glGetMinmaxParameteriv( $target, $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glGetMinmaxParameteriv => [ 'GLenum', 'GLenum', 'GLint_params', ] => 'void' );
 
-#=head2 glConvolutionFilter1D
+=head2 glConvolutionFilter1D
 
-# glConvolutionFilter1D( $target, $internalformat, $width, $format, $type, $*image, );
+ glConvolutionFilter1D( $target, $internalformat, $width, $format, $type, $*image, );
 
-#=cut
+=cut
 
   $ffi->attach( glConvolutionFilter1D => [ 'GLenum', 'GLenum', 'GLsizei', 'GLenum', 'GLenum', 'GLvoid', ] => 'void' );
 
-#=head2 glConvolutionFilter2D
+=head2 glConvolutionFilter2D
 
-# glConvolutionFilter2D( $target, $internalformat, $width, $height, $format, $type, $*image, );
+ glConvolutionFilter2D( $target, $internalformat, $width, $height, $format, $type, $*image, );
 
-#=cut
+=cut
 
   $ffi->attach( glConvolutionFilter2D => [ 'GLenum', 'GLenum', 'GLsizei', 'GLsizei', 'GLenum', 'GLenum', 'GLvoid', ] => 'void' );
 
-#=head2 glConvolutionParameterf
+=head2 glConvolutionParameterf
 
-# glConvolutionParameterf( $target, $pname, $params, );
+ glConvolutionParameterf( $target, $pname, $params, );
 
-#=cut
+=cut
 
   $ffi->attach( glConvolutionParameterf => [ 'GLenum', 'GLenum', 'GLfloat', ] => 'void' );
 
-#=head2 glConvolutionParameterfv
+=head2 glConvolutionParameterfv
 
-# glConvolutionParameterfv( $target, $pname, \@params, );
+ glConvolutionParameterfv( $target, $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glConvolutionParameterfv => [ 'GLenum', 'GLenum', 'GLfloat_params', ] => 'void' );
 
-#=head2 glConvolutionParameteri
+=head2 glConvolutionParameteri
 
-# glConvolutionParameteri( $target, $pname, $params, );
+ glConvolutionParameteri( $target, $pname, $params, );
 
-#=cut
+=cut
 
   $ffi->attach( glConvolutionParameteri => [ 'GLenum', 'GLenum', 'GLint', ] => 'void' );
 
-#=head2 glConvolutionParameteriv
+=head2 glConvolutionParameteriv
 
-# glConvolutionParameteriv( $target, $pname, \@params, );
+ glConvolutionParameteriv( $target, $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glConvolutionParameteriv => [ 'GLenum', 'GLenum', 'GLint_params', ] => 'void' );
 
-#=head2 glCopyConvolutionFilter1D
+=head2 glCopyConvolutionFilter1D
 
-# glCopyConvolutionFilter1D( $target, $internalformat, $x, $y, $width, );
+ glCopyConvolutionFilter1D( $target, $internalformat, $x, $y, $width, );
 
-#=cut
+=cut
 
   $ffi->attach( glCopyConvolutionFilter1D => [ 'GLenum', 'GLenum', 'GLint', 'GLint', 'GLsizei', ] => 'void' );
 
-#=head2 glCopyConvolutionFilter2D
+=head2 glCopyConvolutionFilter2D
 
-# glCopyConvolutionFilter2D( $target, $internalformat, $x, $y, $width, $height, );
+ glCopyConvolutionFilter2D( $target, $internalformat, $x, $y, $width, $height, );
 
-#=cut
+=cut
 
   $ffi->attach( glCopyConvolutionFilter2D => [ 'GLenum', 'GLenum', 'GLint', 'GLint', 'GLsizei', 'GLsizei', ] => 'void' );
 
-#=head2 glGetConvolutionFilter
+=head2 glGetConvolutionFilter
 
-# glGetConvolutionFilter( $target, $format, $type, $*image, );
+ glGetConvolutionFilter( $target, $format, $type, $*image, );
 
-#=cut
+=cut
 
   $ffi->attach( glGetConvolutionFilter => [ 'GLenum', 'GLenum', 'GLenum', 'GLvoid', ] => 'void' );
 
-#=head2 glGetConvolutionParameterfv
+=head2 glGetConvolutionParameterfv
 
-# glGetConvolutionParameterfv( $target, $pname, \@params, );
+ glGetConvolutionParameterfv( $target, $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glGetConvolutionParameterfv => [ 'GLenum', 'GLenum', 'GLfloat_params', ] => 'void' );
 
-#=head2 glGetConvolutionParameteriv
+=head2 glGetConvolutionParameteriv
 
-# glGetConvolutionParameteriv( $target, $pname, \@params, );
+ glGetConvolutionParameteriv( $target, $pname, \@params, );
 
-#=cut
+=cut
 
   $ffi->attach( glGetConvolutionParameteriv => [ 'GLenum', 'GLenum', 'GLint_params', ] => 'void' );
 
-#=head2 glSeparableFilter2D
+=head2 glSeparableFilter2D
 
-# glSeparableFilter2D( $target, $internalformat, $width, $height, $format, $type, $*row, $*column, );
+ glSeparableFilter2D( $target, $internalformat, $width, $height, $format, $type, $*row, $*column, );
 
-#=cut
+=cut
 
   $ffi->attach( glSeparableFilter2D => [ 'GLenum', 'GLenum', 'GLsizei', 'GLsizei', 'GLenum', 'GLenum', 'GLvoid', 'GLvoid', ] => 'void' );
 
-#=head2 glGetSeparableFilter
+=head2 glGetSeparableFilter
 
-# glGetSeparableFilter( $target, $format, $type, $*row, $*column, $*span, );
+ glGetSeparableFilter( $target, $format, $type, $*row, $*column, $*span, );
 
-#=cut
+=cut
 
   $ffi->attach( glGetSeparableFilter => [ 'GLenum', 'GLenum', 'GLenum', 'GLvoid', 'GLvoid', 'GLvoid', ] => 'void' );
 
-#=head2 glActiveTexture
+=head2 glActiveTexture
 
-# glActiveTexture( $texture, );
+ glActiveTexture( $texture, );
 
-#=cut
+=cut
 
   $ffi->attach( glActiveTexture => [ 'GLenum', ] => 'void' );
 
-#=head2 glClientActiveTexture
+=head2 glClientActiveTexture
 
-# glClientActiveTexture( $texture, );
+ glClientActiveTexture( $texture, );
 
-#=cut
+=cut
 
   $ffi->attach( glClientActiveTexture => [ 'GLenum', ] => 'void' );
 
-#=head2 glCompressedTexImage1D
+=head2 glCompressedTexImage1D
 
-# glCompressedTexImage1D( $target, $level, $internalformat, $width, $border, $imageSize, $*data, );
+ glCompressedTexImage1D( $target, $level, $internalformat, $width, $border, $imageSize, $*data, );
 
-#=cut
+=cut
 
   $ffi->attach( glCompressedTexImage1D => [ 'GLenum', 'GLint', 'GLenum', 'GLsizei', 'GLint', 'GLsizei', 'GLvoid', ] => 'void' );
 
-#=head2 glCompressedTexImage2D
+=head2 glCompressedTexImage2D
 
-# glCompressedTexImage2D( $target, $level, $internalformat, $width, $height, $border, $imageSize, $*data, );
+ glCompressedTexImage2D( $target, $level, $internalformat, $width, $height, $border, $imageSize, $*data, );
 
-#=cut
+=cut
 
   $ffi->attach( glCompressedTexImage2D => [ 'GLenum', 'GLint', 'GLenum', 'GLsizei', 'GLsizei', 'GLint', 'GLsizei', 'GLvoid', ] => 'void' );
 
-#=head2 glCompressedTexImage3D
+=head2 glCompressedTexImage3D
 
-# glCompressedTexImage3D( $target, $level, $internalformat, $width, $height, $depth, $border, $imageSize, $*data, );
+ glCompressedTexImage3D( $target, $level, $internalformat, $width, $height, $depth, $border, $imageSize, $*data, );
 
-#=cut
+=cut
 
   $ffi->attach( glCompressedTexImage3D => [ 'GLenum', 'GLint', 'GLenum', 'GLsizei', 'GLsizei', 'GLsizei', 'GLint', 'GLsizei', 'GLvoid', ] => 'void' );
 
-#=head2 glCompressedTexSubImage1D
+=head2 glCompressedTexSubImage1D
 
-# glCompressedTexSubImage1D( $target, $level, $xoffset, $width, $format, $imageSize, $*data, );
+ glCompressedTexSubImage1D( $target, $level, $xoffset, $width, $format, $imageSize, $*data, );
 
-#=cut
+=cut
 
   $ffi->attach( glCompressedTexSubImage1D => [ 'GLenum', 'GLint', 'GLint', 'GLsizei', 'GLenum', 'GLsizei', 'GLvoid', ] => 'void' );
 
-#=head2 glCompressedTexSubImage2D
+=head2 glCompressedTexSubImage2D
 
-# glCompressedTexSubImage2D( $target, $level, $xoffset, $yoffset, $width, $height, $format, $imageSize, $*data, );
+ glCompressedTexSubImage2D( $target, $level, $xoffset, $yoffset, $width, $height, $format, $imageSize, $*data, );
 
-#=cut
+=cut
 
   $ffi->attach( glCompressedTexSubImage2D => [ 'GLenum', 'GLint', 'GLint', 'GLint', 'GLsizei', 'GLsizei', 'GLenum', 'GLsizei', 'GLvoid', ] => 'void' );
 
-#=head2 glCompressedTexSubImage3D
+=head2 glCompressedTexSubImage3D
 
-# glCompressedTexSubImage3D( $target, $level, $xoffset, $yoffset, $zoffset, $width, $height, $depth, $format, $imageSize, $*data, );
+ glCompressedTexSubImage3D( $target, $level, $xoffset, $yoffset, $zoffset, $width, $height, $depth, $format, $imageSize, $*data, );
 
-#=cut
+=cut
 
   $ffi->attach( glCompressedTexSubImage3D => [ 'GLenum', 'GLint', 'GLint', 'GLint', 'GLint', 'GLsizei', 'GLsizei', 'GLsizei', 'GLenum', 'GLsizei', 'GLvoid', ] => 'void' );
 
-#=head2 glGetCompressedTexImage
+=head2 glGetCompressedTexImage
 
-# glGetCompressedTexImage( $target, $lod, $*img, );
+ glGetCompressedTexImage( $target, $lod, $*img, );
 
-#=cut
+=cut
 
   $ffi->attach( glGetCompressedTexImage => [ 'GLenum', 'GLint', 'GLvoid', ] => 'void' );
 
-#=head2 glMultiTexCoord1d
+=head2 glMultiTexCoord1d
 
-# glMultiTexCoord1d( $target, $s, );
+ glMultiTexCoord1d( $target, $s, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord1d => [ 'GLenum', 'GLdouble', ] => 'void' );
 
-#=head2 glMultiTexCoord1dv
+=head2 glMultiTexCoord1dv
 
-# glMultiTexCoord1dv( $target, $*v, );
+ glMultiTexCoord1dv( $target, $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord1dv => [ 'GLenum', 'GLdouble', ] => 'void' );
 
-#=head2 glMultiTexCoord1f
+=head2 glMultiTexCoord1f
 
-# glMultiTexCoord1f( $target, $s, );
+ glMultiTexCoord1f( $target, $s, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord1f => [ 'GLenum', 'GLfloat', ] => 'void' );
 
-#=head2 glMultiTexCoord1fv
+=head2 glMultiTexCoord1fv
 
-# glMultiTexCoord1fv( $target, $*v, );
+ glMultiTexCoord1fv( $target, $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord1fv => [ 'GLenum', 'GLfloat', ] => 'void' );
 
-#=head2 glMultiTexCoord1i
+=head2 glMultiTexCoord1i
 
-# glMultiTexCoord1i( $target, $s, );
+ glMultiTexCoord1i( $target, $s, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord1i => [ 'GLenum', 'GLint', ] => 'void' );
 
-#=head2 glMultiTexCoord1iv
+=head2 glMultiTexCoord1iv
 
-# glMultiTexCoord1iv( $target, $*v, );
+ glMultiTexCoord1iv( $target, $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord1iv => [ 'GLenum', 'GLint', ] => 'void' );
 
-#=head2 glMultiTexCoord1s
+=head2 glMultiTexCoord1s
 
-# glMultiTexCoord1s( $target, $s, );
+ glMultiTexCoord1s( $target, $s, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord1s => [ 'GLenum', 'GLshort', ] => 'void' );
 
-#=head2 glMultiTexCoord1sv
+=head2 glMultiTexCoord1sv
 
-# glMultiTexCoord1sv( $target, $*v, );
+ glMultiTexCoord1sv( $target, $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord1sv => [ 'GLenum', 'GLshort', ] => 'void' );
 
-#=head2 glMultiTexCoord2d
+=head2 glMultiTexCoord2d
 
-# glMultiTexCoord2d( $target, $s, $t, );
+ glMultiTexCoord2d( $target, $s, $t, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord2d => [ 'GLenum', 'GLdouble', 'GLdouble', ] => 'void' );
 
-#=head2 glMultiTexCoord2dv
+=head2 glMultiTexCoord2dv
 
-# glMultiTexCoord2dv( $target, $*v, );
+ glMultiTexCoord2dv( $target, $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord2dv => [ 'GLenum', 'GLdouble', ] => 'void' );
 
-#=head2 glMultiTexCoord2f
+=head2 glMultiTexCoord2f
 
-# glMultiTexCoord2f( $target, $s, $t, );
+ glMultiTexCoord2f( $target, $s, $t, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord2f => [ 'GLenum', 'GLfloat', 'GLfloat', ] => 'void' );
 
-#=head2 glMultiTexCoord2fv
+=head2 glMultiTexCoord2fv
 
-# glMultiTexCoord2fv( $target, $*v, );
+ glMultiTexCoord2fv( $target, $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord2fv => [ 'GLenum', 'GLfloat', ] => 'void' );
 
-#=head2 glMultiTexCoord2i
+=head2 glMultiTexCoord2i
 
-# glMultiTexCoord2i( $target, $s, $t, );
+ glMultiTexCoord2i( $target, $s, $t, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord2i => [ 'GLenum', 'GLint', 'GLint', ] => 'void' );
 
-#=head2 glMultiTexCoord2iv
+=head2 glMultiTexCoord2iv
 
-# glMultiTexCoord2iv( $target, $*v, );
+ glMultiTexCoord2iv( $target, $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord2iv => [ 'GLenum', 'GLint', ] => 'void' );
 
-#=head2 glMultiTexCoord2s
+=head2 glMultiTexCoord2s
 
-# glMultiTexCoord2s( $target, $s, $t, );
+ glMultiTexCoord2s( $target, $s, $t, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord2s => [ 'GLenum', 'GLshort', 'GLshort', ] => 'void' );
 
-#=head2 glMultiTexCoord2sv
+=head2 glMultiTexCoord2sv
 
-# glMultiTexCoord2sv( $target, $*v, );
+ glMultiTexCoord2sv( $target, $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord2sv => [ 'GLenum', 'GLshort', ] => 'void' );
 
-#=head2 glMultiTexCoord3d
+=head2 glMultiTexCoord3d
 
-# glMultiTexCoord3d( $target, $s, $t, $r, );
+ glMultiTexCoord3d( $target, $s, $t, $r, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord3d => [ 'GLenum', 'GLdouble', 'GLdouble', 'GLdouble', ] => 'void' );
 
-#=head2 glMultiTexCoord3dv
+=head2 glMultiTexCoord3dv
 
-# glMultiTexCoord3dv( $target, $*v, );
+ glMultiTexCoord3dv( $target, $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord3dv => [ 'GLenum', 'GLdouble', ] => 'void' );
 
-#=head2 glMultiTexCoord3f
+=head2 glMultiTexCoord3f
 
-# glMultiTexCoord3f( $target, $s, $t, $r, );
+ glMultiTexCoord3f( $target, $s, $t, $r, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord3f => [ 'GLenum', 'GLfloat', 'GLfloat', 'GLfloat', ] => 'void' );
 
-#=head2 glMultiTexCoord3fv
+=head2 glMultiTexCoord3fv
 
-# glMultiTexCoord3fv( $target, $*v, );
+ glMultiTexCoord3fv( $target, $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord3fv => [ 'GLenum', 'GLfloat', ] => 'void' );
 
-#=head2 glMultiTexCoord3i
+=head2 glMultiTexCoord3i
 
-# glMultiTexCoord3i( $target, $s, $t, $r, );
+ glMultiTexCoord3i( $target, $s, $t, $r, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord3i => [ 'GLenum', 'GLint', 'GLint', 'GLint', ] => 'void' );
 
-#=head2 glMultiTexCoord3iv
+=head2 glMultiTexCoord3iv
 
-# glMultiTexCoord3iv( $target, $*v, );
+ glMultiTexCoord3iv( $target, $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord3iv => [ 'GLenum', 'GLint', ] => 'void' );
 
-#=head2 glMultiTexCoord3s
+=head2 glMultiTexCoord3s
 
-# glMultiTexCoord3s( $target, $s, $t, $r, );
+ glMultiTexCoord3s( $target, $s, $t, $r, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord3s => [ 'GLenum', 'GLshort', 'GLshort', 'GLshort', ] => 'void' );
 
-#=head2 glMultiTexCoord3sv
+=head2 glMultiTexCoord3sv
 
-# glMultiTexCoord3sv( $target, $*v, );
+ glMultiTexCoord3sv( $target, $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord3sv => [ 'GLenum', 'GLshort', ] => 'void' );
 
-#=head2 glMultiTexCoord4d
+=head2 glMultiTexCoord4d
 
-# glMultiTexCoord4d( $target, $s, $t, $r, $q, );
+ glMultiTexCoord4d( $target, $s, $t, $r, $q, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord4d => [ 'GLenum', 'GLdouble', 'GLdouble', 'GLdouble', 'GLdouble', ] => 'void' );
 
-#=head2 glMultiTexCoord4dv
+=head2 glMultiTexCoord4dv
 
-# glMultiTexCoord4dv( $target, $*v, );
+ glMultiTexCoord4dv( $target, $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord4dv => [ 'GLenum', 'GLdouble', ] => 'void' );
 
-#=head2 glMultiTexCoord4f
+=head2 glMultiTexCoord4f
 
-# glMultiTexCoord4f( $target, $s, $t, $r, $q, );
+ glMultiTexCoord4f( $target, $s, $t, $r, $q, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord4f => [ 'GLenum', 'GLfloat', 'GLfloat', 'GLfloat', 'GLfloat', ] => 'void' );
 
-#=head2 glMultiTexCoord4fv
+=head2 glMultiTexCoord4fv
 
-# glMultiTexCoord4fv( $target, $*v, );
+ glMultiTexCoord4fv( $target, $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord4fv => [ 'GLenum', 'GLfloat', ] => 'void' );
 
-#=head2 glMultiTexCoord4i
+=head2 glMultiTexCoord4i
 
-# glMultiTexCoord4i( $target, $s, $t, $r, $q, );
+ glMultiTexCoord4i( $target, $s, $t, $r, $q, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord4i => [ 'GLenum', 'GLint', 'GLint', 'GLint', 'GLint', ] => 'void' );
 
-#=head2 glMultiTexCoord4iv
+=head2 glMultiTexCoord4iv
 
-# glMultiTexCoord4iv( $target, $*v, );
+ glMultiTexCoord4iv( $target, $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord4iv => [ 'GLenum', 'GLint', ] => 'void' );
 
-#=head2 glMultiTexCoord4s
+=head2 glMultiTexCoord4s
 
-# glMultiTexCoord4s( $target, $s, $t, $r, $q, );
+ glMultiTexCoord4s( $target, $s, $t, $r, $q, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord4s => [ 'GLenum', 'GLshort', 'GLshort', 'GLshort', 'GLshort', ] => 'void' );
 
-#=head2 glMultiTexCoord4sv
+=head2 glMultiTexCoord4sv
 
-# glMultiTexCoord4sv( $target, $*v, );
+ glMultiTexCoord4sv( $target, $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord4sv => [ 'GLenum', 'GLshort', ] => 'void' );
 
-#=head2 glLoadTransposeMatrixd
+=head2 glLoadTransposeMatrixd
 
-# glLoadTransposeMatrixd( $m[16], );
+ glLoadTransposeMatrixd( $m[16], );
 
-#=cut
+=cut
 
   $ffi->attach( glLoadTransposeMatrixd => [ 'GLdouble', ] => 'void' );
 
-#=head2 glLoadTransposeMatrixf
+=head2 glLoadTransposeMatrixf
 
-# glLoadTransposeMatrixf( $m[16], );
+ glLoadTransposeMatrixf( $m[16], );
 
-#=cut
+=cut
 
   $ffi->attach( glLoadTransposeMatrixf => [ 'GLfloat', ] => 'void' );
 
-#=head2 glMultTransposeMatrixd
+=head2 glMultTransposeMatrixd
 
-# glMultTransposeMatrixd( $m[16], );
+ glMultTransposeMatrixd( $m[16], );
 
-#=cut
+=cut
 
   $ffi->attach( glMultTransposeMatrixd => [ 'GLdouble', ] => 'void' );
 
-#=head2 glMultTransposeMatrixf
+=head2 glMultTransposeMatrixf
 
-# glMultTransposeMatrixf( $m[16], );
+ glMultTransposeMatrixf( $m[16], );
 
-#=cut
+=cut
 
   $ffi->attach( glMultTransposeMatrixf => [ 'GLfloat', ] => 'void' );
 
-#=head2 glSampleCoverage
+=head2 glSampleCoverage
 
-# glSampleCoverage( $value, $invert, );
+ glSampleCoverage( $value, $invert, );
 
-#=cut
+=cut
 
   $ffi->attach( glSampleCoverage => [ 'GLclampf', 'GLboolean', ] => 'void' );
 
-#=head2 glActiveTextureARB
+=head2 glActiveTextureARB
 
-# glActiveTextureARB( $texture, );
+ glActiveTextureARB( $texture, );
 
-#=cut
+=cut
 
   $ffi->attach( glActiveTextureARB => [ 'GLenum', ] => 'void' );
 
-#=head2 glClientActiveTextureARB
+=head2 glClientActiveTextureARB
 
-# glClientActiveTextureARB( $texture, );
+ glClientActiveTextureARB( $texture, );
 
-#=cut
+=cut
 
   $ffi->attach( glClientActiveTextureARB => [ 'GLenum', ] => 'void' );
 
-#=head2 glMultiTexCoord1dARB
+=head2 glMultiTexCoord1dARB
 
-# glMultiTexCoord1dARB( $target, $s, );
+ glMultiTexCoord1dARB( $target, $s, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord1dARB => [ 'GLenum', 'GLdouble', ] => 'void' );
 
-#=head2 glMultiTexCoord1dvARB
+=head2 glMultiTexCoord1dvARB
 
-# glMultiTexCoord1dvARB( $target, $*v, );
+ glMultiTexCoord1dvARB( $target, $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord1dvARB => [ 'GLenum', 'GLdouble', ] => 'void' );
 
-#=head2 glMultiTexCoord1fARB
+=head2 glMultiTexCoord1fARB
 
-# glMultiTexCoord1fARB( $target, $s, );
+ glMultiTexCoord1fARB( $target, $s, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord1fARB => [ 'GLenum', 'GLfloat', ] => 'void' );
 
-#=head2 glMultiTexCoord1fvARB
+=head2 glMultiTexCoord1fvARB
 
-# glMultiTexCoord1fvARB( $target, $*v, );
+ glMultiTexCoord1fvARB( $target, $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord1fvARB => [ 'GLenum', 'GLfloat', ] => 'void' );
 
-#=head2 glMultiTexCoord1iARB
+=head2 glMultiTexCoord1iARB
 
-# glMultiTexCoord1iARB( $target, $s, );
+ glMultiTexCoord1iARB( $target, $s, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord1iARB => [ 'GLenum', 'GLint', ] => 'void' );
 
-#=head2 glMultiTexCoord1ivARB
+=head2 glMultiTexCoord1ivARB
 
-# glMultiTexCoord1ivARB( $target, $*v, );
+ glMultiTexCoord1ivARB( $target, $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord1ivARB => [ 'GLenum', 'GLint', ] => 'void' );
 
-#=head2 glMultiTexCoord1sARB
+=head2 glMultiTexCoord1sARB
 
-# glMultiTexCoord1sARB( $target, $s, );
+ glMultiTexCoord1sARB( $target, $s, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord1sARB => [ 'GLenum', 'GLshort', ] => 'void' );
 
-#=head2 glMultiTexCoord1svARB
+=head2 glMultiTexCoord1svARB
 
-# glMultiTexCoord1svARB( $target, $*v, );
+ glMultiTexCoord1svARB( $target, $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord1svARB => [ 'GLenum', 'GLshort', ] => 'void' );
 
-#=head2 glMultiTexCoord2dARB
+=head2 glMultiTexCoord2dARB
 
-# glMultiTexCoord2dARB( $target, $s, $t, );
+ glMultiTexCoord2dARB( $target, $s, $t, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord2dARB => [ 'GLenum', 'GLdouble', 'GLdouble', ] => 'void' );
 
-#=head2 glMultiTexCoord2dvARB
+=head2 glMultiTexCoord2dvARB
 
-# glMultiTexCoord2dvARB( $target, $*v, );
+ glMultiTexCoord2dvARB( $target, $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord2dvARB => [ 'GLenum', 'GLdouble', ] => 'void' );
 
-#=head2 glMultiTexCoord2fARB
+=head2 glMultiTexCoord2fARB
 
-# glMultiTexCoord2fARB( $target, $s, $t, );
+ glMultiTexCoord2fARB( $target, $s, $t, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord2fARB => [ 'GLenum', 'GLfloat', 'GLfloat', ] => 'void' );
 
-#=head2 glMultiTexCoord2fvARB
+=head2 glMultiTexCoord2fvARB
 
-# glMultiTexCoord2fvARB( $target, $*v, );
+ glMultiTexCoord2fvARB( $target, $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord2fvARB => [ 'GLenum', 'GLfloat', ] => 'void' );
 
-#=head2 glMultiTexCoord2iARB
+=head2 glMultiTexCoord2iARB
 
-# glMultiTexCoord2iARB( $target, $s, $t, );
+ glMultiTexCoord2iARB( $target, $s, $t, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord2iARB => [ 'GLenum', 'GLint', 'GLint', ] => 'void' );
 
-#=head2 glMultiTexCoord2ivARB
+=head2 glMultiTexCoord2ivARB
 
-# glMultiTexCoord2ivARB( $target, $*v, );
+ glMultiTexCoord2ivARB( $target, $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord2ivARB => [ 'GLenum', 'GLint', ] => 'void' );
 
-#=head2 glMultiTexCoord2sARB
+=head2 glMultiTexCoord2sARB
 
-# glMultiTexCoord2sARB( $target, $s, $t, );
+ glMultiTexCoord2sARB( $target, $s, $t, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord2sARB => [ 'GLenum', 'GLshort', 'GLshort', ] => 'void' );
 
-#=head2 glMultiTexCoord2svARB
+=head2 glMultiTexCoord2svARB
 
-# glMultiTexCoord2svARB( $target, $*v, );
+ glMultiTexCoord2svARB( $target, $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord2svARB => [ 'GLenum', 'GLshort', ] => 'void' );
 
-#=head2 glMultiTexCoord3dARB
+=head2 glMultiTexCoord3dARB
 
-# glMultiTexCoord3dARB( $target, $s, $t, $r, );
+ glMultiTexCoord3dARB( $target, $s, $t, $r, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord3dARB => [ 'GLenum', 'GLdouble', 'GLdouble', 'GLdouble', ] => 'void' );
 
-#=head2 glMultiTexCoord3dvARB
+=head2 glMultiTexCoord3dvARB
 
-# glMultiTexCoord3dvARB( $target, $*v, );
+ glMultiTexCoord3dvARB( $target, $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord3dvARB => [ 'GLenum', 'GLdouble', ] => 'void' );
 
-#=head2 glMultiTexCoord3fARB
+=head2 glMultiTexCoord3fARB
 
-# glMultiTexCoord3fARB( $target, $s, $t, $r, );
+ glMultiTexCoord3fARB( $target, $s, $t, $r, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord3fARB => [ 'GLenum', 'GLfloat', 'GLfloat', 'GLfloat', ] => 'void' );
 
-#=head2 glMultiTexCoord3fvARB
+=head2 glMultiTexCoord3fvARB
 
-# glMultiTexCoord3fvARB( $target, $*v, );
+ glMultiTexCoord3fvARB( $target, $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord3fvARB => [ 'GLenum', 'GLfloat', ] => 'void' );
 
-#=head2 glMultiTexCoord3iARB
+=head2 glMultiTexCoord3iARB
 
-# glMultiTexCoord3iARB( $target, $s, $t, $r, );
+ glMultiTexCoord3iARB( $target, $s, $t, $r, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord3iARB => [ 'GLenum', 'GLint', 'GLint', 'GLint', ] => 'void' );
 
-#=head2 glMultiTexCoord3ivARB
+=head2 glMultiTexCoord3ivARB
 
-# glMultiTexCoord3ivARB( $target, $*v, );
+ glMultiTexCoord3ivARB( $target, $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord3ivARB => [ 'GLenum', 'GLint', ] => 'void' );
 
-#=head2 glMultiTexCoord3sARB
+=head2 glMultiTexCoord3sARB
 
-# glMultiTexCoord3sARB( $target, $s, $t, $r, );
+ glMultiTexCoord3sARB( $target, $s, $t, $r, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord3sARB => [ 'GLenum', 'GLshort', 'GLshort', 'GLshort', ] => 'void' );
 
-#=head2 glMultiTexCoord3svARB
+=head2 glMultiTexCoord3svARB
 
-# glMultiTexCoord3svARB( $target, $*v, );
+ glMultiTexCoord3svARB( $target, $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord3svARB => [ 'GLenum', 'GLshort', ] => 'void' );
 
-#=head2 glMultiTexCoord4dARB
+=head2 glMultiTexCoord4dARB
 
-# glMultiTexCoord4dARB( $target, $s, $t, $r, $q, );
+ glMultiTexCoord4dARB( $target, $s, $t, $r, $q, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord4dARB => [ 'GLenum', 'GLdouble', 'GLdouble', 'GLdouble', 'GLdouble', ] => 'void' );
 
-#=head2 glMultiTexCoord4dvARB
+=head2 glMultiTexCoord4dvARB
 
-# glMultiTexCoord4dvARB( $target, $*v, );
+ glMultiTexCoord4dvARB( $target, $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord4dvARB => [ 'GLenum', 'GLdouble', ] => 'void' );
 
-#=head2 glMultiTexCoord4fARB
+=head2 glMultiTexCoord4fARB
 
-# glMultiTexCoord4fARB( $target, $s, $t, $r, $q, );
+ glMultiTexCoord4fARB( $target, $s, $t, $r, $q, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord4fARB => [ 'GLenum', 'GLfloat', 'GLfloat', 'GLfloat', 'GLfloat', ] => 'void' );
 
-#=head2 glMultiTexCoord4fvARB
+=head2 glMultiTexCoord4fvARB
 
-# glMultiTexCoord4fvARB( $target, $*v, );
+ glMultiTexCoord4fvARB( $target, $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord4fvARB => [ 'GLenum', 'GLfloat', ] => 'void' );
 
-#=head2 glMultiTexCoord4iARB
+=head2 glMultiTexCoord4iARB
 
-# glMultiTexCoord4iARB( $target, $s, $t, $r, $q, );
+ glMultiTexCoord4iARB( $target, $s, $t, $r, $q, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord4iARB => [ 'GLenum', 'GLint', 'GLint', 'GLint', 'GLint', ] => 'void' );
 
-#=head2 glMultiTexCoord4ivARB
+=head2 glMultiTexCoord4ivARB
 
-# glMultiTexCoord4ivARB( $target, $*v, );
+ glMultiTexCoord4ivARB( $target, $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord4ivARB => [ 'GLenum', 'GLint', ] => 'void' );
 
-#=head2 glMultiTexCoord4sARB
+=head2 glMultiTexCoord4sARB
 
-# glMultiTexCoord4sARB( $target, $s, $t, $r, $q, );
+ glMultiTexCoord4sARB( $target, $s, $t, $r, $q, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord4sARB => [ 'GLenum', 'GLshort', 'GLshort', 'GLshort', 'GLshort', ] => 'void' );
 
-#=head2 glMultiTexCoord4svARB
+=head2 glMultiTexCoord4svARB
 
-# glMultiTexCoord4svARB( $target, $*v, );
+ glMultiTexCoord4svARB( $target, $*v, );
 
-#=cut
+=cut
 
   $ffi->attach( glMultiTexCoord4svARB => [ 'GLenum', 'GLshort', ] => 'void' );
 
-#=head2 glBlendEquationSeparateATI
+=head2 glBlendEquationSeparateATI
 
-# glBlendEquationSeparateATI( $modeRGB, $modeA, );
+ glBlendEquationSeparateATI( $modeRGB, $modeA, );
 
-#=cut
+=cut
 
   $ffi->attach( glBlendEquationSeparateATI => [ 'GLenum', 'GLenum', ] => 'void' );
 

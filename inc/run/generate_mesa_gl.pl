@@ -65,8 +65,8 @@ foreach my $func (@func)
     my $args = $2;
     my @args = map { shift @$_ if $_->[0] eq 'const'; $_ } map { [split /\s+/, $_] } split /\s*,\s*/s, $args;
     
-    $attaches .= "#=head2 $name\n\n";
-    $attaches .= "# $name(";
+    $attaches .= "=head2 $name\n\n";
+    $attaches .= " $name(";
     
     if(@args == 1 && $args[0]->[0] eq 'void') {
     } else {
@@ -83,7 +83,7 @@ foreach my $func (@func)
       }
     }
     
-    $attaches .= ");\n\n#=cut\n\n";
+    $attaches .= ");\n\n=cut\n\n";
     
     $attaches .= "  \$ffi->attach( $name => [";
 
@@ -123,8 +123,7 @@ use 5.014;
 
 package OpenGL::FFI::Mesa::GL {
 
-  use FFI::Platypus ();
-  use FFI::CheckLib ();
+  use OpenGL::FFI ();
 
   use constant {
 
@@ -133,17 +132,12 @@ package OpenGL::FFI::Mesa::GL {
 $constants
   };
   
-  our \$ffi = FFI::Platypus->new(
-    ignore_not_found => 1,
-    lib => FFI::CheckLib::find_lib_or_die(
-      lib => 'GL',
-    ),
-  );
-
+  my \$ffi = OpenGL::FFI::_get_ffi();
+  \$ffi->lib(OpenGL::FFI::_find_lib('GL'));
 $typedefs
 
-#=head1 FUNCTIONS
-#
+=head1 FUNCTIONS
+
 $attaches
 
 1;
